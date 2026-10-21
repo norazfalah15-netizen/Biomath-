@@ -126,6 +126,8 @@ html.mpjs .btns .bw{display:block}
 #mp .dt .dsep{width:1px;height:26px;background:var(--line)}
 #mp .dt [data-g]{margin-left:auto;font-size:13px}
 #mp .dz canvas{display:block;width:100%;height:min(52vh,460px);touch-action:none;background:#fff;border-top:1px solid var(--line)}
+#mp .k.vx{font-size:22px;color:#1a56c4;font-weight:700}
+#mp .k sup{font-size:.6em;vertical-align:.6em}
 .lzsrc{display:none}
 .bar .lzb{grid-column:1/-1;display:none;text-align:center;color:#fff!important;border:none!important;background:linear-gradient(135deg,#6a4bb0,#9b6cf0)!important;box-shadow:0 6px 18px rgba(106,75,176,.35);font-size:17px;padding:14px!important}
 html.lzjs .bar .lzb{display:block}
@@ -2049,12 +2051,12 @@ function clearAll(){if(st.lines.join('')==='')return;if(!confirm('Clear all your
 function undo(){var u=st.undo.pop();if(!u)return;var v=JSON.parse(u);st.lines=v[0];st.L=v[1];st.c=v[2];}
 /* ---------- keyboard ---------- */
 var K={
- '123':[['eˣ','t:e^()|1','op'],['ln','t:ln()|1','sm'],['log','t:log()|1','sm'],['π','i:π','op'],['e','i:e','op'],['%','i:%','op'],
+ '123':[['<i>x</i>','i:x','vx'],['<i>t</i>','i:t','vx'],['eˣ','t:e^()|1','op'],['ln','t:ln()|1','sm'],['π','i:π','op'],['e','i:e','op'],
         ['7'],['8'],['9'],['÷','i:÷','op'],['(','i:(','op'],[')','i:)','op'],
-        ['4'],['5'],['6'],['×','i:×','op'],['x²','i:^2','op'],['xʸ','t:^()|1','op'],
+        ['4'],['5'],['6'],['×','i:×','op'],['a²','i:^2','op'],['aⁿ','t:^()|1','op'],
         ['1'],['2'],['3'],['−','i:−','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['√','t:√()|1','op'],
         ['0'],['.'],['=','i:=','op'],['+','i:+','op'],['≈','i:≈','op'],['⌫','bs','op']],
- 'f':[['(','i:(','op'],[')','i:)','op'],['xʸ','t:^()|1','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['=','i:=','op'],['!'],
+ 'f':[['(','i:(','op'],[')','i:)','op'],['aⁿ','t:^()|1','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['=','i:=','op'],['!'],
       ['sin','t:sin()|1','sm'],['cos','t:cos()|1','sm'],['tan','t:tan()|1','sm'],['|x|','t:abs()|1'],['%'],['±'],
       ['≠'],['≤'],['≥'],['<'],['>'],['∞'],
       ['→'],['⇒'],['Δ'],['′'],['″'],['⌫','bs','op']],
@@ -2062,7 +2064,7 @@ var K={
       ['a'],['b'],['k'],['r'],['n'],['P'],
       ['Q'],['N'],['S'],['C'],['T'],['V'],
       ['(','i:(','op'],[')','i:)','op'],['=','i:=','op'],['+','i:+','op'],['−','i:−','op'],['⌫','bs','op'],
-      ['f(x)','t:f()|1','sm'],['f′(x)','t:f′()|1','sm'],['f″(x)','t:f″()|1','sm'],['Δx','i:Δx','sm'],['Δt','i:Δt','sm'],['xʸ','t:^()|1','op']],
+      ['f(x)','t:f()|1','sm'],['f′(x)','t:f′()|1','sm'],['f″(x)','t:f″()|1','sm'],['Δx','i:Δx','sm'],['Δt','i:Δt','sm'],['aⁿ','t:^()|1','op']],
  'abc':null
 };
 var ABC1='qwertyuiop',ABC2='asdfghjkl',ABC3='zxcvbnm';
