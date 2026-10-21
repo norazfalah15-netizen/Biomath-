@@ -128,7 +128,8 @@ html.mpjs .btns .bw{display:block}
 #mp .dz canvas{display:block;width:100%;height:min(52vh,460px);touch-action:none;background:#fff;border-top:1px solid var(--line)}
 #mp .k.vx{font-size:22px;color:#1a56c4;font-weight:700}
 #mp .k sup{font-size:.6em;vertical-align:.6em}
-.lzsrc{display:none}
+
+#mp .mph button.arm{background:#d93025;color:#fff;border-color:#d93025}.lzsrc{display:none}
 .bar .lzb{grid-column:1/-1;display:none;text-align:center;color:#fff!important;border:none!important;background:linear-gradient(135deg,#6a4bb0,#9b6cf0)!important;box-shadow:0 6px 18px rgba(106,75,176,.35);font-size:17px;padding:14px!important}
 html.lzjs .bar .lzb{display:block}
 html.lzon,html.lzon body{overflow:hidden}
@@ -2095,7 +2096,7 @@ function down(){var s=cur(),c=st.c,g=encl(s,c);
   for(var h=g;h;h=encl(s,h[0])){var r=role(s,h);if(r==='sup'){st.c=h[1]>=0?h[1]+1:s.length;return;}if(r==='num'){st.c=h[1]+3;return;}if(r==='den')break;}
   if(st.L<st.lines.length-1){st.L++;st.c=cur().length;}}
 function enter(){snap();var s=cur(),d=0;for(var j=0;j<st.c;j++){var h=s.charAt(j);if(h==='(')d++;else if(h===')')d--;}var at=d>0?s.length:st.c;st.lines.splice(st.L,1,s.slice(0,at),s.slice(at));st.L++;st.c=0;}
-function clearAll(){if(st.lines.join('')==='')return;if(!confirm('Clear all your work for this question?'))return;snap();st.lines=[''];st.L=0;st.c=0;}
+function clearAll(){if(st.lines.join('')==='')return;snap();st.lines=[''];st.L=0;st.c=0;}
 function undo(){var u=st.undo.pop();if(!u)return;var v=JSON.parse(u);st.lines=v[0];st.L=v[1];st.c=v[2];}
 /* ---------- keyboard ---------- */
 var K={
@@ -2176,7 +2177,7 @@ function build(){
       else if(b.hasAttribute('data-d')){D.tool=b.getAttribute('data-d');P.querySelectorAll('.dt [data-d]').forEach(function(x){x.classList.toggle('on',x===b);});}
       else if(b.hasAttribute('data-c')){D.col=b.getAttribute('data-c');if(D.tool==='e')D.tool='p';P.querySelectorAll('.dt [data-c]').forEach(function(x){x.classList.toggle('on',x===b);});P.querySelectorAll('.dt [data-d]').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-d')===D.tool);});}
       else if(b.hasAttribute('data-g')){D.d.g=(D.d.g+2)%3;gLabel();dRedraw();dSave();}
-      else if(b.hasAttribute('data-t')){var tt=b.getAttribute('data-t');if(tt==='close')close();else if(tt==='mw'||tt==='md'){setMode(tt==='md'?'d':'w');}else if(mode==='d'&&tt==='undo'){dUndo();}else if(mode==='d'&&tt==='clr'){dClear();}else if(tt==='kb'){var hid=P.classList.toggle('nokb');b.textContent=hid?'⌨️ ▴':'⌨️ ▾';pad();}else if(tt==='undo'){undo();draw();save();}else if(tt==='clr'){clearAll();draw();save();}}
+      else if(b.hasAttribute('data-t')){var tt=b.getAttribute('data-t');if(tt==='clr'){if(!b.classList.contains('arm')){b.classList.add('arm');b.textContent='مسح؟ ✓';clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('arm');b.textContent='🗑';},2500);return;}clearTimeout(b._t);b.classList.remove('arm');b.textContent='🗑';}if(tt==='close')close();else if(tt==='mw'||tt==='md'){setMode(tt==='md'?'d':'w');}else if(mode==='d'&&tt==='undo'){dUndo();}else if(mode==='d'&&tt==='clr'){dClear();}else if(tt==='kb'){var hid=P.classList.toggle('nokb');b.textContent=hid?'⌨️ ▴':'⌨️ ▾';pad();}else if(tt==='undo'){undo();draw();save();}else if(tt==='clr'){clearAll();draw();save();}}
       return;
     }
   });
@@ -2259,7 +2260,7 @@ function dRedraw(){
   });
 }
 function dUndo(){var u=D.un.pop();if(u===undefined)return;D.d.s=JSON.parse(u);dRedraw();dSave();markBtn(st.k);}
-function dClear(){if(!D.d.s.length)return;if(!confirm('Clear your drawing for this question?'))return;D.un.push(JSON.stringify(D.d.s));D.d.s=[];dRedraw();dSave();markBtn(st.k);}
+function dClear(){if(!D.d.s.length)return;D.un.push(JSON.stringify(D.d.s));D.d.s=[];dRedraw();dSave();markBtn(st.k);}
 function setMode(m){mode=m;P.classList.toggle('dm',m==='d');P.querySelectorAll('.mseg button').forEach(function(b){b.classList.toggle('on',(b.getAttribute('data-t')==='md')===(m==='d'));});
   if(m==='d'){gLabel();requestAnimationFrame(function(){dSize();pad();});}else{draw();pad();}}
 function pad(){document.body.style.paddingBottom=(P.offsetHeight+20)+'px';}
