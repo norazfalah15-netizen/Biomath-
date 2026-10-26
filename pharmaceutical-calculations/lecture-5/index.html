@@ -1,0 +1,587 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🔒 Pharm Calc · Lecture 5</title><link rel="icon" type="image/png" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Pharmacy Study"><meta name="theme-color" content="#5b3fc4"><meta name="description" content="Questions with answers and explanations"><meta property="og:type" content="website"><meta property="og:site_name" content="Pharmacy Study"><meta property="og:title" content="🔒 Biomath Practice — Pharmacy Study"><meta property="og:description" content="Questions with answers and explanations"><meta property="og:image" content="https://pharmacy-study.vercel.app/og.jpg?v=3"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://pharmacy-study.vercel.app/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pharmacy-study.vercel.app/og.jpg?v=3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet"></noscript><style>*{box-sizing:border-box}
+:root{--bg:#f7f6fb;--card:#fff;--ink:#1d1b26;--soft:#6e6a7c;--line:#e7e3f1;--ac:#6a4bb0;--acl:#efeafa;--op:#f4f3f8;--ok:#e8f6ed;--okb:#86c49b;--no:#fbeeee;--nob:#e0a9a9}
+@media (prefers-color-scheme:dark){:root{--bg:#141318;--card:#1d1b24;--ink:#ecebf2;--soft:#a39fb3;--line:#2f2b3b;--ac:#a68cf0;--acl:#2a2440;--op:#25222e;--ok:#1c3324;--okb:#4f8a63;--no:#3a2222;--nob:#9a5c5c}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito","IBM Plex Sans Arabic",system-ui,sans-serif;padding:16px;line-height:1.5}
+.wrap{max-width:780px;margin:0 auto}
+.back{display:inline-block;text-decoration:none;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:8px 14px;font-weight:700}
+h1{margin:16px 0 2px;font-size:24px;text-align:center}
+.sub{text-align:center;color:var(--soft);margin:0 0 14px}
+nav{display:grid;gap:8px;margin:10px 0 20px}nav[hidden],.lec[hidden]{display:none}.tocb{font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid #b9a9e3;border-radius:12px;padding:10px 16px;cursor:pointer;margin-bottom:6px}
+nav a{display:block;text-decoration:none;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:700}
+section{scroll-margin-top:12px;margin-bottom:26px}
+.sh{background:var(--acl);border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:12px}
+.sh h2{margin:0;font-size:20px}.sh p{margin:2px 0 0;color:var(--soft);font-size:14px}
+article{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.qn{color:var(--ac);font-weight:800;font-size:14px}.src{color:var(--soft);font-weight:600}
+.qt{font-weight:800;font-size:17px;margin:6px 0 12px}
+.fig{display:block;max-width:100%;height:auto;margin:12px auto;background:#fff;border-radius:8px}
+.ops{display:grid;gap:8px}
+.op{background:var(--op);border-radius:12px;padding:11px 14px}
+.op.ok{background:var(--ok);border-color:var(--okb)}.op.no{background:var(--no);border-color:var(--nob)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;align-items:start}
+.b{width:100%;font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid #b9a9e3;border-radius:12px;padding:10px 6px;cursor:pointer;white-space:nowrap}
+.b.on{background:var(--acl)}
+.box{margin-top:10px;border-radius:12px;padding:10px 14px}.box p{margin:4px 0}
+.ans{background:var(--ok)}.ex{background:var(--acl)}
+pre.fs{font-family:ui-monospace,Menlo,Consolas,monospace;background:#fff;color:#111;border-radius:8px;padding:8px 12px;display:inline-block;margin:4px 0;line-height:1.25;font-weight:400}
+.two{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin:10px 0}.two>div{text-align:center;background:#fff;border-radius:10px;padding:8px}.two b{color:#111}.fsv{display:block;margin:auto}
+h1.lt{line-height:1.2}h1.lt span{display:block;font-size:20px;margin-top:4px}
+.skw{text-align:center;margin:10px 0}.sk{background:#fff;border-radius:10px;padding:6px;max-width:100%;height:auto}
+.ofig{display:inline-block;vertical-align:middle;max-width:85%;max-height:150px;background:#fff;border-radius:8px;padding:4px}.op .fsv{display:inline-block;vertical-align:middle;background:#fff;border-radius:8px}
+.ck{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.lec,.box,.toc{display:none}.ct:checked~.toc{display:grid}
+.ca:checked~.ans,.ce:checked~.ex{display:block}.ca:checked~.btns .ba,.ce:checked~.btns .be{background:var(--acl)}
+label.b,label.tocb{display:block;text-align:center;user-select:none;-webkit-user-select:none}label.tocb{display:inline-block}
+.tabs{display:grid;gap:10px;margin:8px 0}.bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 10px}.bar .tocb{display:block;margin:0}
+.tab{display:block;text-align:start;padding:14px 16px!important;font-size:17px;text-decoration:none;font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 8px;cursor:pointer;line-height:1.25}
+.tab span{display:block;font-weight:600;font-size:13px;color:var(--soft)}
+.tab.on{background:var(--acl);border-color:#b9a9e3}
+.bar .sgb{grid-column:1/-1}.sgb .on,.cS{display:none}.sg:checked~.bar .sgb{background:var(--acl);border-color:#b9a9e3}
+.sg:checked~.bar .sgb .on,.sg:checked~section .cS,.sg:checked~.sub .cS{display:inline}.sg:checked~.bar .sgb .off,.sg:checked~section .cA,.sg:checked~.sub .cA{display:none}
+.sg:checked~section article.pq,.sg:checked~section.nod,.sg:checked~.toc a.nod{display:none}
+#r0:checked~#L0,#r1:checked~#L1,#r2:checked~#L2,#r3:checked~#L3,#r4:checked~#L4,#r5:checked~#L5,#r6:checked~#L6,#r7:checked~#L7,#r8:checked~#L8,#r9:checked~#L9,#r10:checked~#L10,#r11:checked~#L11,#r12:checked~#L12,#r13:checked~#L13{display:block}.bar .xb{grid-column:1/-1;background:var(--ac);color:#fff;border-color:var(--ac)}.xb .xc{display:none}.cx:checked~.bar .xb .xo{display:none}.cx:checked~.bar .xb .xc{display:inline}
+.expl{display:none;font-family:"IBM Plex Sans Arabic",Nunito,system-ui,sans-serif;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:4px 0 18px;line-height:1.75;font-size:16px;text-align:right}
+.cx:checked~.expl{display:block}
+.expl .xh{font-weight:800;font-size:19px;color:var(--ac);margin-bottom:4px}
+.expl .xi{color:var(--soft);font-size:14px;margin:4px 0 10px}
+.expl .xs{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px}
+.expl .xt{font-weight:800;font-size:17px;margin-bottom:8px}
+.expl ul{margin:6px 0;padding-right:20px;padding-left:0}
+.expl .fm{direction:ltr;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:24px;background:var(--acl);border-radius:12px;padding:10px;margin:8px 0;font-style:italic}
+.expl .fm.sm{font-size:18px;padding:6px;margin:6px 0;background:transparent}
+.expl .en{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Cambria Math","Times New Roman",serif}
+.expl .xk{background:#fff7e0;color:#5c4400;border-radius:12px;padding:10px 12px;margin:10px 0;font-size:15px}
+@media (prefers-color-scheme:dark){.expl .xk{background:#3a3016;color:#f3e2b0}}
+.expl .ex{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}
+.expl .el{font-weight:800;color:var(--ac);font-size:15px;margin-bottom:4px}
+.expl .ex p{margin:4px 0}
+.expl .st{direction:ltr;text-align:left;font-family:"Cambria Math","Times New Roman",serif;font-size:18px;padding:2px 6px}
+.expl .st.ok{background:#e6f4ea;color:#1e7a3c;border-radius:8px;font-weight:700;margin-top:2px}
+@media (prefers-color-scheme:dark){.expl .st.ok{background:#173a24;color:#9be0b2}}
+.expl .xtb{width:100%;border-collapse:collapse;margin:8px 0;font-size:15px}
+.expl .xtb th,.expl .xtb td{border:1px solid var(--line);padding:7px 8px;text-align:right;vertical-align:middle}
+.expl .xtb th{background:var(--acl)}
+.expl .xtb td.en{display:table-cell;text-align:center;font-size:17px}
+.expl>.xb{display:block;margin-top:14px;background:var(--ac);color:#fff;border-color:var(--ac)}
+.expl sup{font-size:.7em}
+.expl ol{margin:6px 0;padding-right:22px;padding-left:0}.expl li{margin:3px 0}
+.expl .xtb[dir=ltr] th,.expl .xtb[dir=ltr] td{text-align:center;white-space:nowrap}.expl .xtb[dir=ltr]{display:block;overflow-x:auto}
+
+.en.nw,bdi.nw{white-space:nowrap}.bar .lob{grid-column:1/-1}.lob .lon{display:none}.lo:checked~.bar .lob{background:var(--acl);border-color:var(--ac)}.lo:checked~.bar .lob .lof{display:none}.lo:checked~.bar .lob .lon{display:inline}.lo:checked~section article:not(.aL),.lo:checked~section.noL{display:none}.part{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}.ptq{font-weight:700;margin:0 0 8px;line-height:1.45}.pl{display:inline-block;color:var(--ac);font-weight:800;margin-right:4px}.same{font-size:12px;opacity:.75;margin:-2px 0 6px}html{scroll-padding-top:34px}article{scroll-margin-top:34px}.srcl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:999px;margin:0 0 6px;text-transform:uppercase}.sL{background:#e6f4ea;color:#1e7a3c}.sB{background:#e8f0fe;color:#1a56c4}.sP{background:#fdecea;color:#b3261e}.btns .bw{grid-column:1/-1;display:none;text-align:center;color:#fff;background:var(--ac);border-color:var(--ac)}
+#mp{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:var(--card);border-top:1.5px solid var(--line);box-shadow:0 -8px 30px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:92vh;font-family:Nunito,system-ui,sans-serif;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+#mp.on{display:flex}
+body.mpon .totop{display:none}
+#mp .mph{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line)}
+#mp .mpt{flex:1;font-weight:800;font-size:14px;color:var(--ac);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mp .mph button{font:inherit;font-weight:800;font-size:13px;border:1.5px solid var(--line);background:var(--bg,#f6f5fa);color:var(--ink);border-radius:10px;padding:6px 10px;cursor:pointer}
+#mp .mph .mpx{background:var(--ac);color:#fff;border-color:var(--ac)}
+#mp .mpl{overflow-y:auto;padding:6px 10px;height:19vh;min-height:96px}#mp.nokb .kt,#mp.nokb .kb{display:none}#mp.nokb .mpl{height:24vh}
+#mp .ln{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 8px;border-radius:10px;border:1.5px solid transparent;cursor:text}
+#mp .ln.cur{border-color:#b9a9e3;background:var(--acl)}
+#mp .lnn{flex:none;width:18px;font-size:11px;color:var(--soft);text-align:right}
+#mp .lnx{flex:1;font-family:"Cambria Math","Latin Modern Math","STIX Two Math","Times New Roman",serif;font-size:21px;line-height:1.5;color:var(--ink);overflow-x:auto;white-space:nowrap;padding:2px 0}
+#mp .lnr{flex:none;font-size:15px;font-weight:800;color:#1e7a3c;background:#e6f4ea;border-radius:8px;padding:2px 8px;white-space:nowrap}
+#mp .lnr:empty{display:none}
+#mp .ph{color:var(--soft);font-family:Nunito,system-ui,sans-serif;font-size:14px}
+#mp .cr{display:inline-block;width:2px;height:1.1em;background:var(--ac);vertical-align:middle;margin:0 -1px;animation:mpb 1s steps(1) infinite}
+@keyframes mpb{50%{opacity:0}}
+#mp .ch{display:inline}
+#mp .hid{display:inline-block;width:0;overflow:hidden}
+#mp .fn{font-style:normal;font-family:Nunito,system-ui,sans-serif;font-size:.85em;margin-right:1px}
+#mp .vr{font-style:italic}
+#mp sup{font-size:.68em;vertical-align:.75em;line-height:0}
+#mp .fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;font-size:.88em;line-height:1.15}
+#mp .fr>.nu{border-bottom:1.5px solid currentColor;padding:0 3px 1px}
+#mp .fr>.de{padding:1px 3px 0}
+#mp .bx{display:inline-block;min-width:.7em;height:.9em;border:1.5px dashed #b9a9e3;border-radius:3px;vertical-align:middle;margin:0 1px}
+#mp .sq{display:inline-block;border-top:1.5px solid currentColor;padding:1px 2px 0;margin-left:0;line-height:1.2}#mp .rt{display:inline-block;font-family:"Times New Roman",serif;font-size:1.15em;line-height:1;vertical-align:-.08em;margin-right:-.05em}#mp .o{margin:0 .14em}
+#mp .kt{display:flex;gap:4px;padding:6px 8px 0}
+#mp .kt button{flex:1;font:inherit;font-weight:800;font-size:14px;border:none;border-radius:10px 10px 0 0;padding:8px 0;background:transparent;color:var(--soft);cursor:pointer}
+#mp .kt button.on{background:var(--acl);color:var(--ac)}
+#mp .kb{background:var(--acl);padding:6px 6px calc(8px + env(safe-area-inset-bottom))}
+#mp .kp{display:none;grid-template-columns:repeat(6,1fr);gap:5px}
+#mp .kp.on{display:grid}
+#mp .kp.abc{grid-template-columns:repeat(10,1fr)}
+#mp .k{font-family:"Cambria Math","Times New Roman",serif;font-size:20px;font-weight:600;min-height:42px;border:none;border-radius:9px;background:var(--card);color:var(--ink);box-shadow:0 1.5px 0 rgba(0,0,0,.15);cursor:pointer;padding:0 2px;display:flex;align-items:center;justify-content:center;line-height:1}
+#mp .kp.abc .k{font-size:17px;min-height:42px}
+#mp .k:active,#mp .k.pr{background:var(--line)}#mp,#mp *{-webkit-tap-highlight-color:transparent}
+#mp .k.op{color:var(--ac);font-weight:800}
+#mp .k.sm{font-family:Nunito,system-ui,sans-serif;font-size:14px;font-weight:800}
+#mp .k.ac{background:var(--ac);color:#fff}
+#mp .k.w2{grid-column:span 2}#mp .k.w3{grid-column:span 3}#mp .k.w4{grid-column:span 4}
+#mp .kr{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:5px}
+@media (min-width:700px){#mp{left:50%;right:auto;width:680px;transform:translateX(-50%);border-radius:16px 16px 0 0;border:1.5px solid var(--line)}}
+
+html.mpjs .btns .bw{display:block}
+#mp .mseg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+#mp .mph .mseg button{border:none;border-radius:0;padding:6px 9px;background:transparent}
+#mp .mph .mseg button.on{background:var(--acl)}
+#mp .dz{display:none;flex-direction:column}
+#mp.dm .dz{display:flex}#mp.dm .mpl,#mp.dm .kt,#mp.dm .kb,#mp.dm [data-t="kb"]{display:none}
+#mp .dt{display:flex;align-items:center;gap:6px;padding:8px 10px;flex-wrap:wrap}
+#mp .dt button{font:inherit;font-weight:800;font-size:15px;min-width:42px;height:38px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);cursor:pointer;padding:0 8px}
+#mp .dt button.on{background:var(--acl);border-color:var(--ac)}
+#mp .dt .dc{min-width:30px;width:30px;height:30px;border-radius:50%;padding:0;background:var(--c);border:3px solid #fff;box-shadow:0 0 0 1.5px var(--line)}
+#mp .dt .dc.on{box-shadow:0 0 0 2.5px var(--ac);background:var(--c)}
+#mp .dt .dsep{width:1px;height:26px;background:var(--line)}
+#mp .dt [data-g]{margin-left:auto;font-size:13px}
+#mp .dz canvas{display:block;width:100%;height:min(52vh,460px);touch-action:none;background:#fff;border-top:1px solid var(--line)}
+#mp .k.vx{font-size:22px;color:#1a56c4;font-weight:700}
+#mp .k sup{font-size:.6em;vertical-align:.6em}
+
+#mp .mph button.arm{background:#d93025;color:#fff;border-color:#d93025}.lzsrc{display:none}
+.bar .lzb{grid-column:1/-1;display:none;text-align:center;color:#fff!important;border:none!important;background:linear-gradient(135deg,#6a4bb0,#9b6cf0)!important;box-shadow:0 6px 18px rgba(106,75,176,.35);font-size:17px;padding:14px!important}
+html.lzjs .bar .lzb{display:block}
+html.lzon,html.lzon body{overflow:hidden}
+#lzo{position:fixed;inset:0;z-index:2000;background:var(--bg,#f6f5fa);display:none;flex-direction:column;font-family:"IBM Plex Sans Arabic",Nunito,system-ui,sans-serif;color:var(--ink)}
+#lzo.on{display:flex}
+#lzo .lh{display:flex;align-items:center;gap:8px;padding:10px 12px calc(6px);padding-top:max(10px,env(safe-area-inset-top));background:var(--card);border-bottom:1px solid var(--line)}
+#lzo .lx{flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+#lzo .lt2{flex:1;font-weight:800;font-size:15px;color:var(--ac);text-align:center;line-height:1.3;direction:ltr}
+#lzo .ls{flex:none;font:inherit;font-weight:800;font-size:13px;border:1.5px solid var(--line);background:var(--acl);color:var(--ac);border-radius:12px;padding:7px 10px;cursor:pointer}
+#lzo .lp{height:4px;background:var(--line)}#lzo .lp i{display:block;height:100%;width:0;background:linear-gradient(90deg,#9b6cf0,#6a4bb0);transition:width .3s}
+#lzo .lds{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:8px 12px 2px}
+#lzo .ld{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:var(--line);cursor:pointer}
+#lzo .ld.dn{background:#b9a9e3}#lzo .ld.on{background:var(--ac);width:22px;border-radius:5px}
+#lzo .lb{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 14px 24px}
+#lzo section.sl{display:none;max-width:640px;margin:0 auto;animation:lzin .28s ease}
+#lzo section.sl.cur{display:block}
+@keyframes lzin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#lzo .sh2{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;line-height:1.35;margin:6px 0 12px}
+#lzo .si{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--acl)}
+#lzo .sl p{font-size:17px;line-height:1.8;margin:8px 0}
+#lzo .sl ul,#lzo .sl ol{padding-right:22px;padding-left:0;margin:6px 0;font-size:16.5px;line-height:1.8}
+#lzo .big{font-size:19px;font-weight:700;line-height:1.7;background:var(--card);border-radius:16px;padding:14px;border:1.5px solid var(--line)}
+#lzo .fm{direction:ltr;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:26px;font-style:italic;background:var(--card);border:2px solid #b9a9e3;border-radius:16px;padding:14px 10px;margin:12px 0;box-shadow:0 4px 14px rgba(106,75,176,.12)}
+#lzo .fm small{display:block;font-family:"IBM Plex Sans Arabic",system-ui;font-style:normal;font-size:13px;color:var(--soft);margin-top:4px;direction:rtl}
+#lzo .en{direction:ltr;unicode-bidi:isolate;font-family:"Cambria Math","Times New Roman",serif}
+#lzo .xk,#lzo .tip{background:#fff7e0;color:#5c4400;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+#lzo .warn{background:#fdecea;color:#8c1d18;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+#lzo .an{background:#e8f0fe;color:#123d82;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+@media (prefers-color-scheme:dark){#lzo .xk,#lzo .tip{background:#3a3016;color:#f3e2b0}#lzo .warn{background:#3d1a18;color:#f5c2bd}#lzo .an{background:#16284a;color:#bcd3fb}}
+#lzo .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+#lzo .cards>div{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px;font-size:15px;line-height:1.6}
+#lzo .cards>div b{display:block;font-size:16px;margin-bottom:2px}
+#lzo .xtb{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px;background:var(--card);border-radius:12px;overflow:hidden}
+#lzo .xtb th,#lzo .xtb td{border:1px solid var(--line);padding:8px;text-align:right;vertical-align:middle}
+#lzo .xtb th{background:var(--acl)}
+#lzo .xtb[dir=ltr]{display:block;overflow-x:auto}#lzo .xtb[dir=ltr] th,#lzo .xtb[dir=ltr] td{text-align:center;white-space:nowrap}
+/* worked example */
+#lzo .wk{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px;margin:12px 0}
+#lzo .wq{font-weight:800;font-size:16.5px;line-height:1.65;margin-bottom:8px}
+#lzo .wq .tg{display:inline-block;font-size:12px;background:var(--ac);color:#fff;border-radius:999px;padding:1px 10px;margin-left:6px;vertical-align:2px}
+#lzo .ws{list-style:none;padding:0!important;margin:0;counter-reset:st}
+#lzo .ws>li{counter-increment:st;position:relative;padding:8px 40px 8px 10px;margin:6px 0;border-radius:12px;background:var(--acl);font-size:16px;line-height:1.7}
+#lzo .ws>li::before{content:counter(st);position:absolute;right:8px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--ac);color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+#lzo .ws .m,#lzo .wa .m{display:block;direction:ltr;text-align:left;font-family:"Cambria Math","Times New Roman",serif;font-size:18px;margin-top:2px}
+#lzo .wa{margin-top:8px;border-radius:12px;padding:10px 12px;background:#e6f4ea;color:#14532d;font-weight:800;font-size:16.5px;line-height:1.7}
+@media (prefers-color-scheme:dark){#lzo .wa{background:#173a24;color:#a7f0c0}}
+#lzo .hd{display:none!important}
+#lzo .in{animation:lzin .3s ease}
+#lzo .wb{display:flex;gap:8px;margin-top:10px}
+#lzo .wb button{flex:1;font:inherit;font-weight:800;font-size:14.5px;border-radius:12px;padding:11px 8px;cursor:pointer;border:1.5px solid #b9a9e3;background:var(--card);color:var(--ac)}
+#lzo .wb .wn{background:var(--ac);color:#fff;border-color:var(--ac)}
+/* quiz */
+#lzo .qz{background:linear-gradient(135deg,rgba(155,108,240,.12),rgba(26,115,232,.08));border:2px dashed #b9a9e3;border-radius:18px;padding:14px;margin:14px 0}
+#lzo .qz::before{content:"🎯 جربي بنفسك";display:block;font-weight:800;color:var(--ac);font-size:14px;margin-bottom:6px}
+#lzo .qq{font-weight:800;font-size:16.5px;line-height:1.65;margin-bottom:10px}
+#lzo .qz button{display:block;width:100%;text-align:right;font:inherit;font-size:16px;padding:11px 14px;margin:7px 0;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;line-height:1.5}
+#lzo .qz button.ok{background:#e6f4ea;border-color:#34a853;color:#14532d;font-weight:800}
+#lzo .qz button.no{background:#fdecea;border-color:#d93025;color:#8c1d18}
+@media (prefers-color-scheme:dark){#lzo .qz button.ok{background:#173a24;color:#a7f0c0}#lzo .qz button.no{background:#3d1a18;color:#f5c2bd}}
+#lzo .qw{display:none;font-size:15.5px;line-height:1.7;margin-top:6px;padding:10px 12px;border-radius:12px;background:var(--card)}
+#lzo .qw.sh{display:block;animation:lzin .3s ease}
+/* viz */
+#lzo .vz{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 12px;margin:12px 0}
+#lzo .vz::before{content:"🎛️ حركي الأزرار وشوفي وش يصير";display:block;font-weight:800;color:var(--ac);font-size:13.5px;margin-bottom:4px}
+#lzo .vzs{display:block;width:100%;height:auto;direction:ltr;background:#fff;border-radius:12px}
+#lzo .vzs .gl{stroke:#eceaf4;stroke-width:1}#lzo .vzs .ax{stroke:#6e6a7c;stroke-width:1.5}#lzo .vzs .gd{stroke:#9b8fc0;stroke-width:1.2;stroke-dasharray:4 3}
+#lzo .vzs .tk{font:10px system-ui,sans-serif;fill:#6e6a7c}#lzo .vzs .al{font:italic 13px "Times New Roman",serif;fill:#3c3850}
+#lzo .vzr{direction:rtl;text-align:center;font-weight:800;font-size:14px;margin:6px 0 2px}
+#lzo .vzl{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:13px;margin-top:4px;direction:ltr}
+#lzo .vzl i{display:inline-block;width:14px;height:4px;border-radius:2px;margin-right:4px;vertical-align:middle}
+#lzo .vzc{display:flex;align-items:center;gap:10px;margin:8px 0 0;direction:ltr}
+#lzo .vzn{flex:none;min-width:86px;font-family:"Cambria Math","Times New Roman",serif;font-size:16px}
+#lzo .vzc input{flex:1;accent-color:#6a4bb0;height:28px}
+#lzo .vzt{font-size:14px;color:var(--soft);margin-top:6px;line-height:1.6}
+/* footer nav */
+#lzo .lf{display:flex;align-items:center;gap:10px;padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+#lzo .lf button{flex:1;font:inherit;font-weight:800;font-size:16px;border-radius:14px;padding:13px 8px;cursor:pointer;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+#lzo .lf .lnx{background:var(--ac);color:#fff;border-color:var(--ac)}
+#lzo .lf button:disabled{opacity:.35}
+#lzo .lc{flex:none;font-weight:800;color:var(--soft);font-size:13px;min-width:44px;text-align:center}
+#lzo sup{font-size:.7em}
+bdi.nw,.en.nw{white-space:nowrap}
+.bar .lzk{background:linear-gradient(135deg,#1a73e8,#4f9cf9)!important;box-shadow:0 6px 18px rgba(26,115,232,.3);font-size:16px}
+#lzo .lds:has(.ld:only-child){display:none}
+#lzo .xtb td.en,#lzo .xtb .en{white-space:nowrap;font-size:15px}
+</style><style>.pst{overflow-x:auto;margin:8px 0}.ps{border-collapse:collapse;font-size:15px;background:#fff;color:#111}.ps td,.ps th{border:1px solid #bbb;padding:5px 12px;text-align:center;white-space:nowrap}.ps th{background:#eef2f7;font-weight:700}.ptq .pst{margin:4px 0}.same{font-size:12.5px;opacity:.8;font-weight:600}.lec#L1{display:block}.qh{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}.qh .srcl{margin:0}.bws{font:inherit;font-weight:800;font-size:12.5px;line-height:1;padding:7px 11px;border-radius:999px;border:none;background:var(--ac);color:#fff;cursor:pointer;white-space:nowrap;flex:none}.btns{grid-template-columns:1fr 1fr}article{position:relative}.btns{display:flex!important;gap:8px;flex-wrap:wrap}.btns .b{width:auto!important;flex:none;padding:6px 12px!important;font-size:12.5px!important;line-height:1.2!important;border-radius:999px!important;min-height:0!important}.qno{position:absolute;top:5px;right:16px;font-size:12px;font-weight:800;color:var(--soft);line-height:1}</style></head><body id="top"><div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#e11d48;color:#fff;text-align:center;font:700 13px/1.9 system-ui,sans-serif;letter-spacing:.3px">🔒 MY PRIVATE COPY</div><div style="height:25px"></div><div class="wrap"><a class="back" href="/pharmaceutical-calculations/">← Pharmaceutical Calculations</a><input type="radio" name="lec" class="ck" id="r1" checked><div class="lec" id="L1"><h1 class="lt">Lecture 5<span>Doses for Adults</span></h1><p class="sub">9 lecture · 45 textbook questions</p><input type="checkbox" class="ck ct" id="c1"><input type="checkbox" class="ck lo" id="o1"><div class="bar"><a class="tocb" href="/pharmaceutical-calculations/" style="text-decoration:none;display:block">📚 Lectures</a><label class="tocb" for="c1">☰ Contents</label><label class="tocb lob" for="o1"><span class="lof">📌 أمثلة المحاضرة بس (9)</span><span class="lon">✓ معروض أمثلة المحاضرة بس — اضغطي لعرض الكل</span></label></div><nav class="toc"><a href="#c5s0">1. Solid Dose Units (Tablets, Capsules…)</a><a href="#c5s1">2. Oral Liquid Formulations</a><a href="#c5s2">3. Dose Volumes Less Than 5 ml</a><a href="#c5s3">4. Injections & Units</a><a href="#c5s4">5. Doses Based on Body Weight</a><a href="#c5s5">6. Doses Based on Body Surface Area (BSA)</a></nav><section id="c5s0"><div class="sh"><h2>1. Solid Dose Units (Tablets, Capsules…)</h2><p>1 lecture · 22 textbook questions</p></div><article class="aL"><span class="qno">1</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 8</div><button type="button" class="bw bws" data-k="pc5q_1">✍️ Solve here</button></div><div class="qt">A prescription requires two capsules of drug X for 5/7. How many tablet should be supplied?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_1"><input type="checkbox" class="ck ce" id="e5_1"><div class="ptq">Number = ?</div><div class="btns"><label class="b ba" for="a5_1">✓ Show Answer</label><label class="b be" for="e5_1">💡 Explain</label></div><div class="box ans"><p><b>10 capsules</b></p><p>Number of capsules: 2 (per day)<br>Duration is 5/7 = 5 days<br>Total number of capsules: 2 × 5 = 10</p></div><div class="box ex"><p>4/7 = days, 2/52 = weeks, 3/12 = months.<br><span class="same">⚠️ The slide says "tablet" but means the capsules.</span></p></div></div></article><article class="aB"><span class="qno">2</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.1 · Page 113</div><button type="button" class="bw bws" data-k="pc5q_2">✍️ Solve here</button></div><div class="qt">Calculate the total number of tablets to be dispensed if a prescription requires two tablets of drug X three times a day for 7 days.</div><div class="part"><input type="checkbox" class="ck ca" id="a5_2"><input type="checkbox" class="ck ce" id="e5_2"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_2">✓ Show Answer</label><label class="b be" for="e5_2">💡 Explain</label></div><div class="box ans"><p><b>42 tablets</b></p><p>Per day: 2 × 3 = 6<br>7 days: 6 × 7 = 42</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">3</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.2 · Page 114</div><button type="button" class="bw bws" data-k="pc5q_3">✍️ Solve here</button></div><div class="qt">A prescription requires two suppositories of drug Y daily for 3/7. How many suppositories should be supplied?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_3"><input type="checkbox" class="ck ce" id="e5_3"><div class="ptq">Suppositories = ?</div><div class="btns"><label class="b ba" for="a5_3">✓ Show Answer</label><label class="b be" for="e5_3">💡 Explain</label></div><div class="box ans"><p><b>6</b></p><p>3/7 = 3 days<br>2 × 3 = 6</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">4</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.6 · Page 117</div><button type="button" class="bw bws" data-k="pc5q_4">✍️ Solve here</button></div><div class="qt">A prescription requires a patient to receive 20 mg domperidone (in tablet form) every 8 hours for 4 weeks. Domperidone is available only as 10-mg tablets. How many tablets?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_4"><input type="checkbox" class="ck ce" id="e5_4"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_4">✓ Show Answer</label><label class="b be" for="e5_4">💡 Explain</label></div><div class="box ans"><p><b>168 tablets</b></p><p>20 mg = two 10-mg tablets<br>Every 8 hours = 3 times a day → 6 tablets/day<br>4 weeks = 28 days → 6 × 28 = 168</p></div><div class="box ex"><p>Every 8 h = 24/8 = 3 doses a day.</p></div></div></article><article class="aB"><span class="qno">5</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.7 · Page 118</div><button type="button" class="bw bws" data-k="pc5q_5">✍️ Solve here</button></div><div class="qt">A patient requires 8 mg of drug X per day for 1 week followed by 7 mg per day for the next week. Drug X is available in tablets of 1 mg and 4 mg. How many tablets of each strength?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_5"><input type="checkbox" class="ck ce" id="e5_5"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_5">✓ Show Answer</label><label class="b be" for="e5_5">💡 Explain</label></div><div class="box ans"><p><b>21 × 4-mg and 21 × 1-mg</b></p><p>Week 1: 8 mg = 2 × 4 mg → 14 × 4-mg<br>Week 2: 7 mg = 1 × 4 mg + 3 × 1 mg → 7 × 4-mg + 21 × 1-mg<br>Total: 21 × 4-mg, 21 × 1-mg</p></div><div class="box ex"><p>Use the fewest tablets for each dose.</p></div></div></article><article class="aB"><span class="qno">6</span><div class="qh"><div class="srcl sB">Textbook Question · Q1 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_6">✍️ Solve here</button></div><div class="qt">A patient is prescribed two tablets of drug A four times a day for 3 months. How many tablets?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_6"><input type="checkbox" class="ck ce" id="e5_6"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_6">✓ Show Answer</label><label class="b be" for="e5_6">💡 Explain</label></div><div class="box ans"><p><b>672</b></p><p>2 × 4 = 8/day<br>3 months = 3 × 28 = 84 days<br>8 × 84 = 672</p></div><div class="box ex"><p>1 month = 28 days (as the book uses: 1/12 = 4 weeks).</p></div></div></article><article class="aB"><span class="qno">7</span><div class="qh"><div class="srcl sB">Textbook Question · Q2 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_7">✍️ Solve here</button></div><div class="qt">A customer buys a pack of 100 vitamin capsules. The dosage regimen is one capsule three times a day. How many days will the pack last?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_7"><input type="checkbox" class="ck ce" id="e5_7"><div class="ptq">Days = ?</div><div class="btns"><label class="b ba" for="a5_7">✓ Show Answer</label><label class="b be" for="e5_7">💡 Explain</label></div><div class="box ans"><p><b>33 days</b></p><p>100 / 3 = 33.3 → 33 days</p></div><div class="box ex"><p>Total ÷ amount used per day.</p></div></div></article><article class="aB"><span class="qno">8</span><div class="qh"><div class="srcl sB">Textbook Question · Q3 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_8">✍️ Solve here</button></div><div class="qt">An inhaler contains 200 metered doses. If the patient inhales two doses three times a day, how long will the inhaler last?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_8"><input type="checkbox" class="ck ce" id="e5_8"><div class="ptq">Days = ?</div><div class="btns"><label class="b ba" for="a5_8">✓ Show Answer</label><label class="b be" for="e5_8">💡 Explain</label></div><div class="box ans"><p><b>33 days</b></p><p>2 × 3 = 6 doses/day<br>200 / 6 = 33.3 → 33 days</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">9</span><div class="qh"><div class="srcl sB">Textbook Question · Q4 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_9">✍️ Solve here</button></div><div class="qt">Analgesic suppositories to be used six times a day for 5 days, then three times a day for 3 days. How many suppositories?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_9"><input type="checkbox" class="ck ce" id="e5_9"><div class="ptq">Suppositories = ?</div><div class="btns"><label class="b ba" for="a5_9">✓ Show Answer</label><label class="b be" for="e5_9">💡 Explain</label></div><div class="box ans"><p><b>39</b></p><p>6 × 5 = 30<br>3 × 3 = 9<br>30 + 9 = 39</p></div><div class="box ex"><p>Add each stage.</p></div></div></article><article class="aB"><span class="qno">10</span><div class="qh"><div class="srcl sB">Textbook Question · Q5 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_10">✍️ Solve here</button></div><div class="qt">A patient needs 8 weeks' antimalarial treatment. Drug A: one tablet per week; drug B: two tablets daily. How many tablets of A and B?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_10"><input type="checkbox" class="ck ce" id="e5_10"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_10">✓ Show Answer</label><label class="b be" for="e5_10">💡 Explain</label></div><div class="box ans"><p><b>8 of A; 112 of B</b></p><p>A: 1 × 8 = 8<br>B: 2 × 56 days = 112</p></div><div class="box ex"><p>8 weeks = 56 days.</p></div></div></article><article class="aB"><span class="qno">11</span><div class="qh"><div class="srcl sB">Textbook Question · Q6 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_11">✍️ Solve here</button></div><div class="qt">A residential home buys a 1000 pack of senna tablets. Each of 35 residents takes two tablets each night. How long will it last?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_11"><input type="checkbox" class="ck ce" id="e5_11"><div class="ptq">Days = ?</div><div class="btns"><label class="b ba" for="a5_11">✓ Show Answer</label><label class="b be" for="e5_11">💡 Explain</label></div><div class="box ans"><p><b>14 days</b></p><p>35 × 2 = 70/night<br>1000 / 70 = 14.28 → 14 days</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">12</span><div class="qh"><div class="srcl sB">Textbook Question · Q7 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_12">✍️ Solve here</button></div><div class="qt">Charcoal sachets: two sachets three times a day for 1/12. How many sachets?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_12"><input type="checkbox" class="ck ce" id="e5_12"><div class="ptq">Sachets = ?</div><div class="btns"><label class="b ba" for="a5_12">✓ Show Answer</label><label class="b be" for="e5_12">💡 Explain</label></div><div class="box ans"><p><b>168</b></p><p>2 × 3 = 6/day<br>1/12 = 28 days → 6 × 28 = 168</p></div><div class="box ex"><p>1 month = 28 days (as the book uses: 1/12 = 4 weeks).</p></div></div></article><article class="aB"><span class="qno">13</span><div class="qh"><div class="srcl sB">Textbook Question · Q8 · Page 125</div><button type="button" class="bw bws" data-k="pc5q_13">✍️ Solve here</button></div><div class="qt">Drug Y: three capsules twice a day for 3/7, two capsules twice a day for 3/7, one capsule twice a day for 2/52. How many capsules?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_13"><input type="checkbox" class="ck ce" id="e5_13"><div class="ptq">Capsules = ?</div><div class="btns"><label class="b ba" for="a5_13">✓ Show Answer</label><label class="b be" for="e5_13">💡 Explain</label></div><div class="box ans"><p><b>58</b></p><p>3 × 2 × 3 = 18<br>2 × 2 × 3 = 12<br>1 × 2 × 14 = 28<br>18 + 12 + 28 = 58</p></div><div class="box ex"><p>2/52 = 14 days.</p></div></div></article><article class="aB"><span class="qno">14</span><div class="qh"><div class="srcl sB">Textbook Question · Q9 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_14">✍️ Solve here</button></div><div class="qt">A sachet of 0.9% saline is used to bathe an eye. Bathe both eyes twice a day for 1/12. How many sachets?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_14"><input type="checkbox" class="ck ce" id="e5_14"><div class="ptq">Sachets = ?</div><div class="btns"><label class="b ba" for="a5_14">✓ Show Answer</label><label class="b be" for="e5_14">💡 Explain</label></div><div class="box ans"><p><b>112</b></p><p>2 eyes × 2 times = 4/day<br>4 × 28 = 112</p></div><div class="box ex"><p>One sachet per eye each time.</p></div></div></article><article class="aB"><span class="qno">15</span><div class="qh"><div class="srcl sB">Textbook Question · Q10 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_15">✍️ Solve here</button></div><div class="qt">A patient going on holiday for 3 weeks is supplied 168 tablets. Regimen: two tablets four times a day. Enough?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_15"><input type="checkbox" class="ck ce" id="e5_15"><div class="ptq">Enough?</div><div class="btns"><label class="b ba" for="a5_15">✓ Show Answer</label><label class="b be" for="e5_15">💡 Explain</label></div><div class="box ans"><p><b>Yes</b></p><p>2 × 4 = 8/day × 21 days = 168 → exactly enough</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">16</span><div class="qh"><div class="srcl sB">Textbook Question · Q11 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_16">✍️ Solve here</button></div><div class="qt">One nicotine patch every 3 days. How many patches for 3 months?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_16"><input type="checkbox" class="ck ce" id="e5_16"><div class="ptq">Patches = ?</div><div class="btns"><label class="b ba" for="a5_16">✓ Show Answer</label><label class="b be" for="e5_16">💡 Explain</label></div><div class="box ans"><p><b>28</b></p><p>3 months = 84 days<br>84 / 3 = 28</p></div><div class="box ex"><p>1 month = 28 days (as the book uses: 1/12 = 4 weeks).</p></div></div></article><article class="aB"><span class="qno">17</span><div class="qh"><div class="srcl sB">Textbook Question · Q12 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_17">✍️ Solve here</button></div><div class="qt">A pack contains 56 tablets. Regimen: one tablet four times a day for 4 weeks. How many packs?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_17"><input type="checkbox" class="ck ce" id="e5_17"><div class="ptq">Packs = ?</div><div class="btns"><label class="b ba" for="a5_17">✓ Show Answer</label><label class="b be" for="e5_17">💡 Explain</label></div><div class="box ans"><p><b>2</b></p><p>4 × 28 = 112 tablets<br>112 / 56 = 2 packs</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">18</span><div class="qh"><div class="srcl sB">Textbook Question · Q13 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_18">✍️ Solve here</button></div><div class="qt">A pack of 84 tablets is designed to last 1 month. If the patient takes one dose twice a day, what is the dose?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_18"><input type="checkbox" class="ck ce" id="e5_18"><div class="ptq">Dose = ?</div><div class="btns"><label class="b ba" for="a5_18">✓ Show Answer</label><label class="b be" for="e5_18">💡 Explain</label></div><div class="box ans"><p><b>1.5 tablets</b></p><p>2 doses × 28 days = 56 doses<br>84 / 56 = 1.5 tablets per dose</p></div><div class="box ex"><p>1 month = 28 days (as the book uses: 1/12 = 4 weeks).</p></div></div></article><article class="aB"><span class="qno">19</span><div class="qh"><div class="srcl sB">Textbook Question · Q23 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_19">✍️ Solve here</button></div><div class="qt">A scored tablet contains 100 mg of drug X. Prescription: 50 mg three times a day for 10 days. How many tablets?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_19"><input type="checkbox" class="ck ce" id="e5_19"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_19">✓ Show Answer</label><label class="b be" for="e5_19">💡 Explain</label></div><div class="box ans"><p><b>15</b></p><p>50 mg = ½ tablet<br>½ × 3 × 10 = 15</p></div><div class="box ex"><p>Scored = can be split in half.</p></div></div></article><article class="aB"><span class="qno">20</span><div class="qh"><div class="srcl sB">Textbook Question · Q24 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_20">✍️ Solve here</button></div><div class="qt">Drug Z is only available as a 62.5-mg capsule. Prescription: 125 mg four times a day for 1/12. How many capsules?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_20"><input type="checkbox" class="ck ce" id="e5_20"><div class="ptq">Capsules = ?</div><div class="btns"><label class="b ba" for="a5_20">✓ Show Answer</label><label class="b be" for="e5_20">💡 Explain</label></div><div class="box ans"><p><b>224</b></p><p>125 mg = 2 capsules<br>2 × 4 × 28 = 224</p></div><div class="box ex"><p>1 month = 28 days (as the book uses: 1/12 = 4 weeks).</p></div></div></article><article class="aB"><span class="qno">21</span><div class="qh"><div class="srcl sB">Textbook Question · Q25 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_23">✍️ Solve here</button></div><div class="qt">Drug A is available as a 500-microgram tablet. A patient requires 2 mg four times a day for 3/7 and 1.5 mg for 5/7.</div><div class="part"><input type="checkbox" class="ck ca" id="a5_21"><input type="checkbox" class="ck ce" id="e5_21"><div class="ptq"><span class="pl">a.</span> Tablets for a 2-mg dose = ?</div><div class="btns"><label class="b ba" for="a5_21">✓ Show Answer</label><label class="b be" for="e5_21">💡 Explain</label></div><div class="box ans"><p><b>4 tablets</b></p><p>2 mg = 2000 micrograms / 500 = 4</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a5_22"><input type="checkbox" class="ck ce" id="e5_22"><div class="ptq"><span class="pl">b.</span> Tablets for a 1.5-mg dose = ?</div><div class="btns"><label class="b ba" for="a5_22">✓ Show Answer</label><label class="b be" for="e5_22">💡 Explain</label></div><div class="box ans"><p><b>3 tablets</b></p><p>1500 / 500 = 3</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a5_23"><input type="checkbox" class="ck ce" id="e5_23"><div class="ptq"><span class="pl">c.</span> Total tablets = ?</div><div class="btns"><label class="b ba" for="a5_23">✓ Show Answer</label><label class="b be" for="e5_23">💡 Explain</label></div><div class="box ans"><p><b>63</b></p><p>4 × 4 × 3 = 48<br>3 × 1 × 5 = 15 (1.5 mg once a day)<br>48 + 15 = 63</p></div><div class="box ex"><p>The book's total (63) takes the 1.5-mg dose as once daily.</p></div></div></article><article class="aB"><span class="qno">22</span><div class="qh"><div class="srcl sB">Textbook Question · Q26 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_24">✍️ Solve here</button></div><div class="qt">Drug B: 500 mg twice a day for 5 days; available as 250-mg capsules. How many capsules?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_24"><input type="checkbox" class="ck ce" id="e5_24"><div class="ptq">Capsules = ?</div><div class="btns"><label class="b ba" for="a5_24">✓ Show Answer</label><label class="b be" for="e5_24">💡 Explain</label></div><div class="box ans"><p><b>20</b></p><p>500 mg = 2 capsules<br>2 × 2 × 5 = 20</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">23</span><div class="qh"><div class="srcl sB">Textbook Question · Q27 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_25">✍️ Solve here</button></div><div class="qt">Drug A is available as 2.5-mg and 5-mg tablets. Prescription: 7.5 mg TDS for 5 days, then 5 mg QDS for 3 days, then 5 mg BD for 3 days, then 2.5 mg TDS for 7 days. How many of each?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_25"><input type="checkbox" class="ck ce" id="e5_25"><div class="ptq">Tablets = ?</div><div class="btns"><label class="b ba" for="a5_25">✓ Show Answer</label><label class="b be" for="e5_25">💡 Explain</label></div><div class="box ans"><p><b>33 × 5-mg; 36 × 2.5-mg</b></p><p><div class="pst"><table class="ps"><tr><th>stage</th><th>5-mg</th><th>2.5-mg</th></tr><tr><td>7.5 mg × 3 × 5</td><td>15</td><td>15</td></tr><tr><td>5 mg × 4 × 3</td><td>12</td><td>0</td></tr><tr><td>5 mg × 2 × 3</td><td>6</td><td>0</td></tr><tr><td>2.5 mg × 3 × 7</td><td>0</td><td>21</td></tr><tr><td>Total</td><td>33</td><td>36</td></tr></table></div>7.5 mg = one 5-mg + one 2.5-mg</p></div><div class="box ex"><p>TDS = 3×/day, QDS = 4×/day, BD = 2×/day.</p></div></div></article></section><section id="c5s1"><div class="sh"><h2>2. Oral Liquid Formulations</h2><p>1 lecture · 13 textbook questions</p></div><article class="aL"><span class="qno">24</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 9</div><button type="button" class="bw bws" data-k="pc5q_28">✍️ Solve here</button></div><div class="qt">A prescription of indigestion mixture with dosage regimen of 20 ml four times daily for 5 days.</div><div class="part"><input type="checkbox" class="ck ca" id="a5_26"><input type="checkbox" class="ck ce" id="e5_26"><div class="ptq"><span class="pl">A.</span> How many 5 ml spoonful of mixture required for each dose?</div><div class="btns"><label class="b ba" for="a5_26">✓ Show Answer</label><label class="b be" for="e5_26">💡 Explain</label></div><div class="box ans"><p><b>4 spoonfuls</b></p><p>20 / 5 = 4 × 5-ml spoonfuls</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a5_27"><input type="checkbox" class="ck ce" id="e5_27"><div class="ptq"><span class="pl">B.</span> Calculate the number of doses.</div><div class="btns"><label class="b ba" for="a5_27">✓ Show Answer</label><label class="b be" for="e5_27">💡 Explain</label></div><div class="box ans"><p><b>20 doses</b></p><p>4 × 5 = 20 doses</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a5_28"><input type="checkbox" class="ck ce" id="e5_28"><div class="ptq"><span class="pl">C.</span> Calculate the total volume of mixture that should be supplied.</div><div class="btns"><label class="b ba" for="a5_28">✓ Show Answer</label><label class="b be" for="e5_28">💡 Explain</label></div><div class="box ans"><p><b>400 ml</b></p><p>20 doses × 20 ml = 400 ml</p></div><div class="box ex"><p>No answer on the slide — same method as Example 7.3.</p></div></div></article><article class="aB"><span class="qno">25</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.3 · Page 115</div><button type="button" class="bw bws" data-k="pc5q_29">✍️ Solve here</button></div><div class="qt">Indigestion mixture: 15 mL four times a day for 5 days. How many 5-mL spoonfuls per dose? Number of doses and total volume?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_29"><input type="checkbox" class="ck ce" id="e5_29"><div class="ptq">Spoonfuls, doses, volume = ?</div><div class="btns"><label class="b ba" for="a5_29">✓ Show Answer</label><label class="b be" for="e5_29">💡 Explain</label></div><div class="box ans"><p><b>3 spoonfuls; 20 doses; 300 mL</b></p><p>15 / 5 = 3 spoonfuls<br>4 × 5 = 20 doses<br>20 × 15 = 300 mL</p></div><div class="box ex"><p>Like Slide 9 but 15 mL.</p></div></div></article><article class="aB"><span class="qno">26</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.4 · Page 115</div><button type="button" class="bw bws" data-k="pc5q_30">✍️ Solve here</button></div><div class="qt">A 100-mL bottle of antihistamine mixture; dosage two 5-mL spoonfuls four times a day. How many days will it last?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_30"><input type="checkbox" class="ck ce" id="e5_30"><div class="ptq">Days = ?</div><div class="btns"><label class="b ba" for="a5_30">✓ Show Answer</label><label class="b be" for="e5_30">💡 Explain</label></div><div class="box ans"><p><b>2.5 days</b></p><p>10 mL × 4 = 40 mL/day<br>100 / 40 = 2.5 days</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">27</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.8 · Page 119</div><button type="button" class="bw bws" data-k="pc5q_31">✍️ Solve here</button></div><div class="qt">360 mg of paracetamol four times a day for 3 days, supplied as 120 mg/5 mL suspension. Volume to supply?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_31"><input type="checkbox" class="ck ce" id="e5_31"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_31">✓ Show Answer</label><label class="b be" for="e5_31">💡 Explain</label></div><div class="box ans"><p><b>180 mL</b></p><p><div class="pst"><table class="ps"><tr><td>paracetamol (mg)</td><td>360</td><td>120</td></tr><tr><td>suspension (mL)</td><td>y</td><td>5</td></tr></table></div>y = 5 × 360 / 120 = 15 mL<br>15 × 4 × 3 = 180 mL</p></div><div class="box ex"><p>mg → mL first, then total.</p></div></div></article><article class="aB"><span class="qno">28</span><div class="qh"><div class="srcl sB">Textbook Question · Q14 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_32">✍️ Solve here</button></div><div class="qt">How many 5-mL doses are contained in 120 mL of mixture?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_32"><input type="checkbox" class="ck ce" id="e5_32"><div class="ptq">Doses = ?</div><div class="btns"><label class="b ba" for="a5_32">✓ Show Answer</label><label class="b be" for="e5_32">💡 Explain</label></div><div class="box ans"><p><b>24</b></p><p>120 / 5 = 24</p></div><div class="box ex"><p>Total ÷ dose.</p></div></div></article><article class="aB"><span class="qno">29</span><div class="qh"><div class="srcl sB">Textbook Question · Q15 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_33">✍️ Solve here</button></div><div class="qt">30 mL of mouthwash twice a day for a 14-day course. Volume to supply?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_33"><input type="checkbox" class="ck ce" id="e5_33"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_33">✓ Show Answer</label><label class="b be" for="e5_33">💡 Explain</label></div><div class="box ans"><p><b>840 mL</b></p><p>30 × 2 × 14 = 840 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">30</span><div class="qh"><div class="srcl sB">Textbook Question · Q16 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_34">✍️ Solve here</button></div><div class="qt">Indigestion mixture: 15 mL four times a day for 2/52. How much to dispense?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_34"><input type="checkbox" class="ck ce" id="e5_34"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_34">✓ Show Answer</label><label class="b be" for="e5_34">💡 Explain</label></div><div class="box ans"><p><b>840 mL</b></p><p>15 × 4 = 60 mL/day<br>2/52 = 14 days → 60 × 14 = 840 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">31</span><div class="qh"><div class="srcl sB">Textbook Question · Q17 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_35">✍️ Solve here</button></div><div class="qt">How many 15-mL doses are contained in 240 mL of mixture?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_35"><input type="checkbox" class="ck ce" id="e5_35"><div class="ptq">Doses = ?</div><div class="btns"><label class="b ba" for="a5_35">✓ Show Answer</label><label class="b be" for="e5_35">💡 Explain</label></div><div class="box ans"><p><b>16</b></p><p>240 / 15 = 16</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">32</span><div class="qh"><div class="srcl sB">Textbook Question · Q18 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_36">✍️ Solve here</button></div><div class="qt">10 mL of laxative solution at night. Volume used in a month?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_36"><input type="checkbox" class="ck ce" id="e5_36"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_36">✓ Show Answer</label><label class="b be" for="e5_36">💡 Explain</label></div><div class="box ans"><p><b>280 mL</b></p><p>10 × 28 = 280 mL</p></div><div class="box ex"><p>1 month = 28 days (as the book uses: 1/12 = 4 weeks).</p></div></div></article><article class="aB"><span class="qno">33</span><div class="qh"><div class="srcl sB">Textbook Question · Q19 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_37">✍️ Solve here</button></div><div class="qt">A 150-mL bottle of cough elixir. Each of two children gets 5 mL four times a day for 3 days. How many doses left?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_37"><input type="checkbox" class="ck ce" id="e5_37"><div class="ptq">Doses left = ?</div><div class="btns"><label class="b ba" for="a5_37">✓ Show Answer</label><label class="b be" for="e5_37">💡 Explain</label></div><div class="box ans"><p><b>6</b></p><p>150 / 5 = 30 doses<br>Used: 2 × 4 × 3 = 24<br>30 − 24 = 6</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">34</span><div class="qh"><div class="srcl sB">Textbook Question · Q21 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_38">✍️ Solve here</button></div><div class="qt">7.5 mL of a mixture four times a day for 3/52. Volume to supply?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_38"><input type="checkbox" class="ck ce" id="e5_38"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_38">✓ Show Answer</label><label class="b be" for="e5_38">💡 Explain</label></div><div class="box ans"><p><b>630 mL</b></p><p>7.5 × 4 = 30 mL/day × 21 days = 630 mL</p></div><div class="box ex"><p>3/52 = 21 days.</p></div></div></article><article class="aB"><span class="qno">35</span><div class="qh"><div class="srcl sB">Textbook Question · Q28 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_39">✍️ Solve here</button></div><div class="qt">Drug Z: 62.5 mg three times a day for 5 days; available as 250 mg/5 mL suspension. Volume of each dose and total?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_39"><input type="checkbox" class="ck ce" id="e5_39"><div class="ptq">Dose volume and total = ?</div><div class="btns"><label class="b ba" for="a5_39">✓ Show Answer</label><label class="b be" for="e5_39">💡 Explain</label></div><div class="box ans"><p><b>1.25 mL per dose; 18.75 mL</b></p><p>62.5 × 5 / 250 = 1.25 mL<br>1.25 × 3 × 5 = 18.75 mL</p></div><div class="box ex"><p>Less than 5 mL → oral syringe.</p></div></div></article><article class="aB"><span class="qno">36</span><div class="qh"><div class="srcl sB">Textbook Question · Q29 · Page 128</div><button type="button" class="bw bws" data-k="pc5q_40">✍️ Solve here</button></div><div class="qt">Drug X: 240 mg four times a day; send 100 mL of 120 mg/5 mL mixture. How many days will it last?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_40"><input type="checkbox" class="ck ce" id="e5_40"><div class="ptq">Days = ?</div><div class="btns"><label class="b ba" for="a5_40">✓ Show Answer</label><label class="b be" for="e5_40">💡 Explain</label></div><div class="box ans"><p><b>2.5 days</b></p><p>240 mg = 10 mL<br>10 × 4 = 40 mL/day<br>100 / 40 = 2.5 days</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">37</span><div class="qh"><div class="srcl sB">Textbook Question · Q31 · Page 128</div><button type="button" class="bw bws" data-k="pc5q_41">✍️ Solve here</button></div><div class="qt">Elixir 150 mg/5 mL. Prescription: 225 mg four times a day for 7 days. Volume to supply?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_41"><input type="checkbox" class="ck ce" id="e5_41"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_41">✓ Show Answer</label><label class="b be" for="e5_41">💡 Explain</label></div><div class="box ans"><p><b>210 mL</b></p><p>225 × 5 / 150 = 7.5 mL<br>7.5 × 4 × 7 = 210 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article></section><section id="c5s2"><div class="sh"><h2>3. Dose Volumes Less Than 5 ml</h2><p>1 lecture · 4 textbook questions</p></div><article class="aL"><span class="qno">38</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 12</div><button type="button" class="bw bws" data-k="pc5q_42">✍️ Solve here</button></div><div class="qt">A prescription states: 2.5 ml three times daily for 4/7. What volume of drug should be dispensed?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_42"><input type="checkbox" class="ck ce" id="e5_42"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_42">✓ Show Answer</label><label class="b be" for="e5_42">💡 Explain</label></div><div class="box ans"><p><b>30 ml</b></p><p>Number of doses: 3<br>Volume of each dose: 2.5 ml<br>Daily: 3 × 2.5 = 7.5 ml<br>Total for 4 days: 7.5 × 4 = 30 ml</p></div><div class="box ex"><p>Less than 5 ml → give a 5 ml oral syringe (0.5 ml divisions).</p></div></div></article><article class="aB"><span class="qno">39</span><div class="qh"><div class="srcl sB">Textbook Question · Q20 · Page 126</div><button type="button" class="bw bws" data-k="pc5q_43">✍️ Solve here</button></div><div class="qt">A prescription for a young child reads: 2.5 mL three times a day for 4/7. What volume should be dispensed? <span class="same">(Same as the lecture question on Slide 12.)</span></div><div class="part"><input type="checkbox" class="ck ca" id="a5_43"><input type="checkbox" class="ck ce" id="e5_43"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_43">✓ Show Answer</label><label class="b be" for="e5_43">💡 Explain</label></div><div class="box ans"><p><b>30 mL</b></p><p>2.5 × 3 × 4 = 30 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">40</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.5 · Page 117</div><button type="button" class="bw bws" data-k="pc5q_44">✍️ Solve here</button></div><div class="qt">A very young child is prescribed 2.0 mL of an analgesic suspension three times a day for 4/7. How many mL to dispense?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_44"><input type="checkbox" class="ck ce" id="e5_44"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_44">✓ Show Answer</label><label class="b be" for="e5_44">💡 Explain</label></div><div class="box ans"><p><b>24 mL</b></p><p>2.0 × 3 = 6.0 mL/day<br>4 × 6 = 24 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">41</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.9 · Page 120</div><button type="button" class="bw bws" data-k="pc5q_45">✍️ Solve here</button></div><div class="qt">What volume of paracetamol suspension (250 mg/5 mL) would provide a dose of 200 mg?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_45"><input type="checkbox" class="ck ce" id="e5_45"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_45">✓ Show Answer</label><label class="b be" for="e5_45">💡 Explain</label></div><div class="box ans"><p><b>4 mL</b></p><p>y = 5 × 200 / 250 = 4 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">42</span><div class="qh"><div class="srcl sB">Textbook Question · Q22 · Page 127</div><button type="button" class="bw bws" data-k="pc5q_46">✍️ Solve here</button></div><div class="qt">A pack contains 30 mL of a syrup. How many days will it last if the dose is 0.5 mL three times a day?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_46"><input type="checkbox" class="ck ce" id="e5_46"><div class="ptq">Days = ?</div><div class="btns"><label class="b ba" for="a5_46">✓ Show Answer</label><label class="b be" for="e5_46">💡 Explain</label></div><div class="box ans"><p><b>20 days</b></p><p>0.5 × 3 = 1.5 mL/day<br>30 / 1.5 = 20 days</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article></section><section id="c5s3" class="noL"><div class="sh"><h2>4. Injections & Units</h2><p>6 textbook questions</p></div><article class="aB"><span class="qno">43</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.10 · Page 120</div><button type="button" class="bw bws" data-k="pc5q_47">✍️ Solve here</button></div><div class="qt">A patient requires an IM injection of 0.5 mg of adrenaline. Adrenaline injection contains 100 micrograms/mL. How many mL?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_47"><input type="checkbox" class="ck ce" id="e5_47"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a5_47">✓ Show Answer</label><label class="b be" for="e5_47">💡 Explain</label></div><div class="box ans"><p><b>5 mL</b></p><p>0.5 mg = 500 micrograms<br>y = 500 / 100 = 5 mL</p></div><div class="box ex"><p>Don't confuse micrograms with milligrams.</p></div></div></article><article class="aB"><span class="qno">44</span><div class="qh"><div class="srcl sB">Textbook Question · Q32 · Page 128</div><button type="button" class="bw bws" data-k="pc5q_48">✍️ Solve here</button></div><div class="qt">15 mg of morphine sulfate SC every 4 hours for 16 hours; injection 20 mg/mL. Volume per dose and total morphine?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_48"><input type="checkbox" class="ck ce" id="e5_48"><div class="ptq">Volume per dose and total = ?</div><div class="btns"><label class="b ba" for="a5_48">✓ Show Answer</label><label class="b be" for="e5_48">💡 Explain</label></div><div class="box ans"><p><b>0.75 mL per dose; 75 mg</b></p><p>15 / 20 = 0.75 mL<br>Every 4 h for 16 h = 5 doses (0, 4, 8, 12, 16 h)<br>5 × 15 = 75 mg</p></div><div class="box ex"><p>Count the first dose at time 0.</p></div></div></article><article class="aB"><span class="qno">45</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.11 · Page 122</div><button type="button" class="bw bws" data-k="pc5q_49">✍️ Solve here</button></div><div class="qt">Nystatin: 500 000 units every 6 hours. Suspension 100 000 units/mL. Total daily dose and volume for 5 days?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_49"><input type="checkbox" class="ck ce" id="e5_49"><div class="ptq">Daily dose and volume = ?</div><div class="btns"><label class="b ba" for="a5_49">✓ Show Answer</label><label class="b be" for="e5_49">💡 Explain</label></div><div class="box ans"><p><b>2 000 000 units/day; 100 mL</b></p><p>Every 6 h = 4 times a day → 500 000 × 4 = 2 000 000 units<br>Each dose = 5 mL → 20 mL/day × 5 = 100 mL</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">46</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.12 · Page 123</div><button type="button" class="bw bws" data-k="pc5q_50">✍️ Solve here</button></div><div class="qt">Vitamin A drops contain 5000 units/mL; 40 drops/mL. How many drops give 750 units?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_50"><input type="checkbox" class="ck ce" id="e5_50"><div class="ptq">Drops = ?</div><div class="btns"><label class="b ba" for="a5_50">✓ Show Answer</label><label class="b be" for="e5_50">💡 Explain</label></div><div class="box ans"><p><b>6 drops</b></p><p>x = 40 × 750 / 5000 = 6</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article><article class="aB"><span class="qno">47</span><div class="qh"><div class="srcl sB">Textbook Question · Example 7.13 · Page 124</div><button type="button" class="bw bws" data-k="pc5q_51">✍️ Solve here</button></div><div class="qt">Product A: 8 mg vitamin A (retinyl acetate) + 400 IU ergocalciferol. Product B: 2500 IU vitamin A + 10 micrograms vitamin D. Which contains the most vitamins? (Vit A: 1 IU = 0.344 micrograms; Vit D: 40 IU = 1 microgram)</div><div class="part"><input type="checkbox" class="ck ca" id="a5_51"><input type="checkbox" class="ck ce" id="e5_51"><div class="ptq">Which product?</div><div class="btns"><label class="b ba" for="a5_51">✓ Show Answer</label><label class="b be" for="e5_51">💡 Explain</label></div><div class="box ans"><p><b>Product A</b></p><p>A: 8000 / 0.344 = 23 256 IU vitamin A<br>A: 400 / 40 = 10 micrograms vitamin D<br>B: 2500 IU vitamin A, 10 micrograms vitamin D<br>Same vitamin D, more vitamin A in A</p></div><div class="box ex"><p>Convert to the same units before comparing.</p></div></div></article><article class="aB"><span class="qno">48</span><div class="qh"><div class="srcl sB">Textbook Question · Q30 · Page 128</div><button type="button" class="bw bws" data-k="pc5q_52">✍️ Solve here</button></div><div class="qt">A solution contains 500 units/mL; pack size 25 mL. 2500 units three times a day for 5 days. How many packs?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_52"><input type="checkbox" class="ck ce" id="e5_52"><div class="ptq">Packs = ?</div><div class="btns"><label class="b ba" for="a5_52">✓ Show Answer</label><label class="b be" for="e5_52">💡 Explain</label></div><div class="box ans"><p><b>3 packs</b></p><p>2500 / 500 = 5 mL per dose<br>5 × 3 × 5 = 75 mL<br>75 / 25 = 3 packs</p></div><div class="box ex"><p>Per dose → per day → × number of days.</p></div></div></article></section><section id="c5s4"><div class="sh"><h2>5. Doses Based on Body Weight</h2><p>3 lecture questions</p></div><article class="aL"><span class="qno">49</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 15</div><button type="button" class="bw bws" data-k="pc5q_53">✍️ Solve here</button></div><div class="qt">The usual dose of chlorambucil is 150 mcg/kg once a day. How many milligrams should be administered to a person weighing 154 lb?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_53"><input type="checkbox" class="ck ce" id="e5_53"><div class="ptq">Dose (mg) = ?</div><div class="btns"><label class="b ba" for="a5_53">✓ Show Answer</label><label class="b be" for="e5_53">💡 Explain</label></div><div class="box ans"><p><b>10.5 mg</b></p><p>154 lb / 2.2 = 70 kg<br>150 mcg × 70 = 10 500 mcg = 10.5 mg</p></div><div class="box ex"><p>1 kg = 2.2 lb. No answer on the slide.</p></div></div></article><article class="aL"><span class="qno">50</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 16</div><button type="button" class="bw bws" data-k="pc5q_54">✍️ Solve here</button></div><div class="qt">Normal gentamicin dose is 3 mg/kg/day in three divided doses. What would be the single (8-hour) dose for a patient weighing 165 lb scheduled to receive only 40% of the usual dose (renal impairment)?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_54"><input type="checkbox" class="ck ce" id="e5_54"><div class="ptq">Single dose = ?</div><div class="btns"><label class="b ba" for="a5_54">✓ Show Answer</label><label class="b be" for="e5_54">💡 Explain</label></div><div class="box ans"><p><b>30 mg</b></p><p>165 / 2.2 = 75 kg<br>3 × 75 = 225 mg/day<br>40% → 225 × 0.4 = 90 mg/day<br>÷ 3 doses = 30 mg every 8 hours</p></div><div class="box ex"><p>kg → daily dose → % → divide. No answer on the slide.</p></div></div></article><article class="aL"><span class="qno">51</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 17</div><button type="button" class="bw bws" data-k="pc5q_55">✍️ Solve here</button></div><div class="qt">A patient weighing 120 lb was administered 2.1 g of a drug supposed to be dosed at 30 mg/kg. Correct, overdose or underdose?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_55"><input type="checkbox" class="ck ce" id="e5_55"><div class="ptq">Verdict?</div><div class="btns"><label class="b ba" for="a5_55">✓ Show Answer</label><label class="b be" for="e5_55">💡 Explain</label></div><div class="box ans"><p><b>Overdose</b></p><p>120 / 2.2 = 54.5 kg<br>30 × 54.5 = 1636 mg ≈ 1.64 g<br>2.1 g &gt; 1.64 g → overdose</p></div><div class="box ex"><p>Compare what was given with what should be given. No answer on the slide.</p></div></div></article></section><section id="c5s5"><div class="sh"><h2>6. Doses Based on Body Surface Area (BSA)</h2><p>3 lecture questions</p></div><article class="aL"><span class="qno">52</span><div class="qh"><div class="srcl sL">Lecture Question · Slides 18–20</div><button type="button" class="bw bws" data-k="pc5q_56">✍️ Solve here</button></div><div class="qt">BSA = √(Ht (cm) × Wt (kg) / 3600) (average adult = 1.73 m²). If the dose of a drug is 5 mg/m², what would be the dose for a patient measuring 165 cm and weighing 65 kg?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_56"><input type="checkbox" class="ck ce" id="e5_56"><div class="ptq">Dose = ?</div><div class="btns"><label class="b ba" for="a5_56">✓ Show Answer</label><label class="b be" for="e5_56">💡 Explain</label></div><div class="box ans"><p><b>8.6 mg</b></p><p>BSA = √(165 × 65 / 3600) = √2.979 = 1.73 m²<br>Dose = 5 × 1.73 = 8.6 mg</p></div><div class="box ex"><p>Find BSA first (formula or nomogram). No answer on the slide.</p></div></div></article><article class="aL"><span class="qno">53</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 21</div><button type="button" class="bw bws" data-k="pc5q_57">✍️ Solve here</button></div><div class="qt">The chemotherapy regimen "CAF" during a 21-day cycle is: cyclophosphamide 500 mg/m², D-1; doxorubicin 50 mg/m², D-1; 5-fluorouracil 500 mg/m², D-1, 8. Calculate the dose of each drug per cycle for a patient with a BSA of 1.9 m².</div><div class="part"><input type="checkbox" class="ck ca" id="a5_57"><input type="checkbox" class="ck ce" id="e5_57"><div class="ptq">Doses per cycle = ?</div><div class="btns"><label class="b ba" for="a5_57">✓ Show Answer</label><label class="b be" for="e5_57">💡 Explain</label></div><div class="box ans"><p><b>Cyclophosphamide 950 mg; doxorubicin 95 mg; 5-FU 1900 mg</b></p><p><div class="pst"><table class="ps"><tr><th>drug</th><th>per dose</th><th>days</th><th>per cycle</th></tr><tr><td>Cyclophosphamide</td><td>500 × 1.9 = 950 mg</td><td>1 (D-1)</td><td>950 mg</td></tr><tr><td>Doxorubicin</td><td>50 × 1.9 = 95 mg</td><td>1 (D-1)</td><td>95 mg</td></tr><tr><td>5-Fluorouracil</td><td>500 × 1.9 = 950 mg</td><td>2 (D-1, 8)</td><td>1900 mg</td></tr></table></div></p></div><div class="box ex"><p>"D-1, 8" = given on day 1 and day 8 → twice. No answer on the slide.</p></div></div></article><article class="aL"><span class="qno">54</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 22</div><button type="button" class="bw bws" data-k="pc5q_58">✍️ Solve here</button></div><div class="qt">VAD regimen (multiple myeloma), 28-day cycle: vincristine 0.4 mg/d CIVI, D 1–4; doxorubicin 9 mg/m²/d CIVI, D 1–4; dexamethasone 40 mg/d PO, D 1–4, 9–12, 17–20. Total of each drug per cycle for BSA 1.65 m²?</div><div class="part"><input type="checkbox" class="ck ca" id="a5_58"><input type="checkbox" class="ck ce" id="e5_58"><div class="ptq">Totals = ?</div><div class="btns"><label class="b ba" for="a5_58">✓ Show Answer</label><label class="b be" for="e5_58">💡 Explain</label></div><div class="box ans"><p><b>Vincristine 1.6 mg; doxorubicin 59.4 mg; dexamethasone 480 mg</b></p><p><div class="pst"><table class="ps"><tr><th>drug</th><th>per day</th><th>days</th><th>per cycle</th></tr><tr><td>Vincristine</td><td>0.4 mg</td><td>4</td><td>1.6 mg</td></tr><tr><td>Doxorubicin</td><td>9 × 1.65 = 14.85 mg</td><td>4</td><td>59.4 mg</td></tr><tr><td>Dexamethasone</td><td>40 mg</td><td>12</td><td>480 mg</td></tr></table></div></p></div><div class="box ex"><p>Vincristine and dexamethasone are fixed mg (not per m²). D 1–4, 9–12, 17–20 = 4 + 4 + 4 = 12 days. No answer on the slide.</p></div></div></article></section></div></div><a class="totop" href="#top" aria-label="Back to top">↑</a><script>(function(){
+'use strict';
+document.documentElement.classList.add('mpjs');
+var FN=['log','sin','cos','tan','abs','ln','√'];
+var SEQ=[')/(','log(','sin(','cos(','tan(','abs(','ln(','√(','^('];
+var st={k:null,lines:[''],L:0,c:0,undo:[]};
+var P,LS,TT,layer='123',shift=false;
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+/* ---------- storage ---------- */
+function load(k){try{var v=JSON.parse(localStorage.getItem('bmpad_'+k)||'null');if(v&&v.length)return v.map(String);}catch(e){}return [''];}
+function save(){try{if(st.lines.join('')==='')localStorage.removeItem('bmpad_'+st.k);else localStorage.setItem('bmpad_'+st.k,JSON.stringify(st.lines));}catch(e){}}
+/* ---------- parser for display ---------- */
+function parse(s){
+  var i=0,n=s.length;
+  function fnAt(){for(var f=0;f<FN.length;f++){var nm=FN[f];if(s.substr(i,nm.length)===nm&&s.charAt(i+nm.length)==='(')return nm;}return null;}
+  function atom(){
+    if(i>=n)return null;var ch=s.charAt(i);
+    if(ch===')'||ch==='/'||ch==='^')return null;
+    var nm=fnAt();
+    if(nm){var st0=i;i+=nm.length;return {t:'fn',name:nm,start:st0,g:grp()};}
+    if(ch==='(')return grp();
+    if(/[0-9.]/.test(ch)){var a=i;while(i<n&&/[0-9.]/.test(s.charAt(i)))i++;return {t:'num',a:a,b:i};}
+    i++;return {t:'ch',i:i-1};
+  }
+  function grp(){var o=i;i++;var inner=seq(true);var c=-1;if(i<n&&s.charAt(i)===')'){c=i;i++;}return {t:'grp',o:o,inner:inner,c:c};}
+  function atomSup(){var a=atom();while(i<n&&s.charAt(i)==='^'){var h=i;i++;a={t:'sup',base:a,ex:atom(),h:h};}return a;}
+  function seq(inGrp){
+    var items=[];
+    while(i<n){
+      var ch=s.charAt(i);
+      if(ch===')'){if(inGrp)break;items.push({t:'ch',i:i});i++;continue;}
+      if(ch==='/'){var sl=i;i++;var num=items.length?items.pop():null;items.push({t:'frac',num:num,den:atomSup(),sl:sl});continue;}
+      if(ch==='^'){var h=i;i++;var base=items.length?items.pop():null;items.push({t:'sup',base:base,ex:atom(),h:h});continue;}
+      var a=atom();if(a)items.push(a);else{items.push({t:'ch',i:i});i++;}
+    }
+    return items;
+  }
+  return seq(false);
+}
+function render(s,c){
+  var CR='<span class="cr"></span>';
+  function em(i,txt,cls,noCr){return (i===c&&!noCr?CR:'')+'<span class="'+(cls||'ch')+'" data-i="'+i+'">'+txt+'</span>';}
+  function chTxt(ch){if(ch===' ')return '&#8201;&#8201;';return esc(ch);}
+  function chCls(ch){return /[A-Za-z]/.test(ch)?'ch vr':('=+−×÷≈≠≤≥<>→⇒±'.indexOf(ch)>=0?'ch o':'ch');}
+  var BOX='<span class="bx"></span>';function box(i){return '<span class="bx" data-b="'+i+'"></span>';}
+  function seqH(items){var h='';for(var k=0;k<items.length;k++)h+=node(items[k]);return h;}
+  function bare(nd){
+    if(!nd)return BOX;
+    if(nd.t==='grp'){return em(nd.o,'','hid',1)+(nd.inner.length?seqH(nd.inner):box(nd.o+1))+(nd.c>=0?em(nd.c,'','hid'):'');}
+    return node(nd);
+  }
+  function node(nd){
+    if(!nd)return BOX;
+    switch(nd.t){
+      case 'ch':var ch=s.charAt(nd.i);return em(nd.i,chTxt(ch),chCls(ch));
+      case 'num':var h='';for(var k=nd.a;k<nd.b;k++)h+=em(k,s.charAt(k));return h;
+      case 'grp':return em(nd.o,'(')+(nd.inner.length?seqH(nd.inner):BOX)+(nd.c>=0?em(nd.c,')'):'');
+      case 'sup':return (nd.base?node(nd.base):BOX)+(c===nd.h?CR:'')+'<sup>'+em(nd.h,'','hid',1)+bare(nd.ex)+'</sup>';
+      case 'frac':return ((nd.num&&nd.num.t==='grp'&&c===nd.num.o)?CR:'')+'<span class="fr"><span class="nu">'+bare(nd.num)+(c===nd.sl?CR:'')+'</span><span class="de">'+em(nd.sl,'','hid',1)+bare(nd.den)+'</span></span>';
+      case 'fn':
+        var nm=nd.name,g=nd.g,out='';
+        if(nm==='abs'){for(var q=0;q<3;q++)out+=em(nd.start+q,'','hid');return out+em(g.o,'|')+(g.inner.length?seqH(g.inner):BOX)+(g.c>=0?em(g.c,'|'):'');}
+        if(nm==='√'){return em(nd.start,'√','ch rt')+'<span class="sq">'+bare(g)+'</span>';}
+        for(var q2=0;q2<nm.length;q2++)out+=em(nd.start+q2,nm.charAt(q2),'ch fn');
+        return out+em(g.o,'(')+(g.inner.length?seqH(g.inner):BOX)+(g.c>=0?em(g.c,')'):'');
+    }
+    return '';
+  }
+  var h=seqH(parse(s));
+  if(c===s.length)h+=CR;
+  return h;
+}
+/* ---------- evaluator ---------- */
+function evaluate(src){
+  var t=[],i=0,s=src,n=s.length;
+  while(i<n){
+    var ch=s.charAt(i);
+    if(ch===' '){i++;continue;}
+    if(/[0-9.]/.test(ch)){var a=i,dot=0;while(i<n){var d=s.charAt(i);if(/[0-9]/.test(d))i++;else if(d==='.'&&!dot){dot=1;i++;}else if(d===','&&/[0-9]/.test(s.charAt(i-1))&&/^[0-9]{3}(?![0-9])/.test(s.substr(i+1,4)))i++;else break;}
+      var numS=s.slice(a,i).replace(/,/g,'');if(numS==='.')return null;t.push({k:'n',v:parseFloat(numS)});if(s.charAt(i)==='.'||(s.charAt(i)==='e'&&/[0-9]/.test(s.charAt(i+1)||'')))return null;continue;}
+    var fn=null;for(var f=0;f<FN.length;f++){if(s.substr(i,FN[f].length)===FN[f]){fn=FN[f];break;}}
+    if(fn){t.push({k:'f',v:fn});i+=fn.length;continue;}
+    if(ch==='π'){t.push({k:'n',v:Math.PI});i++;continue;}
+    if(ch==='e'&&!/[A-Za-z]/.test(s.charAt(i+1)||'')&&!/[A-Za-z]/.test(s.charAt(i-1)||'')){t.push({k:'n',v:Math.E});i++;continue;}
+    if('+-−'.indexOf(ch)>=0){t.push({k:ch==='+'?'+':'-'});i++;continue;}
+    if('×·*'.indexOf(ch)>=0){t.push({k:'*'});i++;continue;}
+    if('÷/'.indexOf(ch)>=0){t.push({k:'/'});i++;continue;}
+    if('^()!%'.indexOf(ch)>=0){t.push({k:ch});i++;continue;}
+    return null;
+  }
+  if(!t.length)return null;
+  var p=0,bad=false;
+  function pk(){return t[p]?t[p].k:null;}
+  function startsPrimary(){var k=pk();return k==='n'||k==='f'||k==='(';}
+  function expr(){var v=term();while(pk()==='+'||pk()==='-'){var o=t[p++].k;var r=term();var nv=o==='+'?v+r:v-r;if(Math.abs(nv)<1e-12*Math.max(Math.abs(v),Math.abs(r)))nv=0;v=nv;}return v;}
+  function term(){var v=unary();for(;;){var k=pk();if(k==='*'||k==='/'){p++;var r=unary();v=k==='*'?v*r:v/r;}else if(startsPrimary()){v=v*unary();}else break;}return v;}
+  function unary(){var k=pk();if(k==='-'){p++;return -unary();}if(k==='+'){p++;return unary();}return power();}
+  function power(){var b=postfix();if(pk()==='^'){p++;var e=unary();return Math.pow(b,e);}return b;}
+  function tz(x){return Math.abs(x)<1e-12?0:x;}
+  function fact(x){if(x<0||x!==Math.floor(x)||x>170){bad=true;return NaN;}var r=1;for(var q=2;q<=x;q++)r*=q;return r;}
+  function postfix(){var v=primary();for(;;){if(pk()==='!'){p++;v=fact(v);}else if(pk()==='%'){p++;v=v/100;}else break;}return v;}
+  function primary(){
+    var tk=t[p];if(!tk){bad=true;return NaN;}
+    if(tk.k==='n'){p++;return tk.v;}
+    if(tk.k==='('){p++;var v=expr();if(pk()===')')p++;else if(p<t.length)bad=true;return v;}
+    if(tk.k==='f'){p++;var a;if(pk()==='('){a=primary();}else{a=power();}
+      switch(tk.v){case 'ln':return Math.log(a);case 'log':return Math.log10(a);case 'sin':return tz(Math.sin(a));case 'cos':return tz(Math.cos(a));case 'tan':return tz(Math.tan(a));case 'abs':return Math.abs(a);case '√':return Math.sqrt(a);}}
+    bad=true;return NaN;
+  }
+  var v=expr();
+  if(bad||p<t.length||typeof v!=='number'||!isFinite(v))return null;
+  var nontrivial=t.length>1||t[0].k==='f';
+  if(t.length===1&&t[0].k==='n'&&(t[0].v===Math.PI||t[0].v===Math.E))nontrivial=true;
+  return nontrivial?v:null;
+}
+function fmt(v){
+  if(v===0)return '0';var a=Math.abs(v);
+  if(a>=1e9||a<1e-5){var e=v.toExponential(4).split('e');return e[0].replace(/\.?0+$/,'').replace('-','−')+' × 10^'+String(parseInt(e[1],10)).replace('-','−');}
+  var r=a<1?parseFloat(v.toPrecision(6)):parseFloat(parseFloat(v.toPrecision(12)).toFixed(6));var s=String(Math.abs(r));
+  if(s.indexOf('e')>=0)s=Math.abs(r).toFixed(6);
+  var parts=s.split('.');parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  return (r<0?'−':'')+parts.join('.');
+}
+function lineResult(s){
+  var segs=s.split(/[=≈]/);var seg=segs[segs.length-1];
+  if(!seg.trim()&&segs.length>1)seg=segs[segs.length-2];
+  if(!seg.trim())return '';
+  var v=evaluate(seg);if(v===null)return '';
+  return '= '+fmt(v);
+}
+/* ---------- editing ---------- */
+function snap(){st.undo.push(JSON.stringify([st.lines,st.L,st.c]));if(st.undo.length>150)st.undo.shift();}
+function cur(){return st.lines[st.L];}
+function setCur(t){st.lines[st.L]=t;}
+function matchClose(s,o){var d=0;for(var j=o;j<s.length;j++){var ch=s.charAt(j);if(ch==='(')d++;else if(ch===')'){d--;if(d===0)return j;}}return -1;}
+function insert(txt,back){snap();var s=cur();setCur(s.slice(0,st.c)+txt+s.slice(st.c));st.c+=txt.length-(back||0);}
+function bs(){
+  var s=cur(),c=st.c;
+  if(c===0){if(st.L>0){snap();var prev=st.lines[st.L-1];st.lines.splice(st.L-1,2,prev+s);st.L--;st.c=prev.length;}return;}
+  if(s.slice(Math.max(0,c-3),c)===')/('){st.c=c-3;return;}
+  var ch=s.charAt(c-1);
+  if(ch===')'){var d=0,o=-1;for(var j=c-1;j>=0;j--){var cj=s.charAt(j);if(cj===')')d++;else if(cj==='('){d--;if(d===0){o=j;break;}}}
+    if(o>=0&&o!==c-2){st.c=c-1;return;}
+    if(o>=0&&o===c-2){snap();var tk='(';for(var q0=0;q0<SEQ.length;q0++){var T0=SEQ[q0];if(T0!==')/('&&o+1>=T0.length&&s.slice(o+1-T0.length,o+1)===T0){tk=T0;break;}}setCur(s.slice(0,o+1-tk.length)+s.slice(c));st.c=o+1-tk.length;return;}
+  }
+  snap();
+  if(ch==='('){
+    var tok='(';for(var q=0;q<SEQ.length;q++){var T=SEQ[q];if(T!==')/('&&c>=T.length&&s.slice(c-T.length,c)===T){tok=T;break;}}
+    var o=c-1,m=matchClose(s,o);
+    var after=m>=0?s.slice(c,m)+s.slice(m+1):s.slice(c);
+    // removing an empty fraction "()/()"
+    if(tok==='('&&s.slice(c-1,c+4)==='()/()'){setCur(s.slice(0,c-1)+s.slice(c+4));st.c=c-1;return;}
+    setCur(s.slice(0,c-tok.length)+after);st.c=c-tok.length;return;
+  }
+  setCur(s.slice(0,c-1)+s.slice(c));st.c=c-1;
+}
+function left(){var s=cur(),c=st.c;if(c===0){if(st.L>0){st.L--;st.c=st.lines[st.L].length;}return;}
+  for(var q=0;q<SEQ.length;q++){var T=SEQ[q];if(c>=T.length&&s.slice(c-T.length,c)===T){st.c=c-T.length;return;}}st.c=c-1;}
+function right(){var s=cur(),c=st.c;if(c>=s.length){if(st.L<st.lines.length-1){st.L++;st.c=0;}return;}
+  for(var q=0;q<SEQ.length;q++){var T=SEQ[q];if(s.substr(c,T.length)===T){st.c=c+T.length;return;}}st.c=c+1;}
+function snapC(s,c){for(var q=0;q<SEQ.length;q++){var T=SEQ[q],j=s.indexOf(T);while(j>=0){if(c>j&&c<j+T.length)return j+T.length;j=s.indexOf(T,j+1);}}return c;}
+function encl(s,c){var d=0;for(var j=c-1;j>=0;j--){var ch=s.charAt(j);if(ch===')')d++;else if(ch==='('){if(d===0){return [j,matchClose(s,j)];}d--;}}return null;}
+function openOf(s,cl){var d=0;for(var j=cl;j>=0;j--){var ch=s.charAt(j);if(ch===')')d++;else if(ch==='('){d--;if(d===0)return j;}}return -1;}
+function role(s,g){var o=g[0],cl=g[1];
+  if(o>0&&s.charAt(o-1)==='^')return 'sup';
+  if(o>1&&s.charAt(o-1)==='/'&&s.charAt(o-2)===')')return 'den';
+  if(cl>=0&&s.charAt(cl+1)==='/'&&s.charAt(cl+2)==='(')return 'num';
+  return '';}
+function up(){var s=cur(),c=st.c,g=encl(s,c);
+  // walk outward through groups looking for a denominator (go to numerator)
+  for(var h=g;h;h=encl(s,h[0])){var r=role(s,h);if(r==='den'){st.c=h[0]-2;return;}if(r==='sup')break;}
+  if(s.substr(c,2)==='^('){st.c=c+2;return;}
+  if(c>0&&s.charAt(c-1)===')'){var o=openOf(s,c-1);if(o>0&&s.charAt(o-1)==='^'){st.c=c-1;return;}}
+  if(c>0&&s.charAt(c-1)!=='('&&s.substr(c,1)==='^'){st.c=c+(s.charAt(c+1)==='('?2:1);return;}
+  if(st.L>0){st.L--;st.c=cur().length;}}
+function down(){var s=cur(),c=st.c,g=encl(s,c);
+  for(var h=g;h;h=encl(s,h[0])){var r=role(s,h);if(r==='sup'){st.c=h[1]>=0?h[1]+1:s.length;return;}if(r==='num'){st.c=h[1]+3;return;}if(r==='den')break;}
+  if(st.L<st.lines.length-1){st.L++;st.c=cur().length;}}
+function enter(){snap();var s=cur(),d=0;for(var j=0;j<st.c;j++){var h=s.charAt(j);if(h==='(')d++;else if(h===')')d--;}var at=d>0?s.length:st.c;st.lines.splice(st.L,1,s.slice(0,at),s.slice(at));st.L++;st.c=0;}
+function clearAll(){if(st.lines.join('')==='')return;snap();st.lines=[''];st.L=0;st.c=0;}
+function undo(){var u=st.undo.pop();if(!u)return;var v=JSON.parse(u);st.lines=v[0];st.L=v[1];st.c=v[2];}
+/* ---------- keyboard ---------- */
+var K={
+ '123':[['<i>x</i>','i:x','vx'],['<i>t</i>','i:t','vx'],['eˣ','t:e^()|1','op'],['ln','t:ln()|1','sm'],['π','i:π','op'],['e','i:e','op'],
+        ['7'],['8'],['9'],['÷','i:÷','op'],['(','i:(','op'],[')','i:)','op'],
+        ['4'],['5'],['6'],['×','i:×','op'],['a²','i:^2','op'],['aⁿ','t:^()|1','op'],
+        ['1'],['2'],['3'],['−','i:−','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['√','t:√()|1','op'],
+        ['0'],['.'],['=','i:=','op'],['+','i:+','op'],['≈','i:≈','op'],['⌫','bs','op']],
+ 'f':[['(','i:(','op'],[')','i:)','op'],['aⁿ','t:^()|1','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['=','i:=','op'],['!'],
+      ['sin','t:sin()|1','sm'],['cos','t:cos()|1','sm'],['tan','t:tan()|1','sm'],['|x|','t:abs()|1'],['%'],['±'],
+      ['≠'],['≤'],['≥'],['<'],['>'],['∞'],
+      ['→'],['⇒'],['Δ'],['′'],['″'],['⌫','bs','op']],
+ 'x':[['x'],['y'],['t'],['f'],['g'],['h'],
+      ['a'],['b'],['k'],['r'],['n'],['P'],
+      ['Q'],['N'],['S'],['C'],['T'],['V'],
+      ['(','i:(','op'],[')','i:)','op'],['=','i:=','op'],['+','i:+','op'],['−','i:−','op'],['⌫','bs','op'],
+      ['f(x)','t:f()|1','sm'],['f′(x)','t:f′()|1','sm'],['f″(x)','t:f″()|1','sm'],['Δx','i:Δx','sm'],['Δt','i:Δt','sm'],['aⁿ','t:^()|1','op']],
+ 'abc':null
+};
+var ABC1='qwertyuiop',ABC2='asdfghjkl',ABC3='zxcvbnm';
+function abcKeys(){var a=[],U=function(ch){return shift?ch.toUpperCase():ch;};
+  ABC1.split('').forEach(function(ch){a.push([U(ch)]);});
+  ABC2.split('').forEach(function(ch){a.push([U(ch)]);});a.push(['\u2019','i:\u2019']);
+  a.push(['⇧','shift','op'+(shift?' ac':'')]);ABC3.split('').forEach(function(ch){a.push([U(ch)]);});a.push(['⌫','bs','op w2']);
+  a.push(['%']);a.push(['$']);a.push(['°C','i:°C','sm']);a.push(['space','i: ','sm w4']);a.push([',']);a.push([':']);a.push(['?']);
+  return a;}
+function keyHTML(list,cls){return '<div class="kp '+cls+' on">'+list.map(function(k){var act=k[1]||('i:'+k[0]);var c=k[2]||'';var lab=k[0].length<=2?esc(k[0]):k[0];return '<button type="button" class="k '+c+'" data-a="'+esc(act)+'">'+lab+'</button>';}).join('')+'</div>';}
+function drawKeys(){
+  var kb=P.querySelector('.kb .kz');
+  kb.innerHTML=layer==='abc'?keyHTML(abcKeys(),'abc'):keyHTML(K[layer],'');
+  P.querySelectorAll('.kt button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===layer);});
+}
+function act(a){
+  if(a.indexOf('i:')===0)insert(a.slice(2));
+  else if(a.indexOf('t:')===0){var m=a.slice(2).split('|');insert(m[0],parseInt(m[1],10));}
+  else if(a==='bs')bs();else if(a==='left')left();else if(a==='right')right();else if(a==='up')up();else if(a==='down')down();
+  else if(a==='enter')enter();
+  else if(a==='shift'){shift=!shift;drawKeys();return;}
+  if(layer==='abc'&&shift&&a.indexOf('i:')===0&&a!=='i: '){shift=false;drawKeys();}
+  draw();save();
+}
+/* ---------- drawing ---------- */
+function draw(){
+  var h='';var empty=st.lines.length===1&&st.lines[0]==='';
+  st.lines.forEach(function(s,i){
+    var isC=i===st.L;
+    var body=render(s,isC?st.c:-1);
+    if(empty)body+='<span class="ph">&nbsp;Type your work — results appear on the right</span>';
+    h+='<div class="ln'+(isC?' cur':'')+'" data-l="'+i+'"><span class="lnn">'+(i+1)+'</span><span class="lnx">'+body+'</span><span class="lnr">'+esc(lineResult(s))+'</span></div>';
+  });
+  LS.innerHTML=h;
+  var cr=LS.querySelector('.cr');
+  if(cr){var ln=cr.closest('.ln'),x=cr.closest('.lnx');
+    var lr=ln.getBoundingClientRect(),pr=LS.getBoundingClientRect();
+    if(lr.bottom>pr.bottom)LS.scrollTop+=lr.bottom-pr.bottom+4;else if(lr.top<pr.top)LS.scrollTop-=pr.top-lr.top+4;
+    var cx=cr.getBoundingClientRect(),xr=x.getBoundingClientRect();
+    if(cx.right>xr.right-6)x.scrollLeft+=cx.right-xr.right+30;else if(cx.left<xr.left+6)x.scrollLeft-=xr.left-cx.left+30;}
+}
+/* ---------- build panel ---------- */
+function build(){
+  P=document.createElement('div');P.id='mp';
+  P.innerHTML='<div class="mph"><span class="mpt"></span><span class="mseg"><button type="button" data-t="mw" class="on" aria-label="Write">✍️</button><button type="button" data-t="md" aria-label="Draw">📈</button></span><button type="button" data-t="kb" aria-label="Hide keyboard">⌨️ ▾</button><button type="button" data-t="undo" aria-label="Undo">↶</button><button type="button" data-t="clr" aria-label="Clear">🗑</button><button type="button" class="mpx" data-t="close">✓ Done</button></div>'+
+    '<div class="mpl"></div>'+
+    '<div class="dz"><div class="dt"><button type="button" data-d="p" class="on" aria-label="Pen">✏️</button><button type="button" data-d="l" aria-label="Straight line">╱</button><button type="button" data-d="e" aria-label="Eraser">🧽</button><span class="dsep"></span><button type="button" data-c="#1d1b26" class="dc on" style="--c:#1d1b26" aria-label="Black"></button><button type="button" data-c="#1a56c4" class="dc" style="--c:#1a56c4" aria-label="Blue"></button><button type="button" data-c="#d93025" class="dc" style="--c:#d93025" aria-label="Red"></button><span class="dsep"></span><button type="button" data-g="1" aria-label="Grid">▦ Axes</button></div><canvas></canvas></div>'+
+    '<div class="kt"><button type="button" data-l="123">123</button><button type="button" data-l="f">f(x)</button><button type="button" data-l="x">x y t</button><button type="button" data-l="abc">ABC</button></div>'+
+    '<div class="kb"><div class="kz"></div><div class="kr">'+
+    '<button type="button" class="k op" data-a="left">◀</button><button type="button" class="k op" data-a="right">▶</button><button type="button" class="k op" data-a="up">▲</button><button type="button" class="k op" data-a="down">▼</button><button type="button" class="k sm" data-a="i: ">space</button><button type="button" class="k ac sm" data-a="enter">↵ line</button></div></div>';
+  document.body.appendChild(P);LS=P.querySelector('.mpl');TT=P.querySelector('.mpt');
+  var rep=null,repT=null;
+  function stopRep(){clearTimeout(repT);clearInterval(rep);rep=repT=null;}
+  P.addEventListener('pointerdown',function(e){
+    var b=e.target.closest('button');
+    if(b&&P.contains(b)){
+      e.preventDefault();
+      if(b.hasAttribute('data-a')){var a=b.getAttribute('data-a');b.classList.add('pr');act(a);
+        if(a==='bs'||a==='left'||a==='right'){stopRep();repT=setTimeout(function(){rep=setInterval(function(){act(a);},70);},600);}}
+      else if(b.hasAttribute('data-l')){layer=b.getAttribute('data-l');shift=false;drawKeys();}
+      else if(b.hasAttribute('data-d')){D.tool=b.getAttribute('data-d');P.querySelectorAll('.dt [data-d]').forEach(function(x){x.classList.toggle('on',x===b);});}
+      else if(b.hasAttribute('data-c')){D.col=b.getAttribute('data-c');if(D.tool==='e')D.tool='p';P.querySelectorAll('.dt [data-c]').forEach(function(x){x.classList.toggle('on',x===b);});P.querySelectorAll('.dt [data-d]').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-d')===D.tool);});}
+      else if(b.hasAttribute('data-g')){D.d.g=(D.d.g+2)%3;gLabel();dRedraw();dSave();}
+      else if(b.hasAttribute('data-t')){var tt=b.getAttribute('data-t');if(tt==='clr'){if(!b.classList.contains('arm')){b.classList.add('arm');b.textContent='مسح؟ ✓';clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('arm');b.textContent='🗑';},2500);return;}clearTimeout(b._t);b.classList.remove('arm');b.textContent='🗑';}if(tt==='close')close();else if(tt==='mw'||tt==='md'){setMode(tt==='md'?'d':'w');}else if(mode==='d'&&tt==='undo'){dUndo();}else if(mode==='d'&&tt==='clr'){dClear();}else if(tt==='kb'){var hid=P.classList.toggle('nokb');b.textContent=hid?'⌨️ ▴':'⌨️ ▾';pad();}else if(tt==='undo'){undo();draw();save();}else if(tt==='clr'){clearAll();draw();save();}}
+      return;
+    }
+  });
+  ['pointerup','pointercancel'].forEach(function(ev){document.addEventListener(ev,function(){stopRep();},true);});window.addEventListener('blur',stopRep);
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){P.addEventListener(ev,function(e){stopRep();P.querySelectorAll('.pr').forEach(function(b){b.classList.remove('pr');});});});
+  P.addEventListener('click',function(e){if(e.target.closest('button')){e.preventDefault();return;}
+    var ln=e.target.closest('.ln');
+    if(ln){st.L=parseInt(ln.getAttribute('data-l'),10);var s=cur();
+      var sp=e.target.closest('[data-i]'),bx=e.target.closest('[data-b]');
+      if(bx)st.c=parseInt(bx.getAttribute('data-b'),10);
+      else if(sp){var r=sp.getBoundingClientRect(),i=parseInt(sp.getAttribute('data-i'),10);st.c=(e.clientX>r.left+r.width/2)?i+1:i;}
+      else{var x=ln.querySelector('.lnx').getBoundingClientRect();st.c=(e.clientX<x.left+4)?0:s.length;}
+      st.c=snapC(s,Math.max(0,Math.min(s.length,st.c)));draw();}
+  });
+  document.addEventListener('keydown',function(e){
+    if(!P.classList.contains('on')||mode==='d'||e.ctrlKey||e.metaKey||e.altKey)return;
+    var k=e.key,m={'*':'×','-':'−','x':'x'};
+    if(k==='Escape'){close();}
+    else if(k==='Backspace'){act('bs');}
+    else if(k==='Enter'){act('enter');}
+    else if(k==='ArrowLeft'){act('left');}else if(k==='ArrowRight'){act('right');}else if(k==='ArrowUp'){act('up');}else if(k==='ArrowDown'){act('down');}
+    else if(k.length===1){act('i:'+(m[k]||k));}
+    else return;
+    e.preventDefault();
+  });
+  window.addEventListener('resize',function(){if(P.classList.contains('on')){pad();if(mode==='d')dSize();}});
+  dInit();
+}
+/* ---------- drawing ---------- */
+var mode='w',D={d:{s:[],g:2},tool:'p',col:'#1d1b26',un:[],cv:null,cx:null,W:0,H:0,cur:null};
+function dLoad(k){try{var v=JSON.parse(localStorage.getItem('bmdraw_'+k)||'null');if(v&&v.s)return v;}catch(e){}return {s:[],g:2};}
+function dSave(){try{if(!D.d.s.length)localStorage.removeItem('bmdraw_'+st.k);else localStorage.setItem('bmdraw_'+st.k,JSON.stringify(D.d));}catch(e){}}
+function gLabel(){var b=P.querySelector('.dt [data-g]');b.textContent=['▢ Blank','▦ Grid','▦ Axes'][D.d.g];}
+function dInit(){
+  var cv=P.querySelector('.dz canvas');D.cv=cv;D.cx=cv.getContext('2d');
+  function pt(e){var r=cv.getBoundingClientRect();return [(e.clientX-r.left)/D.W,(e.clientY-r.top)/D.W];}
+  cv.addEventListener('pointerdown',function(e){
+    e.preventDefault();if(D.cur)return;D.pid=e.pointerId;try{cv.setPointerCapture(e.pointerId);}catch(x){}
+    var q=pt(e);
+    if(D.tool==='e'){D.un.push(JSON.stringify(D.d.s));D.cur={t:'e'};dErase(q);return;}
+    D.un.push(JSON.stringify(D.d.s));if(D.un.length>80)D.un.shift();
+    D.cur={t:D.tool==='l'?'l':'p',c:D.col,w:D.tool==='l'?2.5:3,p:[q,q.slice()]};
+    if(D.cur.t==='p')D.cur.p=[q];
+    D.d.s.push(D.cur);dRedraw();
+  });
+  cv.addEventListener('pointermove',function(e){
+    if(!D.cur||e.pointerId!==D.pid)return;e.preventDefault();var q=pt(e);
+    if(D.cur.t==='e'){dErase(q);return;}
+    if(D.cur.t==='l')D.cur.p[1]=q;else{var l=D.cur.p[D.cur.p.length-1];if(Math.abs(l[0]-q[0])+Math.abs(l[1]-q[1])>0.002)D.cur.p.push(q);}
+    dRedraw();
+  });
+  function end(e){if(!D.cur||e.pointerId!==D.pid)return;
+    if(D.cur.t==='e'){if(D.un.length&&D.un[D.un.length-1]===JSON.stringify(D.d.s))D.un.pop();}
+    D.cur=null;dRedraw();dSave();markBtn(st.k);}
+  cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);
+}
+function dErase(q){
+  var r=14/D.W,keep=[],hit=false;
+  function dseg(p,a,b){var dx=b[0]-a[0],dy=b[1]-a[1],L=dx*dx+dy*dy,t=L?((p[0]-a[0])*dx+(p[1]-a[1])*dy)/L:0;t=Math.max(0,Math.min(1,t));var x=a[0]+t*dx-p[0],y=a[1]+t*dy-p[1];return Math.sqrt(x*x+y*y);}
+  D.d.s.forEach(function(sk){var h=false;if(sk.p.length===1)h=dseg(q,sk.p[0],sk.p[0])<r;else for(var i=1;i<sk.p.length;i++){if(dseg(q,sk.p[i-1],sk.p[i])<r){h=true;break;}}if(h)hit=true;else keep.push(sk);});
+  if(hit){D.d.s=keep;dRedraw();}
+}
+function dSize(){var cv=D.cv,r=cv.getBoundingClientRect();if(!r.width)return;var dpr=window.devicePixelRatio||1;D.W=r.width;D.H=r.height;cv.width=Math.round(r.width*dpr);cv.height=Math.round(r.height*dpr);D.cx.setTransform(dpr,0,0,dpr,0,0);dRedraw();}
+function dRedraw(){
+  var c=D.cx,W=D.W,H=D.H;if(!W)return;
+  c.clearRect(0,0,W,H);c.fillStyle='#fff';c.fillRect(0,0,W,H);
+  var g=D.d.g,step=W/16;
+  if(g>=1){c.strokeStyle='#e6e1f2';c.lineWidth=1;c.beginPath();for(var x=step;x<W;x+=step){c.moveTo(Math.round(x)+.5,0);c.lineTo(Math.round(x)+.5,H);}for(var y=H/2%step;y<H;y+=step){c.moveTo(0,Math.round(y)+.5);c.lineTo(W,Math.round(y)+.5);}c.stroke();}
+  if(g===2){var ox=Math.round(W/2/step)*step,oy=Math.round(H/2/step)*step;c.strokeStyle='#6e6a7c';c.lineWidth=1.5;c.beginPath();c.moveTo(6,oy);c.lineTo(W-6,oy);c.moveTo(ox,H-6);c.lineTo(ox,6);c.stroke();
+    c.fillStyle='#6e6a7c';c.beginPath();c.moveTo(W-6,oy);c.lineTo(W-14,oy-4);c.lineTo(W-14,oy+4);c.fill();c.beginPath();c.moveTo(ox,6);c.lineTo(ox-4,14);c.lineTo(ox+4,14);c.fill();
+    c.font='italic 15px "Times New Roman",serif';c.fillText('x',W-16,oy+18);c.fillText('y',ox+8,16);c.fillText('0',ox-12,oy+16);}
+  c.lineCap='round';c.lineJoin='round';
+  D.d.s.forEach(function(sk){
+    c.strokeStyle=sk.c;c.fillStyle=sk.c;c.lineWidth=sk.w;var p=sk.p;
+    if(p.length===1){c.beginPath();c.arc(p[0][0]*W,p[0][1]*W,sk.w/1.6,0,7);c.fill();return;}
+    c.beginPath();c.moveTo(p[0][0]*W,p[0][1]*W);
+    if(sk.t==='l'||p.length===2){c.lineTo(p[p.length-1][0]*W,p[p.length-1][1]*W);}
+    else{for(var i=1;i<p.length-1;i++){var mx=(p[i][0]+p[i+1][0])/2*W,my=(p[i][1]+p[i+1][1])/2*W;c.quadraticCurveTo(p[i][0]*W,p[i][1]*W,mx,my);}c.lineTo(p[p.length-1][0]*W,p[p.length-1][1]*W);}
+    c.stroke();
+  });
+}
+function dUndo(){var u=D.un.pop();if(u===undefined)return;D.d.s=JSON.parse(u);dRedraw();dSave();markBtn(st.k);}
+function dClear(){if(!D.d.s.length)return;D.un.push(JSON.stringify(D.d.s));D.d.s=[];dRedraw();dSave();markBtn(st.k);}
+function setMode(m){mode=m;P.classList.toggle('dm',m==='d');P.querySelectorAll('.mseg button').forEach(function(b){b.classList.toggle('on',(b.getAttribute('data-t')==='md')===(m==='d'));});
+  if(m==='d'){gLabel();requestAnimationFrame(function(){dSize();pad();});}else{draw();pad();}}
+function pad(){document.body.style.paddingBottom=(P.offsetHeight+20)+'px';}
+function open(k,title,part){
+  if(!P)build();
+  st.k=k;st.lines=load(k);st.L=st.lines.length-1;st.c=st.lines[st.L].length;st.undo=[];
+  TT.textContent=title;D.d=dLoad(k);D.un=[];D.cur=null;
+  P.classList.add('on');document.body.classList.add('mpon');layer='123';shift=false;drawKeys();draw();
+  setMode((st.lines.join('')===''&&D.d.s.length)?'d':'w');
+  if(part){var r=part.getBoundingClientRect();window.scrollTo({top:window.scrollY+r.top-36,behavior:'smooth'});}
+  markBtn(k);
+}
+function close(){save();P.classList.remove('on');document.body.classList.remove('mpon');document.body.style.paddingBottom='';markBtn(st.k);}
+function markBtn(k){var b=document.querySelector('.bw[data-k="'+k+'"]');if(!b)return;var has=false;try{has=!!(localStorage.getItem('bmpad_'+k)||localStorage.getItem('bmdraw_'+k));}catch(e){}b.textContent=has?'✍️ Continue my work':'✍️ Solve here';}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.bw');if(!b)return;e.preventDefault();
+  var part=b.closest('.part'),art=b.closest('article');
+  var src=art&&art.querySelector('.srcl')?art.querySelector('.srcl').textContent.split('·').pop().trim():'';
+  var pl=part&&part.querySelector('.pl')?' '+part.querySelector('.pl').textContent:'';
+  open(b.getAttribute('data-k'),(src+pl).trim(),part);
+});
+function initBtns(){document.querySelectorAll('.bw').forEach(function(b){markBtn(b.getAttribute('data-k'));});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initBtns);else initBtns();
+window.__mp={evaluate:evaluate,render:render,fmt:fmt,lineResult:lineResult};
+})();
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script></body></html>
