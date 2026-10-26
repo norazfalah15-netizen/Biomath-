@@ -1,0 +1,587 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🔒 Pharm Calc · Lecture 4</title><link rel="icon" type="image/png" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Pharmacy Study"><meta name="theme-color" content="#5b3fc4"><meta name="description" content="Questions with answers and explanations"><meta property="og:type" content="website"><meta property="og:site_name" content="Pharmacy Study"><meta property="og:title" content="🔒 Biomath Practice — Pharmacy Study"><meta property="og:description" content="Questions with answers and explanations"><meta property="og:image" content="https://pharmacy-study.vercel.app/og.jpg?v=3"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://pharmacy-study.vercel.app/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pharmacy-study.vercel.app/og.jpg?v=3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet"></noscript><style>*{box-sizing:border-box}
+:root{--bg:#f7f6fb;--card:#fff;--ink:#1d1b26;--soft:#6e6a7c;--line:#e7e3f1;--ac:#6a4bb0;--acl:#efeafa;--op:#f4f3f8;--ok:#e8f6ed;--okb:#86c49b;--no:#fbeeee;--nob:#e0a9a9}
+@media (prefers-color-scheme:dark){:root{--bg:#141318;--card:#1d1b24;--ink:#ecebf2;--soft:#a39fb3;--line:#2f2b3b;--ac:#a68cf0;--acl:#2a2440;--op:#25222e;--ok:#1c3324;--okb:#4f8a63;--no:#3a2222;--nob:#9a5c5c}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito","IBM Plex Sans Arabic",system-ui,sans-serif;padding:16px;line-height:1.5}
+.wrap{max-width:780px;margin:0 auto}
+.back{display:inline-block;text-decoration:none;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:8px 14px;font-weight:700}
+h1{margin:16px 0 2px;font-size:24px;text-align:center}
+.sub{text-align:center;color:var(--soft);margin:0 0 14px}
+nav{display:grid;gap:8px;margin:10px 0 20px}nav[hidden],.lec[hidden]{display:none}.tocb{font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid #b9a9e3;border-radius:12px;padding:10px 16px;cursor:pointer;margin-bottom:6px}
+nav a{display:block;text-decoration:none;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:700}
+section{scroll-margin-top:12px;margin-bottom:26px}
+.sh{background:var(--acl);border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:12px}
+.sh h2{margin:0;font-size:20px}.sh p{margin:2px 0 0;color:var(--soft);font-size:14px}
+article{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.qn{color:var(--ac);font-weight:800;font-size:14px}.src{color:var(--soft);font-weight:600}
+.qt{font-weight:800;font-size:17px;margin:6px 0 12px}
+.fig{display:block;max-width:100%;height:auto;margin:12px auto;background:#fff;border-radius:8px}
+.ops{display:grid;gap:8px}
+.op{background:var(--op);border-radius:12px;padding:11px 14px}
+.op.ok{background:var(--ok);border-color:var(--okb)}.op.no{background:var(--no);border-color:var(--nob)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;align-items:start}
+.b{width:100%;font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid #b9a9e3;border-radius:12px;padding:10px 6px;cursor:pointer;white-space:nowrap}
+.b.on{background:var(--acl)}
+.box{margin-top:10px;border-radius:12px;padding:10px 14px}.box p{margin:4px 0}
+.ans{background:var(--ok)}.ex{background:var(--acl)}
+pre.fs{font-family:ui-monospace,Menlo,Consolas,monospace;background:#fff;color:#111;border-radius:8px;padding:8px 12px;display:inline-block;margin:4px 0;line-height:1.25;font-weight:400}
+.two{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin:10px 0}.two>div{text-align:center;background:#fff;border-radius:10px;padding:8px}.two b{color:#111}.fsv{display:block;margin:auto}
+h1.lt{line-height:1.2}h1.lt span{display:block;font-size:20px;margin-top:4px}
+.skw{text-align:center;margin:10px 0}.sk{background:#fff;border-radius:10px;padding:6px;max-width:100%;height:auto}
+.ofig{display:inline-block;vertical-align:middle;max-width:85%;max-height:150px;background:#fff;border-radius:8px;padding:4px}.op .fsv{display:inline-block;vertical-align:middle;background:#fff;border-radius:8px}
+.ck{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.lec,.box,.toc{display:none}.ct:checked~.toc{display:grid}
+.ca:checked~.ans,.ce:checked~.ex{display:block}.ca:checked~.btns .ba,.ce:checked~.btns .be{background:var(--acl)}
+label.b,label.tocb{display:block;text-align:center;user-select:none;-webkit-user-select:none}label.tocb{display:inline-block}
+.tabs{display:grid;gap:10px;margin:8px 0}.bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 10px}.bar .tocb{display:block;margin:0}
+.tab{display:block;text-align:start;padding:14px 16px!important;font-size:17px;text-decoration:none;font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 8px;cursor:pointer;line-height:1.25}
+.tab span{display:block;font-weight:600;font-size:13px;color:var(--soft)}
+.tab.on{background:var(--acl);border-color:#b9a9e3}
+.bar .sgb{grid-column:1/-1}.sgb .on,.cS{display:none}.sg:checked~.bar .sgb{background:var(--acl);border-color:#b9a9e3}
+.sg:checked~.bar .sgb .on,.sg:checked~section .cS,.sg:checked~.sub .cS{display:inline}.sg:checked~.bar .sgb .off,.sg:checked~section .cA,.sg:checked~.sub .cA{display:none}
+.sg:checked~section article.pq,.sg:checked~section.nod,.sg:checked~.toc a.nod{display:none}
+#r0:checked~#L0,#r1:checked~#L1,#r2:checked~#L2,#r3:checked~#L3,#r4:checked~#L4,#r5:checked~#L5,#r6:checked~#L6,#r7:checked~#L7,#r8:checked~#L8,#r9:checked~#L9,#r10:checked~#L10,#r11:checked~#L11,#r12:checked~#L12,#r13:checked~#L13{display:block}.bar .xb{grid-column:1/-1;background:var(--ac);color:#fff;border-color:var(--ac)}.xb .xc{display:none}.cx:checked~.bar .xb .xo{display:none}.cx:checked~.bar .xb .xc{display:inline}
+.expl{display:none;font-family:"IBM Plex Sans Arabic",Nunito,system-ui,sans-serif;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:4px 0 18px;line-height:1.75;font-size:16px;text-align:right}
+.cx:checked~.expl{display:block}
+.expl .xh{font-weight:800;font-size:19px;color:var(--ac);margin-bottom:4px}
+.expl .xi{color:var(--soft);font-size:14px;margin:4px 0 10px}
+.expl .xs{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px}
+.expl .xt{font-weight:800;font-size:17px;margin-bottom:8px}
+.expl ul{margin:6px 0;padding-right:20px;padding-left:0}
+.expl .fm{direction:ltr;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:24px;background:var(--acl);border-radius:12px;padding:10px;margin:8px 0;font-style:italic}
+.expl .fm.sm{font-size:18px;padding:6px;margin:6px 0;background:transparent}
+.expl .en{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Cambria Math","Times New Roman",serif}
+.expl .xk{background:#fff7e0;color:#5c4400;border-radius:12px;padding:10px 12px;margin:10px 0;font-size:15px}
+@media (prefers-color-scheme:dark){.expl .xk{background:#3a3016;color:#f3e2b0}}
+.expl .ex{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}
+.expl .el{font-weight:800;color:var(--ac);font-size:15px;margin-bottom:4px}
+.expl .ex p{margin:4px 0}
+.expl .st{direction:ltr;text-align:left;font-family:"Cambria Math","Times New Roman",serif;font-size:18px;padding:2px 6px}
+.expl .st.ok{background:#e6f4ea;color:#1e7a3c;border-radius:8px;font-weight:700;margin-top:2px}
+@media (prefers-color-scheme:dark){.expl .st.ok{background:#173a24;color:#9be0b2}}
+.expl .xtb{width:100%;border-collapse:collapse;margin:8px 0;font-size:15px}
+.expl .xtb th,.expl .xtb td{border:1px solid var(--line);padding:7px 8px;text-align:right;vertical-align:middle}
+.expl .xtb th{background:var(--acl)}
+.expl .xtb td.en{display:table-cell;text-align:center;font-size:17px}
+.expl>.xb{display:block;margin-top:14px;background:var(--ac);color:#fff;border-color:var(--ac)}
+.expl sup{font-size:.7em}
+.expl ol{margin:6px 0;padding-right:22px;padding-left:0}.expl li{margin:3px 0}
+.expl .xtb[dir=ltr] th,.expl .xtb[dir=ltr] td{text-align:center;white-space:nowrap}.expl .xtb[dir=ltr]{display:block;overflow-x:auto}
+
+.en.nw,bdi.nw{white-space:nowrap}.bar .lob{grid-column:1/-1}.lob .lon{display:none}.lo:checked~.bar .lob{background:var(--acl);border-color:var(--ac)}.lo:checked~.bar .lob .lof{display:none}.lo:checked~.bar .lob .lon{display:inline}.lo:checked~section article:not(.aL),.lo:checked~section.noL{display:none}.part{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}.ptq{font-weight:700;margin:0 0 8px;line-height:1.45}.pl{display:inline-block;color:var(--ac);font-weight:800;margin-right:4px}.same{font-size:12px;opacity:.75;margin:-2px 0 6px}html{scroll-padding-top:34px}article{scroll-margin-top:34px}.srcl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:999px;margin:0 0 6px;text-transform:uppercase}.sL{background:#e6f4ea;color:#1e7a3c}.sB{background:#e8f0fe;color:#1a56c4}.sP{background:#fdecea;color:#b3261e}.btns .bw{grid-column:1/-1;display:none;text-align:center;color:#fff;background:var(--ac);border-color:var(--ac)}
+#mp{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:var(--card);border-top:1.5px solid var(--line);box-shadow:0 -8px 30px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:92vh;font-family:Nunito,system-ui,sans-serif;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+#mp.on{display:flex}
+body.mpon .totop{display:none}
+#mp .mph{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line)}
+#mp .mpt{flex:1;font-weight:800;font-size:14px;color:var(--ac);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mp .mph button{font:inherit;font-weight:800;font-size:13px;border:1.5px solid var(--line);background:var(--bg,#f6f5fa);color:var(--ink);border-radius:10px;padding:6px 10px;cursor:pointer}
+#mp .mph .mpx{background:var(--ac);color:#fff;border-color:var(--ac)}
+#mp .mpl{overflow-y:auto;padding:6px 10px;height:19vh;min-height:96px}#mp.nokb .kt,#mp.nokb .kb{display:none}#mp.nokb .mpl{height:24vh}
+#mp .ln{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 8px;border-radius:10px;border:1.5px solid transparent;cursor:text}
+#mp .ln.cur{border-color:#b9a9e3;background:var(--acl)}
+#mp .lnn{flex:none;width:18px;font-size:11px;color:var(--soft);text-align:right}
+#mp .lnx{flex:1;font-family:"Cambria Math","Latin Modern Math","STIX Two Math","Times New Roman",serif;font-size:21px;line-height:1.5;color:var(--ink);overflow-x:auto;white-space:nowrap;padding:2px 0}
+#mp .lnr{flex:none;font-size:15px;font-weight:800;color:#1e7a3c;background:#e6f4ea;border-radius:8px;padding:2px 8px;white-space:nowrap}
+#mp .lnr:empty{display:none}
+#mp .ph{color:var(--soft);font-family:Nunito,system-ui,sans-serif;font-size:14px}
+#mp .cr{display:inline-block;width:2px;height:1.1em;background:var(--ac);vertical-align:middle;margin:0 -1px;animation:mpb 1s steps(1) infinite}
+@keyframes mpb{50%{opacity:0}}
+#mp .ch{display:inline}
+#mp .hid{display:inline-block;width:0;overflow:hidden}
+#mp .fn{font-style:normal;font-family:Nunito,system-ui,sans-serif;font-size:.85em;margin-right:1px}
+#mp .vr{font-style:italic}
+#mp sup{font-size:.68em;vertical-align:.75em;line-height:0}
+#mp .fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;font-size:.88em;line-height:1.15}
+#mp .fr>.nu{border-bottom:1.5px solid currentColor;padding:0 3px 1px}
+#mp .fr>.de{padding:1px 3px 0}
+#mp .bx{display:inline-block;min-width:.7em;height:.9em;border:1.5px dashed #b9a9e3;border-radius:3px;vertical-align:middle;margin:0 1px}
+#mp .sq{display:inline-block;border-top:1.5px solid currentColor;padding:1px 2px 0;margin-left:0;line-height:1.2}#mp .rt{display:inline-block;font-family:"Times New Roman",serif;font-size:1.15em;line-height:1;vertical-align:-.08em;margin-right:-.05em}#mp .o{margin:0 .14em}
+#mp .kt{display:flex;gap:4px;padding:6px 8px 0}
+#mp .kt button{flex:1;font:inherit;font-weight:800;font-size:14px;border:none;border-radius:10px 10px 0 0;padding:8px 0;background:transparent;color:var(--soft);cursor:pointer}
+#mp .kt button.on{background:var(--acl);color:var(--ac)}
+#mp .kb{background:var(--acl);padding:6px 6px calc(8px + env(safe-area-inset-bottom))}
+#mp .kp{display:none;grid-template-columns:repeat(6,1fr);gap:5px}
+#mp .kp.on{display:grid}
+#mp .kp.abc{grid-template-columns:repeat(10,1fr)}
+#mp .k{font-family:"Cambria Math","Times New Roman",serif;font-size:20px;font-weight:600;min-height:42px;border:none;border-radius:9px;background:var(--card);color:var(--ink);box-shadow:0 1.5px 0 rgba(0,0,0,.15);cursor:pointer;padding:0 2px;display:flex;align-items:center;justify-content:center;line-height:1}
+#mp .kp.abc .k{font-size:17px;min-height:42px}
+#mp .k:active,#mp .k.pr{background:var(--line)}#mp,#mp *{-webkit-tap-highlight-color:transparent}
+#mp .k.op{color:var(--ac);font-weight:800}
+#mp .k.sm{font-family:Nunito,system-ui,sans-serif;font-size:14px;font-weight:800}
+#mp .k.ac{background:var(--ac);color:#fff}
+#mp .k.w2{grid-column:span 2}#mp .k.w3{grid-column:span 3}#mp .k.w4{grid-column:span 4}
+#mp .kr{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:5px}
+@media (min-width:700px){#mp{left:50%;right:auto;width:680px;transform:translateX(-50%);border-radius:16px 16px 0 0;border:1.5px solid var(--line)}}
+
+html.mpjs .btns .bw{display:block}
+#mp .mseg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+#mp .mph .mseg button{border:none;border-radius:0;padding:6px 9px;background:transparent}
+#mp .mph .mseg button.on{background:var(--acl)}
+#mp .dz{display:none;flex-direction:column}
+#mp.dm .dz{display:flex}#mp.dm .mpl,#mp.dm .kt,#mp.dm .kb,#mp.dm [data-t="kb"]{display:none}
+#mp .dt{display:flex;align-items:center;gap:6px;padding:8px 10px;flex-wrap:wrap}
+#mp .dt button{font:inherit;font-weight:800;font-size:15px;min-width:42px;height:38px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);cursor:pointer;padding:0 8px}
+#mp .dt button.on{background:var(--acl);border-color:var(--ac)}
+#mp .dt .dc{min-width:30px;width:30px;height:30px;border-radius:50%;padding:0;background:var(--c);border:3px solid #fff;box-shadow:0 0 0 1.5px var(--line)}
+#mp .dt .dc.on{box-shadow:0 0 0 2.5px var(--ac);background:var(--c)}
+#mp .dt .dsep{width:1px;height:26px;background:var(--line)}
+#mp .dt [data-g]{margin-left:auto;font-size:13px}
+#mp .dz canvas{display:block;width:100%;height:min(52vh,460px);touch-action:none;background:#fff;border-top:1px solid var(--line)}
+#mp .k.vx{font-size:22px;color:#1a56c4;font-weight:700}
+#mp .k sup{font-size:.6em;vertical-align:.6em}
+
+#mp .mph button.arm{background:#d93025;color:#fff;border-color:#d93025}.lzsrc{display:none}
+.bar .lzb{grid-column:1/-1;display:none;text-align:center;color:#fff!important;border:none!important;background:linear-gradient(135deg,#6a4bb0,#9b6cf0)!important;box-shadow:0 6px 18px rgba(106,75,176,.35);font-size:17px;padding:14px!important}
+html.lzjs .bar .lzb{display:block}
+html.lzon,html.lzon body{overflow:hidden}
+#lzo{position:fixed;inset:0;z-index:2000;background:var(--bg,#f6f5fa);display:none;flex-direction:column;font-family:"IBM Plex Sans Arabic",Nunito,system-ui,sans-serif;color:var(--ink)}
+#lzo.on{display:flex}
+#lzo .lh{display:flex;align-items:center;gap:8px;padding:10px 12px calc(6px);padding-top:max(10px,env(safe-area-inset-top));background:var(--card);border-bottom:1px solid var(--line)}
+#lzo .lx{flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+#lzo .lt2{flex:1;font-weight:800;font-size:15px;color:var(--ac);text-align:center;line-height:1.3;direction:ltr}
+#lzo .ls{flex:none;font:inherit;font-weight:800;font-size:13px;border:1.5px solid var(--line);background:var(--acl);color:var(--ac);border-radius:12px;padding:7px 10px;cursor:pointer}
+#lzo .lp{height:4px;background:var(--line)}#lzo .lp i{display:block;height:100%;width:0;background:linear-gradient(90deg,#9b6cf0,#6a4bb0);transition:width .3s}
+#lzo .lds{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:8px 12px 2px}
+#lzo .ld{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:var(--line);cursor:pointer}
+#lzo .ld.dn{background:#b9a9e3}#lzo .ld.on{background:var(--ac);width:22px;border-radius:5px}
+#lzo .lb{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 14px 24px}
+#lzo section.sl{display:none;max-width:640px;margin:0 auto;animation:lzin .28s ease}
+#lzo section.sl.cur{display:block}
+@keyframes lzin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#lzo .sh2{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;line-height:1.35;margin:6px 0 12px}
+#lzo .si{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--acl)}
+#lzo .sl p{font-size:17px;line-height:1.8;margin:8px 0}
+#lzo .sl ul,#lzo .sl ol{padding-right:22px;padding-left:0;margin:6px 0;font-size:16.5px;line-height:1.8}
+#lzo .big{font-size:19px;font-weight:700;line-height:1.7;background:var(--card);border-radius:16px;padding:14px;border:1.5px solid var(--line)}
+#lzo .fm{direction:ltr;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:26px;font-style:italic;background:var(--card);border:2px solid #b9a9e3;border-radius:16px;padding:14px 10px;margin:12px 0;box-shadow:0 4px 14px rgba(106,75,176,.12)}
+#lzo .fm small{display:block;font-family:"IBM Plex Sans Arabic",system-ui;font-style:normal;font-size:13px;color:var(--soft);margin-top:4px;direction:rtl}
+#lzo .en{direction:ltr;unicode-bidi:isolate;font-family:"Cambria Math","Times New Roman",serif}
+#lzo .xk,#lzo .tip{background:#fff7e0;color:#5c4400;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+#lzo .warn{background:#fdecea;color:#8c1d18;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+#lzo .an{background:#e8f0fe;color:#123d82;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+@media (prefers-color-scheme:dark){#lzo .xk,#lzo .tip{background:#3a3016;color:#f3e2b0}#lzo .warn{background:#3d1a18;color:#f5c2bd}#lzo .an{background:#16284a;color:#bcd3fb}}
+#lzo .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+#lzo .cards>div{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px;font-size:15px;line-height:1.6}
+#lzo .cards>div b{display:block;font-size:16px;margin-bottom:2px}
+#lzo .xtb{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px;background:var(--card);border-radius:12px;overflow:hidden}
+#lzo .xtb th,#lzo .xtb td{border:1px solid var(--line);padding:8px;text-align:right;vertical-align:middle}
+#lzo .xtb th{background:var(--acl)}
+#lzo .xtb[dir=ltr]{display:block;overflow-x:auto}#lzo .xtb[dir=ltr] th,#lzo .xtb[dir=ltr] td{text-align:center;white-space:nowrap}
+/* worked example */
+#lzo .wk{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px;margin:12px 0}
+#lzo .wq{font-weight:800;font-size:16.5px;line-height:1.65;margin-bottom:8px}
+#lzo .wq .tg{display:inline-block;font-size:12px;background:var(--ac);color:#fff;border-radius:999px;padding:1px 10px;margin-left:6px;vertical-align:2px}
+#lzo .ws{list-style:none;padding:0!important;margin:0;counter-reset:st}
+#lzo .ws>li{counter-increment:st;position:relative;padding:8px 40px 8px 10px;margin:6px 0;border-radius:12px;background:var(--acl);font-size:16px;line-height:1.7}
+#lzo .ws>li::before{content:counter(st);position:absolute;right:8px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--ac);color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+#lzo .ws .m,#lzo .wa .m{display:block;direction:ltr;text-align:left;font-family:"Cambria Math","Times New Roman",serif;font-size:18px;margin-top:2px}
+#lzo .wa{margin-top:8px;border-radius:12px;padding:10px 12px;background:#e6f4ea;color:#14532d;font-weight:800;font-size:16.5px;line-height:1.7}
+@media (prefers-color-scheme:dark){#lzo .wa{background:#173a24;color:#a7f0c0}}
+#lzo .hd{display:none!important}
+#lzo .in{animation:lzin .3s ease}
+#lzo .wb{display:flex;gap:8px;margin-top:10px}
+#lzo .wb button{flex:1;font:inherit;font-weight:800;font-size:14.5px;border-radius:12px;padding:11px 8px;cursor:pointer;border:1.5px solid #b9a9e3;background:var(--card);color:var(--ac)}
+#lzo .wb .wn{background:var(--ac);color:#fff;border-color:var(--ac)}
+/* quiz */
+#lzo .qz{background:linear-gradient(135deg,rgba(155,108,240,.12),rgba(26,115,232,.08));border:2px dashed #b9a9e3;border-radius:18px;padding:14px;margin:14px 0}
+#lzo .qz::before{content:"🎯 جربي بنفسك";display:block;font-weight:800;color:var(--ac);font-size:14px;margin-bottom:6px}
+#lzo .qq{font-weight:800;font-size:16.5px;line-height:1.65;margin-bottom:10px}
+#lzo .qz button{display:block;width:100%;text-align:right;font:inherit;font-size:16px;padding:11px 14px;margin:7px 0;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;line-height:1.5}
+#lzo .qz button.ok{background:#e6f4ea;border-color:#34a853;color:#14532d;font-weight:800}
+#lzo .qz button.no{background:#fdecea;border-color:#d93025;color:#8c1d18}
+@media (prefers-color-scheme:dark){#lzo .qz button.ok{background:#173a24;color:#a7f0c0}#lzo .qz button.no{background:#3d1a18;color:#f5c2bd}}
+#lzo .qw{display:none;font-size:15.5px;line-height:1.7;margin-top:6px;padding:10px 12px;border-radius:12px;background:var(--card)}
+#lzo .qw.sh{display:block;animation:lzin .3s ease}
+/* viz */
+#lzo .vz{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 12px;margin:12px 0}
+#lzo .vz::before{content:"🎛️ حركي الأزرار وشوفي وش يصير";display:block;font-weight:800;color:var(--ac);font-size:13.5px;margin-bottom:4px}
+#lzo .vzs{display:block;width:100%;height:auto;direction:ltr;background:#fff;border-radius:12px}
+#lzo .vzs .gl{stroke:#eceaf4;stroke-width:1}#lzo .vzs .ax{stroke:#6e6a7c;stroke-width:1.5}#lzo .vzs .gd{stroke:#9b8fc0;stroke-width:1.2;stroke-dasharray:4 3}
+#lzo .vzs .tk{font:10px system-ui,sans-serif;fill:#6e6a7c}#lzo .vzs .al{font:italic 13px "Times New Roman",serif;fill:#3c3850}
+#lzo .vzr{direction:rtl;text-align:center;font-weight:800;font-size:14px;margin:6px 0 2px}
+#lzo .vzl{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:13px;margin-top:4px;direction:ltr}
+#lzo .vzl i{display:inline-block;width:14px;height:4px;border-radius:2px;margin-right:4px;vertical-align:middle}
+#lzo .vzc{display:flex;align-items:center;gap:10px;margin:8px 0 0;direction:ltr}
+#lzo .vzn{flex:none;min-width:86px;font-family:"Cambria Math","Times New Roman",serif;font-size:16px}
+#lzo .vzc input{flex:1;accent-color:#6a4bb0;height:28px}
+#lzo .vzt{font-size:14px;color:var(--soft);margin-top:6px;line-height:1.6}
+/* footer nav */
+#lzo .lf{display:flex;align-items:center;gap:10px;padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+#lzo .lf button{flex:1;font:inherit;font-weight:800;font-size:16px;border-radius:14px;padding:13px 8px;cursor:pointer;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+#lzo .lf .lnx{background:var(--ac);color:#fff;border-color:var(--ac)}
+#lzo .lf button:disabled{opacity:.35}
+#lzo .lc{flex:none;font-weight:800;color:var(--soft);font-size:13px;min-width:44px;text-align:center}
+#lzo sup{font-size:.7em}
+bdi.nw,.en.nw{white-space:nowrap}
+.bar .lzk{background:linear-gradient(135deg,#1a73e8,#4f9cf9)!important;box-shadow:0 6px 18px rgba(26,115,232,.3);font-size:16px}
+#lzo .lds:has(.ld:only-child){display:none}
+#lzo .xtb td.en,#lzo .xtb .en{white-space:nowrap;font-size:15px}
+</style><style>.pst{overflow-x:auto;margin:8px 0}.ps{border-collapse:collapse;font-size:15px;background:#fff;color:#111}.ps td,.ps th{border:1px solid #bbb;padding:5px 12px;text-align:center;white-space:nowrap}.ps th{background:#eef2f7;font-weight:700}.ptq .pst{margin:4px 0}.same{font-size:12.5px;opacity:.8;font-weight:600}.lec#L1{display:block}.qh{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}.qh .srcl{margin:0}.bws{font:inherit;font-weight:800;font-size:12.5px;line-height:1;padding:7px 11px;border-radius:999px;border:none;background:var(--ac);color:#fff;cursor:pointer;white-space:nowrap;flex:none}.btns{grid-template-columns:1fr 1fr}article{position:relative}.btns{display:flex!important;gap:8px;flex-wrap:wrap}.btns .b{width:auto!important;flex:none;padding:6px 12px!important;font-size:12.5px!important;line-height:1.2!important;border-radius:999px!important;min-height:0!important}.qno{position:absolute;top:5px;right:16px;font-size:12px;font-weight:800;color:var(--soft);line-height:1}</style></head><body id="top"><div style="position:fixed;top:0;left:0;right:0;z-index:9999;background:#e11d48;color:#fff;text-align:center;font:700 13px/1.9 system-ui,sans-serif;letter-spacing:.3px">🔒 MY PRIVATE COPY</div><div style="height:25px"></div><div class="wrap"><a class="back" href="/pharmaceutical-calculations/">← Pharmaceutical Calculations</a><input type="radio" name="lec" class="ck" id="r1" checked><div class="lec" id="L1"><h1 class="lt">Lecture 4<span>Moles</span></h1><p class="sub">10 lecture · 40 textbook questions</p><input type="checkbox" class="ck ct" id="c1"><input type="checkbox" class="ck lo" id="o1"><div class="bar"><a class="tocb" href="/pharmaceutical-calculations/" style="text-decoration:none;display:block">📚 Lectures</a><label class="tocb" for="c1">☰ Contents</label><label class="tocb lob" for="o1"><span class="lof">📌 أمثلة المحاضرة بس (10)</span><span class="lon">✓ معروض أمثلة المحاضرة بس — اضغطي لعرض الكل</span></label></div><nav class="toc"><a href="#c4s0">1. Moles & Molecular Mass</a><a href="#c4s1">2. Amount of an Ion in a Compound</a><a href="#c4s2">3. Drug Salts, Bases & Hydrates</a><a href="#c4s3">4. Legal Classification Using Molecular Weights</a><a href="#c4s4">5. Moles & Millimoles</a><a href="#c4s5">6. Millimoles in Infusions & Molar Solutions</a></nav><section id="c4s0"><div class="sh"><h2>1. Moles & Molecular Mass</h2><p>3 lecture · 2 textbook questions</p></div><article class="aL"><span class="qno">1</span><div class="qh"><div class="srcl sL">Lecture Question · Slides 3–4</div><button type="button" class="bw bws" data-k="pc4q_2">✍️ Solve here</button></div><div class="qt">One mole = the relative atomic mass in grams. One mole of any element contains 6 × 10<sup>23</sup> atoms (Avogadro's constant). Atomic masses: Ca = 40, Cl = 35.5, Na = 23, C = 12, H = 1.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_1"><input type="checkbox" class="ck ce" id="e4_1"><div class="ptq"><span class="pl">a.</span> How many moles are in 24 g of carbon?</div><div class="btns"><label class="b ba" for="a4_1">✓ Show Answer</label><label class="b be" for="e4_1">💡 Explain</label></div><div class="box ans"><p><b>2 moles</b></p><p>12 g of carbon = 1 mole<br>24 g → 24 / 12 = 2 moles</p></div><div class="box ex"><p>Moles = grams ÷ atomic mass.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_2"><input type="checkbox" class="ck ce" id="e4_2"><div class="ptq"><span class="pl">b.</span> How many moles (and atoms) are in 1 g of carbon?</div><div class="btns"><label class="b ba" for="a4_2">✓ Show Answer</label><label class="b be" for="e4_2">💡 Explain</label></div><div class="box ans"><p><b>1/12 mole = 6/12 × 10<sup>23</sup> atoms</b></p><p>1 g / 12 = 1/12 mole<br>atoms = 1/12 × 6 × 10<sup>23</sup> = 0.5 × 10<sup>23</sup></p></div><div class="box ex"><p>1 mole = 6 × 10<sup>23</sup> atoms.</p></div></div></article><article class="aL"><span class="qno">2</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 5</div><button type="button" class="bw bws" data-k="pc4q_3">✍️ Solve here</button></div><div class="qt">Sodium chloride (NaCl) is made up of sodium (Na) and chloride (Cl): NaCl → Na<sup>+</sup> + Cl<sup>−</sup>.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_3"><input type="checkbox" class="ck ce" id="e4_3"><div class="ptq">Molecular mass of NaCl = ? and what does 1 mole of NaCl give?</div><div class="btns"><label class="b ba" for="a4_3">✓ Show Answer</label><label class="b be" for="e4_3">💡 Explain</label></div><div class="box ans"><p><b>58.5 g → 1 mole Na<sup>+</sup> + 1 mole Cl<sup>−</sup></b></p><p>Na 23 + Cl 35.5 = 58.5<br>One mole = the molecular mass in grams = 58.5 g<br>1 mole NaCl gives 1 mole of sodium and 1 mole of chloride</p></div><div class="box ex"><p>Molecular mass = sum of the atomic masses.</p></div></div></article><article class="aL"><span class="qno">3</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 6</div><button type="button" class="bw bws" data-k="pc4q_4">✍️ Solve here</button></div><div class="qt">CO<sub>2</sub>: C = 12, O = 16.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_4"><input type="checkbox" class="ck ce" id="e4_4"><div class="ptq">Molecular mass of CO<sub>2</sub> = ?</div><div class="btns"><label class="b ba" for="a4_4">✓ Show Answer</label><label class="b be" for="e4_4">💡 Explain</label></div><div class="box ans"><p><b>44 → 1 mole of CO<sub>2</sub> = 44 g</b></p><p>C = 12<br>O = 16 + 16 = 32<br>Total = 44<br>1 mole of CO<sub>2</sub> = 44 g (it contains 1 mole C = 12 g and 2 moles O = 32 g)<br><span class="same">⚠️ The slide writes "one mole of C = 44 g" and "one mole of O = 44/2 = 22 g" — the correct reading is 1 mole of CO<sub>2</sub> = 44 g, and one mole of O atoms is always 16 g.</span></p></div><div class="box ex"><p>Count every atom: O<sub>2</sub> means two oxygens.</p></div></div></article><article class="aB"><span class="qno">4</span><div class="qh"><div class="srcl sB">Textbook Question · Worked examples · Page 166</div><button type="button" class="bw bws" data-k="pc4q_8">✍️ Solve here</button></div><div class="qt">Calculate the molecular weights (K = 39, Br = 79.9, Al = 27, Cl = 35.5, Zn = 65.4, S = 32, O = 16, H = 1, C = 12):</div><div class="part"><input type="checkbox" class="ck ca" id="a4_5"><input type="checkbox" class="ck ce" id="e4_5"><div class="ptq"><span class="pl">a.</span> Potassium bromide, KBr</div><div class="btns"><label class="b ba" for="a4_5">✓ Show Answer</label><label class="b be" for="e4_5">💡 Explain</label></div><div class="box ans"><p><b>118.9 g</b></p><p>39 + 79.9 = 118.9 g</p></div><div class="box ex"><p>One atom of each.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_6"><input type="checkbox" class="ck ce" id="e4_6"><div class="ptq"><span class="pl">b.</span> Aluminium chloride, AlCl<sub>3</sub></div><div class="btns"><label class="b ba" for="a4_6">✓ Show Answer</label><label class="b be" for="e4_6">💡 Explain</label></div><div class="box ans"><p><b>133.5 g</b></p><p>27 + (35.5 × 3) = 133.5 g</p></div><div class="box ex"><p>Multiply by the number of atoms.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_7"><input type="checkbox" class="ck ce" id="e4_7"><div class="ptq"><span class="pl">c.</span> Zinc sulfate monohydrate, ZnSO<sub>4</sub>.H<sub>2</sub>O</div><div class="btns"><label class="b ba" for="a4_7">✓ Show Answer</label><label class="b be" for="e4_7">💡 Explain</label></div><div class="box ans"><p><b>179.4 g</b></p><p>65.4 + 32 + (16 × 4) + (1 × 2) + 16 = 179.4 g</p></div><div class="box ex"><p>Include the water of hydration.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_8"><input type="checkbox" class="ck ce" id="e4_8"><div class="ptq"><span class="pl">d.</span> Aspirin, C<sub>9</sub>H<sub>8</sub>O<sub>4</sub></div><div class="btns"><label class="b ba" for="a4_8">✓ Show Answer</label><label class="b be" for="e4_8">💡 Explain</label></div><div class="box ans"><p><b>180 g</b></p><p>(9 × 12) + (8 × 1) + (4 × 16) = 180 g</p></div><div class="box ex"><p>Use the empirical formula.</p></div></div></article><article class="aB"><span class="qno">5</span><div class="qh"><div class="srcl sB">Textbook Question · Q1 · Page 189</div><button type="button" class="bw bws" data-k="pc4q_16">✍️ Solve here</button></div><div class="qt">For the following drugs calculate the molecular weight and the weight of salt containing 1 millimole of the metal ion:</div><div class="part"><input type="checkbox" class="ck ca" id="a4_9"><input type="checkbox" class="ck ce" id="e4_9"><div class="ptq"><span class="pl">a.</span> (a) potassium chloride, KCl</div><div class="btns"><label class="b ba" for="a4_9">✓ Show Answer</label><label class="b be" for="e4_9">💡 Explain</label></div><div class="box ans"><p><b>MW 74.5; 74.5 mg</b></p><p>39 + 35.5 = 74.5 → 1 mmol = 74.5 mg</p></div><div class="box ex"><p>1 mmol = MW in mg.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_10"><input type="checkbox" class="ck ce" id="e4_10"><div class="ptq"><span class="pl">b.</span> (b) sodium chloride, NaCl</div><div class="btns"><label class="b ba" for="a4_10">✓ Show Answer</label><label class="b be" for="e4_10">💡 Explain</label></div><div class="box ans"><p><b>MW 58.5; 58.5 mg</b></p><p>23 + 35.5 = 58.5</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_11"><input type="checkbox" class="ck ce" id="e4_11"><div class="ptq"><span class="pl">c.</span> (c) calcium chloride, CaCl<sub>2</sub>.2H<sub>2</sub>O</div><div class="btns"><label class="b ba" for="a4_11">✓ Show Answer</label><label class="b be" for="e4_11">💡 Explain</label></div><div class="box ans"><p><b>MW 147; 147 mg</b></p><p>40 + 71 + (2 × 18) = 147</p></div><div class="box ex"><p>Water: 2 × 18.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_12"><input type="checkbox" class="ck ce" id="e4_12"><div class="ptq"><span class="pl">d.</span> (d) calcium lactate, C<sub>6</sub>H<sub>10</sub>CaO<sub>6</sub>.5H<sub>2</sub>O</div><div class="btns"><label class="b ba" for="a4_12">✓ Show Answer</label><label class="b be" for="e4_12">💡 Explain</label></div><div class="box ans"><p><b>MW 308; 308 mg</b></p><p>72 + 10 + 40 + 96 + (5 × 18) = 308</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_13"><input type="checkbox" class="ck ce" id="e4_13"><div class="ptq"><span class="pl">e.</span> (e) potassium bicarbonate, KHCO<sub>3</sub></div><div class="btns"><label class="b ba" for="a4_13">✓ Show Answer</label><label class="b be" for="e4_13">💡 Explain</label></div><div class="box ans"><p><b>MW 100; 100 mg</b></p><p>39 + 1 + 12 + 48 = 100</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_14"><input type="checkbox" class="ck ce" id="e4_14"><div class="ptq"><span class="pl">f.</span> (f) magnesium chloride, MgCl<sub>2</sub>.6H<sub>2</sub>O</div><div class="btns"><label class="b ba" for="a4_14">✓ Show Answer</label><label class="b be" for="e4_14">💡 Explain</label></div><div class="box ans"><p><b>MW 203; 203 mg</b></p><p>24.3 + 71 + (6 × 18) = 203.3 ≈ 203</p></div><div class="box ex"><p>Mg = 24.3.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_15"><input type="checkbox" class="ck ce" id="e4_15"><div class="ptq"><span class="pl">g.</span> (g) sodium citrate, C<sub>6</sub>H<sub>5</sub>Na<sub>3</sub>O<sub>7</sub>.2H<sub>2</sub>O</div><div class="btns"><label class="b ba" for="a4_15">✓ Show Answer</label><label class="b be" for="e4_15">💡 Explain</label></div><div class="box ans"><p><b>MW 294.1; 294.1 mg (book)</b></p><p>72 + 5 + 69 + 112 + 36 = 294<br><span class="same">⚠️ The book gives 294.1 mg (1 mmol of the salt). Because there are 3 Na per molecule, 1 mmol of Na<sup>+</sup> is actually in 294.1/3 ≈ 98 mg.</span></p></div><div class="box ex"><p>Na<sub>3</sub> = 3 × 23 = 69.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_16"><input type="checkbox" class="ck ce" id="e4_16"><div class="ptq"><span class="pl">h.</span> (h) ammonium chloride, NH<sub>4</sub>Cl</div><div class="btns"><label class="b ba" for="a4_16">✓ Show Answer</label><label class="b be" for="e4_16">💡 Explain</label></div><div class="box ans"><p><b>MW 53.5; 53.5 mg</b></p><p>14 + 4 + 35.5 = 53.5</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article></section><section id="c4s1"><div class="sh"><h2>2. Amount of an Ion in a Compound</h2><p>1 lecture · 8 textbook questions</p></div><article class="aL"><span class="qno">6</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 13</div><button type="button" class="bw bws" data-k="pc4q_17">✍️ Solve here</button></div><div class="qt">How many mg of sodium ions are contained in 850 mg tablet of sodium chloride?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_17"><input type="checkbox" class="ck ce" id="e4_17"><div class="ptq">Na<sup>+</sup> (mg) = ?</div><div class="btns"><label class="b ba" for="a4_17">✓ Show Answer</label><label class="b be" for="e4_17">💡 Explain</label></div><div class="box ans"><p><b>334 mg</b></p><p>850 → x<br>58.5 → 23<br>x = 850 × 23 / 58.5 = 334 mg</p></div><div class="box ex"><p>Na is 23 parts of every 58.5 parts of NaCl.</p></div></div></article><article class="aB"><span class="qno">7</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.1 · Page 167</div><button type="button" class="bw bws" data-k="pc4q_18">✍️ Solve here</button></div><div class="qt">How many milligrams of sodium ions are contained in a 600-mg tablet of sodium chloride?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_18"><input type="checkbox" class="ck ce" id="e4_18"><div class="ptq">Na<sup>+</sup> (mg) = ?</div><div class="btns"><label class="b ba" for="a4_18">✓ Show Answer</label><label class="b be" for="e4_18">💡 Explain</label></div><div class="box ans"><p><b>235.9 mg</b></p><p>Na + Cl = 23 + 35.5 = 58.5<div class="pst"><table class="ps"><tr><th></th><th>NaCl</th><th>Na</th></tr><tr><td>weight (mg)</td><td>600</td><td>x</td></tr><tr><td>molecular/atomic weight</td><td>58.5</td><td>23</td></tr></table></div>x = 600 × 23 / 58.5 = 235.9 mg</p></div><div class="box ex"><p>Same method as Slide 13.</p></div></div></article><article class="aB"><span class="qno">8</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.2 · Page 168</div><button type="button" class="bw bws" data-k="pc4q_19">✍️ Solve here</button></div><div class="qt">What is the percentage of lithium contained in a 400-mg tablet of lithium carbonate?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_19"><input type="checkbox" class="ck ce" id="e4_19"><div class="ptq">% Li = ?</div><div class="btns"><label class="b ba" for="a4_19">✓ Show Answer</label><label class="b be" for="e4_19">💡 Explain</label></div><div class="box ans"><p><b>18.92%</b></p><p>Li<sub>2</sub>CO<sub>3</sub> = (7 × 2) + 12 + (16 × 3) = 74 → Li = 14 parts<br>y = 400 × 14 / 74 = 75.7 mg<br>75.7 / 400 × 100 = 18.92%<br>Directly: 14 / 74 × 100 = 18.92%</p></div><div class="box ex"><p>There are 2 Li atoms → 14, not 7.</p></div></div></article><article class="aB"><span class="qno">9</span><div class="qh"><div class="srcl sB">Textbook Question · Q2 · Page 189</div><button type="button" class="bw bws" data-k="pc4q_21">✍️ Solve here</button></div><div class="qt">Lithium citrate, C<sub>6</sub>H<sub>5</sub>Li<sub>3</sub>O<sub>7</sub>.H<sub>2</sub>O (Li = 7).</div><div class="part"><input type="checkbox" class="ck ca" id="a4_20"><input type="checkbox" class="ck ce" id="e4_20"><div class="ptq"><span class="pl">a.</span> Molecular weight = ?</div><div class="btns"><label class="b ba" for="a4_20">✓ Show Answer</label><label class="b be" for="e4_20">💡 Explain</label></div><div class="box ans"><p><b>228</b></p><p>72 + 5 + 21 + 112 + 18 = 228</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_21"><input type="checkbox" class="ck ce" id="e4_21"><div class="ptq"><span class="pl">b.</span> % of Li<sup>+</sup> = ?</div><div class="btns"><label class="b ba" for="a4_21">✓ Show Answer</label><label class="b be" for="e4_21">💡 Explain</label></div><div class="box ans"><p><b>9.21%</b></p><p>21 / 228 × 100 = 9.21%</p></div><div class="box ex"><p>Li<sub>3</sub> = 21.</p></div></div></article><article class="aB"><span class="qno">10</span><div class="qh"><div class="srcl sB">Textbook Question · Q3 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_23">✍️ Solve here</button></div><div class="qt">The empirical formula of ferrous fumarate is C<sub>4</sub>H<sub>2</sub>FeO<sub>4</sub>.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_22"><input type="checkbox" class="ck ce" id="e4_22"><div class="ptq"><span class="pl">a.</span> Molecular weight = ?</div><div class="btns"><label class="b ba" for="a4_22">✓ Show Answer</label><label class="b be" for="e4_22">💡 Explain</label></div><div class="box ans"><p><b>169.9</b></p><p>48 + 2 + 55.9 + 64 = 169.9 (Fe = 55.85)</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_23"><input type="checkbox" class="ck ce" id="e4_23"><div class="ptq"><span class="pl">b.</span> Weight of ferrous fumarate that gives 100 mg of iron = ?</div><div class="btns"><label class="b ba" for="a4_23">✓ Show Answer</label><label class="b be" for="e4_23">💡 Explain</label></div><div class="box ans"><p><b>304 mg</b></p><p>x = 100 × 169.9 / 55.85 = 304 mg</p></div><div class="box ex"><p>Iron is 55.85 parts of 169.9.</p></div></div></article><article class="aB"><span class="qno">11</span><div class="qh"><div class="srcl sB">Textbook Question · Q4 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_24">✍️ Solve here</button></div><div class="qt">A syrup contains ferrous fumarate 140 mg/5 mL. How much iron will a patient receive per day if the daily dosage regimen is 10 mL twice a day?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_24"><input type="checkbox" class="ck ce" id="e4_24"><div class="ptq">Iron per day = ?</div><div class="btns"><label class="b ba" for="a4_24">✓ Show Answer</label><label class="b be" for="e4_24">💡 Explain</label></div><div class="box ans"><p><b>184 mg</b></p><p>10 mL × 2 = 20 mL/day → 140 × 20/5 = 560 mg ferrous fumarate<br>Iron = 560 × 55.85 / 169.9 = 184 mg</p></div><div class="box ex"><p>Find the salt first, then the iron in it.</p></div></div></article><article class="aB"><span class="qno">12</span><div class="qh"><div class="srcl sB">Textbook Question · Q7 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_26">✍️ Solve here</button></div><div class="qt">Calcium gluconate (molecular weight 448.4) tablets each contain 53.4 mg of calcium (Ca = 40.08).</div><div class="part"><input type="checkbox" class="ck ca" id="a4_25"><input type="checkbox" class="ck ce" id="e4_25"><div class="ptq"><span class="pl">a.</span> Calcium gluconate in each tablet = ?</div><div class="btns"><label class="b ba" for="a4_25">✓ Show Answer</label><label class="b be" for="e4_25">💡 Explain</label></div><div class="box ans"><p><b>597.4 mg</b></p><p>53.4 × 448.4 / 40.08 = 597.4 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_26"><input type="checkbox" class="ck ce" id="e4_26"><div class="ptq"><span class="pl">b.</span> Millimoles of calcium per tablet = ?</div><div class="btns"><label class="b ba" for="a4_26">✓ Show Answer</label><label class="b be" for="e4_26">💡 Explain</label></div><div class="box ans"><p><b>1.33 mmol</b></p><p>53.4 / 40.08 = 1.33 mmol</p></div><div class="box ex"><p>mmol = mg ÷ atomic weight.</p></div></div></article><article class="aB"><span class="qno">13</span><div class="qh"><div class="srcl sB">Textbook Question · Q8 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_29">✍️ Solve here</button></div><div class="qt">Calcium acetate, C<sub>4</sub>H<sub>6</sub>CaO<sub>4</sub>.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_27"><input type="checkbox" class="ck ce" id="e4_27"><div class="ptq"><span class="pl">a.</span> Molecular weight = ?</div><div class="btns"><label class="b ba" for="a4_27">✓ Show Answer</label><label class="b be" for="e4_27">💡 Explain</label></div><div class="box ans"><p><b>158</b></p><p>48 + 6 + 40 + 64 = 158</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_28"><input type="checkbox" class="ck ce" id="e4_28"><div class="ptq"><span class="pl">b.</span> Calcium provided by 300 mg of calcium acetate = ?</div><div class="btns"><label class="b ba" for="a4_28">✓ Show Answer</label><label class="b be" for="e4_28">💡 Explain</label></div><div class="box ans"><p><b>75.9 mg</b></p><p>300 × 40 / 158 = 75.9 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_29"><input type="checkbox" class="ck ce" id="e4_29"><div class="ptq"><span class="pl">c.</span> mg of calcium acetate in 1 millimole = ?</div><div class="btns"><label class="b ba" for="a4_29">✓ Show Answer</label><label class="b be" for="e4_29">💡 Explain</label></div><div class="box ans"><p><b>158 mg</b></p><p>1 mmol = MW in mg = 158 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">14</span><div class="qh"><div class="srcl sB">Textbook Question · Q11 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_30">✍️ Solve here</button></div><div class="qt">Sodium Fluoride BP drops contain 275 micrograms of sodium fluoride per drop. Calculate the quantity of fluoride ion provided by five drops (Na = 23, F = 19).</div><div class="part"><input type="checkbox" class="ck ca" id="a4_30"><input type="checkbox" class="ck ce" id="e4_30"><div class="ptq">Fluoride = ?</div><div class="btns"><label class="b ba" for="a4_30">✓ Show Answer</label><label class="b be" for="e4_30">💡 Explain</label></div><div class="box ans"><p><b>622 micrograms</b></p><p>5 × 275 = 1375 micrograms NaF<br>NaF = 23 + 19 = 42<br>1375 × 19 / 42 = 622 micrograms</p></div><div class="box ex"><p>Fluoride is 19 parts of 42.</p></div></div></article></section><section id="c4s2"><div class="sh"><h2>3. Drug Salts, Bases & Hydrates</h2><p>1 lecture · 15 textbook questions</p></div><article class="aL"><span class="qno">15</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 14</div><button type="button" class="bw bws" data-k="pc4q_31">✍️ Solve here</button></div><div class="qt">What weight of ferrous gluconate contains the same quantity of iron as tablet containing 300 mg of ferrous sulphate (dried)? (FeSO<sub>4</sub> = 152, ferrous gluconate = 482, Fe = 56)</div><div class="part"><input type="checkbox" class="ck ca" id="a4_31"><input type="checkbox" class="ck ce" id="e4_31"><div class="ptq">Ferrous gluconate = ?</div><div class="btns"><label class="b ba" for="a4_31">✓ Show Answer</label><label class="b be" for="e4_31">💡 Explain</label></div><div class="box ans"><p><b>951 mg</b></p><p>Iron in 300 mg ferrous sulphate: 300 × 56 / 152 = 110.5 mg<br>Ferrous gluconate with 110.5 mg iron: 110.5 × 482 / 56 = 951 mg<br>Shortcut: 300 × 482 / 152 = 951 mg</p></div><div class="box ex"><p>No answer on the slide — solved with the book's method (Example 10.3).</p></div></div></article><article class="aB"><span class="qno">16</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.3 · Page 169</div><button type="button" class="bw bws" data-k="pc4q_32">✍️ Solve here</button></div><div class="qt">What weight of ferrous gluconate contains the same quantity of iron as a tablet containing 200 mg of ferrous sulfate (dried)?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_32"><input type="checkbox" class="ck ce" id="e4_32"><div class="ptq">Ferrous gluconate = ?</div><div class="btns"><label class="b ba" for="a4_32">✓ Show Answer</label><label class="b be" for="e4_32">💡 Explain</label></div><div class="box ans"><p><b>634.17 mg</b></p><p>Fe + S + O<sub>4</sub> = 56 + 32 + 64 = 152<div class="pst"><table class="ps"><tr><th></th><th>iron</th><th>ferrous sulfate</th></tr><tr><td>amount (mg)</td><td>y</td><td>200</td></tr><tr><td>molecular/atomic weight</td><td>56</td><td>152</td></tr></table></div>y = 73.68 mg iron<br>Ferrous gluconate C<sub>12</sub>H<sub>22</sub>FeO<sub>12</sub>.2H<sub>2</sub>O = 482<br>z = 73.68 × 482 / 56 = 634.17 mg</p></div><div class="box ex"><p>Same as Slide 14 but with 200 mg.</p></div></div></article><article class="aB"><span class="qno">17</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.4 · Page 171</div><button type="button" class="bw bws" data-k="pc4q_33">✍️ Solve here</button></div><div class="qt">Erythromycin 734, erythromycin ethyl succinate 862, erythromycin stearate 1018. Calculate the amounts of erythromycin ethyl succinate and erythromycin stearate that are equivalent to 250 mg erythromycin.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_33"><input type="checkbox" class="ck ce" id="e4_33"><div class="ptq">Ethyl succinate and stearate = ?</div><div class="btns"><label class="b ba" for="a4_33">✓ Show Answer</label><label class="b be" for="e4_33">💡 Explain</label></div><div class="box ans"><p><b>294 mg and 347 mg</b></p><p>x = 250 × 862 / 734 = 294 mg<br>y = 250 × 1018 / 734 = 347 mg</p></div><div class="box ex"><p>Salt = base × MW salt / MW base.</p></div></div></article><article class="aB"><span class="qno">18</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.5 · Page 172</div><button type="button" class="bw bws" data-k="pc4q_34">✍️ Solve here</button></div><div class="qt">Adrenaline injection contains 100 micrograms of adrenaline (as the acid tartrate) per mL. MW adrenaline 183, adrenaline acid tartrate 333. Calculate the amount of adrenaline acid tartrate in each mL.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_34"><input type="checkbox" class="ck ce" id="e4_34"><div class="ptq">Acid tartrate per mL = ?</div><div class="btns"><label class="b ba" for="a4_34">✓ Show Answer</label><label class="b be" for="e4_34">💡 Explain</label></div><div class="box ans"><p><b>182 micrograms</b></p><p>z = 100 × 333 / 183 = 182 micrograms</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">19</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.6 · Page 173</div><button type="button" class="bw bws" data-k="pc4q_35">✍️ Solve here</button></div><div class="qt">How many grams of salbutamol sulfate will contain the same amount of salbutamol base as 5 g of salbutamol? MW salbutamol 239, salbutamol sulfate (C<sub>13</sub>H<sub>21</sub>NO<sub>3</sub>)<sub>2</sub>.H<sub>2</sub>SO<sub>4</sub> 577.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_35"><input type="checkbox" class="ck ce" id="e4_35"><div class="ptq">Salbutamol sulfate = ?</div><div class="btns"><label class="b ba" for="a4_35">✓ Show Answer</label><label class="b be" for="e4_35">💡 Explain</label></div><div class="box ans"><p><b>6.04 g</b></p><p>One sulfate molecule has 2 salbutamol → equivalent MW = 239 × 2 = 478<br>x = 5 × 577 / 478 = 6.04 g</p></div><div class="box ex"><p>Base : salt is 2 : 1 here.</p></div></div></article><article class="aB"><span class="qno">20</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.7 · Page 174</div><button type="button" class="bw bws" data-k="pc4q_36">✍️ Solve here</button></div><div class="qt">BNF: quinine (anhydrous base) 100 mg ≡ quinine bisulfate 169 mg ≡ quinine dihydrochloride 122 mg. Quinine base MW = 324. Estimate the molecular weights of the two salts.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_36"><input type="checkbox" class="ck ce" id="e4_36"><div class="ptq">MW of bisulfate and dihydrochloride = ?</div><div class="btns"><label class="b ba" for="a4_36">✓ Show Answer</label><label class="b be" for="e4_36">💡 Explain</label></div><div class="box ans"><p><b>548 and 395</b></p><p>x = 324 × 169 / 100 = 548<br>y = 324 × 122 / 100 = 395</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">21</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.8 · Page 174</div><button type="button" class="bw bws" data-k="pc4q_37">✍️ Solve here</button></div><div class="qt">Show that a 300-mg tablet of quinine bisulfate contains less quinine than a 300-mg tablet of quinine sulfate (BNF equivalent for quinine sulfate = 121).</div><div class="part"><input type="checkbox" class="ck ca" id="a4_37"><input type="checkbox" class="ck ce" id="e4_37"><div class="ptq">Quinine base in each = ?</div><div class="btns"><label class="b ba" for="a4_37">✓ Show Answer</label><label class="b be" for="e4_37">💡 Explain</label></div><div class="box ans"><p><b>Sulfate 248 mg; bisulfate 178 mg</b></p><p>Sulfate: 300 × 100 / 121 = 248 mg<br>Bisulfate: 300 × 100 / 169 = 178 mg<br>178 &lt; 248 → statement correct</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">22</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.9 · Page 176</div><button type="button" class="bw bws" data-k="pc4q_38">✍️ Solve here</button></div><div class="qt">1 L of Paediatric Ferrous Sulfate Oral Solution BP contains 12 g of ferrous sulfate. You need 150 mL, but only ferrous sulfate anhydrous is available. MW ferrous sulfate 278, anhydrous 152. How much anhydrous should be used?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_38"><input type="checkbox" class="ck ce" id="e4_38"><div class="ptq">Anhydrous ferrous sulfate = ?</div><div class="btns"><label class="b ba" for="a4_38">✓ Show Answer</label><label class="b be" for="e4_38">💡 Explain</label></div><div class="box ans"><p><b>0.984 g</b></p><p>x = 12 × 150 / 1000 = 1.8 g ferrous sulfate<br>y = 1.8 × 152 / 278 = 0.984 g</p></div><div class="box ex"><p>The hydrate is heavier, so you need less anhydrous.</p></div></div></article><article class="aB"><span class="qno">23</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.10 · Page 177</div><button type="button" class="bw bws" data-k="pc4q_39">✍️ Solve here</button></div><div class="qt">How much codeine phosphate sesquihydrate (MW 424) is equivalent to 30 mg of codeine phosphate (hemihydrate, MW 406)?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_39"><input type="checkbox" class="ck ce" id="e4_39"><div class="ptq">Sesquihydrate = ?</div><div class="btns"><label class="b ba" for="a4_39">✓ Show Answer</label><label class="b be" for="e4_39">💡 Explain</label></div><div class="box ans"><p><b>31.33 mg</b></p><p>z = 30 × 424 / 406 = 31.33 mg</p></div><div class="box ex"><p>The difference is one water molecule.</p></div></div></article><article class="aB"><span class="qno">24</span><div class="qh"><div class="srcl sB">Textbook Question · Q6 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_41">✍️ Solve here</button></div><div class="qt">Glucose intravenous infusion contains 5% glucose expressed as anhydrous glucose.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_40"><input type="checkbox" class="ck ce" id="e4_40"><div class="ptq"><span class="pl">a.</span> Anhydrous glucose (MW 180) for 500 mL = ?</div><div class="btns"><label class="b ba" for="a4_40">✓ Show Answer</label><label class="b be" for="e4_40">💡 Explain</label></div><div class="box ans"><p><b>25 g</b></p><p>5 g → 100 mL → 500 mL: 25 g</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_41"><input type="checkbox" class="ck ce" id="e4_41"><div class="ptq"><span class="pl">b.</span> Glucose monohydrate (MW 192) for 750 mL = ?</div><div class="btns"><label class="b ba" for="a4_41">✓ Show Answer</label><label class="b be" for="e4_41">💡 Explain</label></div><div class="box ans"><p><b>40 g</b></p><p>Anhydrous needed: 5 × 7.5 = 37.5 g<br>Monohydrate: 37.5 × 192 / 180 = 40 g</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">25</span><div class="qh"><div class="srcl sB">Textbook Question · Q12 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_42">✍️ Solve here</button></div><div class="qt">Ranitidine Injection BP contains ranitidine 25 mg/mL (as the hydrochloride). Calculate the amount of ranitidine hydrochloride needed to prepare 100 mL. (MW: ranitidine hydrochloride 350.9, ranitidine 314.4)</div><div class="part"><input type="checkbox" class="ck ca" id="a4_42"><input type="checkbox" class="ck ce" id="e4_42"><div class="ptq">Ranitidine HCl = ?</div><div class="btns"><label class="b ba" for="a4_42">✓ Show Answer</label><label class="b be" for="e4_42">💡 Explain</label></div><div class="box ans"><p><b>2.79 g</b></p><p>25 × 100 = 2500 mg ranitidine<br>2500 × 350.9 / 314.4 = 2790 mg = 2.79 g</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">26</span><div class="qh"><div class="srcl sB">Textbook Question · Q14 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_43">✍️ Solve here</button></div><div class="qt">A syrup contains chloroquine sulfate (MW 436), 68 mg/5-mL dose. Calculate the amount of chloroquine base (MW 319.9) in each 5-mL dose.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_43"><input type="checkbox" class="ck ce" id="e4_43"><div class="ptq">Base = ?</div><div class="btns"><label class="b ba" for="a4_43">✓ Show Answer</label><label class="b be" for="e4_43">💡 Explain</label></div><div class="box ans"><p><b>49.9 mg</b></p><p>68 × 319.9 / 436 = 49.9 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">27</span><div class="qh"><div class="srcl sB">Textbook Question · Q15 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_44">✍️ Solve here</button></div><div class="qt">How much chloroquine base (MW 319.9) is equivalent to a tablet containing 250 mg chloroquine phosphate (MW 515.9)?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_44"><input type="checkbox" class="ck ce" id="e4_44"><div class="ptq">Base = ?</div><div class="btns"><label class="b ba" for="a4_44">✓ Show Answer</label><label class="b be" for="e4_44">💡 Explain</label></div><div class="box ans"><p><b>155 mg</b></p><p>250 × 319.9 / 515.9 = 155 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">28</span><div class="qh"><div class="srcl sB">Textbook Question · Q16 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_45">✍️ Solve here</button></div><div class="qt">How much morphine (MW 285.3) is contained in 50 mL of a 2% solution of morphine tartrate (MW 774.8)?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_45"><input type="checkbox" class="ck ce" id="e4_45"><div class="ptq">Morphine = ?</div><div class="btns"><label class="b ba" for="a4_45">✓ Show Answer</label><label class="b be" for="e4_45">💡 Explain</label></div><div class="box ans"><p><b>0.368 g (book answer)</b></p><p>2% × 50 mL = 1 g morphine tartrate<br>1 × 285.3 / 774.8 = 0.368 g<br><span class="same">⚠️ Morphine tartrate contains 2 morphine molecules per molecule (like salbutamol sulfate in Example 10.6), so strictly 1 × 570.6 / 774.8 = 0.736 g. The book's answer uses 1 : 1.</span></p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">29</span><div class="qh"><div class="srcl sB">Textbook Question · Q17 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_46">✍️ Solve here</button></div><div class="qt">A patient requires 300 mg of quinine (MW 324.4). What weight of quinine hydrobromide (MW 423.3) will provide 300 mg of quinine?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_46"><input type="checkbox" class="ck ce" id="e4_46"><div class="ptq">Quinine HBr = ?</div><div class="btns"><label class="b ba" for="a4_46">✓ Show Answer</label><label class="b be" for="e4_46">💡 Explain</label></div><div class="box ans"><p><b>391.5 mg</b></p><p>300 × 423.3 / 324.4 = 391.5 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">30</span><div class="qh"><div class="srcl sB">Textbook Question · Q18 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_47">✍️ Solve here</button></div><div class="qt">How much hyoscine (MW 303.4) is contained in a 20-mg tablet of hyoscine butylbromide (MW 440.4)?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_47"><input type="checkbox" class="ck ce" id="e4_47"><div class="ptq">Hyoscine = ?</div><div class="btns"><label class="b ba" for="a4_47">✓ Show Answer</label><label class="b be" for="e4_47">💡 Explain</label></div><div class="box ans"><p><b>13.8 mg</b></p><p>20 × 303.4 / 440.4 = 13.8 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article></section><section id="c4s3" class="noL"><div class="sh"><h2>4. Legal Classification Using Molecular Weights</h2><p>3 textbook questions</p></div><article class="aB"><span class="qno">31</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.11 · Page 178</div><button type="button" class="bw bws" data-k="pc4q_48">✍️ Solve here</button></div><div class="qt">Ephedrine HCl can be sold over the counter if the maximum dose ≡ 30 mg ephedrine and the maximum daily dose ≡ 60 mg ephedrine. MW ephedrine HCl 202, ephedrine 165. What are these limits as ephedrine hydrochloride?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_48"><input type="checkbox" class="ck ce" id="e4_48"><div class="ptq">Max dose and max daily dose = ?</div><div class="btns"><label class="b ba" for="a4_48">✓ Show Answer</label><label class="b be" for="e4_48">💡 Explain</label></div><div class="box ans"><p><b>36.7 mg and 73.4 mg</b></p><p>x = 30 × 202 / 165 = 36.7 mg<br>y = 60 × 202 / 165 = 73.4 mg</p></div><div class="box ex"><p>Above these it becomes POM.</p></div></div></article><article class="aB"><span class="qno">32</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.12 · Page 179</div><button type="button" class="bw bws" data-k="pc4q_49">✍️ Solve here</button></div><div class="qt">Morphine salts are CD Inv POM up to 0.2% (as anhydrous morphine base). MW base 285, morphine HCl 376. Maximum morphine hydrochloride in 200 mL?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_49"><input type="checkbox" class="ck ce" id="e4_49"><div class="ptq">Morphine HCl = ?</div><div class="btns"><label class="b ba" for="a4_49">✓ Show Answer</label><label class="b be" for="e4_49">💡 Explain</label></div><div class="box ans"><p><b>0.528 g</b></p><p>0.2% → 0.4 g base in 200 mL<br>x = 0.4 × 376 / 285 = 0.528 g</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">33</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.13 · Page 180</div><button type="button" class="bw bws" data-k="pc4q_51">✍️ Solve here</button></div><div class="qt">Codeine is CD Inv POM up to 2.5% (as base) or 100 mg base per dosage unit. MW codeine base 317, codeine phosphate 406.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_50"><input type="checkbox" class="ck ce" id="e4_50"><div class="ptq"><span class="pl">a.</span> Max codeine phosphate in 100 mL syrup = ?</div><div class="btns"><label class="b ba" for="a4_50">✓ Show Answer</label><label class="b be" for="e4_50">💡 Explain</label></div><div class="box ans"><p><b>3.2 g</b></p><p>2.5 g base → 2.5 × 406 / 317 = 3.2 g</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_51"><input type="checkbox" class="ck ce" id="e4_51"><div class="ptq"><span class="pl">b.</span> Max codeine phosphate per dosage unit = ?</div><div class="btns"><label class="b ba" for="a4_51">✓ Show Answer</label><label class="b be" for="e4_51">💡 Explain</label></div><div class="box ans"><p><b>128 mg</b></p><p>100 × 406 / 317 = 128 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article></section><section id="c4s4"><div class="sh"><h2>5. Moles & Millimoles</h2><p>1 lecture · 5 textbook questions</p></div><article class="aL"><span class="qno">34</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 7</div><button type="button" class="bw bws" data-k="pc4q_52">✍️ Solve here</button></div><div class="qt">In practice, moles are too big for everyday use, so millimoles are used.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_52"><input type="checkbox" class="ck ce" id="e4_52"><div class="ptq">1 millimole = ? mole</div><div class="btns"><label class="b ba" for="a4_52">✓ Show Answer</label><label class="b be" for="e4_52">💡 Explain</label></div><div class="box ans"><p><b>1/1000 mole</b></p><p>1 mole = 1000 mmol → 1 mmol = 0.001 mole<br>(1 mmol = 1000 micromoles; 1 micromole = 1000 nanomoles)</p></div><div class="box ex"><p>mole → mmol: × 1000.</p></div></div></article><article class="aB"><span class="qno">35</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.14 · Page 182</div><button type="button" class="bw bws" data-k="pc4q_53">✍️ Solve here</button></div><div class="qt">How many millimoles each of Na<sup>+</sup> and HCO<sub>3</sub><sup>−</sup> are there in a 500-mg sodium bicarbonate capsule? (NaHCO<sub>3</sub> = 84)</div><div class="part"><input type="checkbox" class="ck ca" id="a4_53"><input type="checkbox" class="ck ce" id="e4_53"><div class="ptq">mmol = ?</div><div class="btns"><label class="b ba" for="a4_53">✓ Show Answer</label><label class="b be" for="e4_53">💡 Explain</label></div><div class="box ans"><p><b>5.9 mmol of each</b></p><p>0.5 g / 84 = 0.0059 mole = 5.9 mmol<br>1 NaHCO<sub>3</sub> → 1 Na<sup>+</sup> + 1 HCO<sub>3</sub><sup>−</sup> → 5.9 mmol each</p></div><div class="box ex"><p>Keep grams with grams.</p></div></div></article><article class="aB"><span class="qno">36</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.15 · Page 183</div><button type="button" class="bw bws" data-k="pc4q_54">✍️ Solve here</button></div><div class="qt">Calculate the number of moles of chloride ion in 500 mg of calcium chloride (CaCl<sub>2</sub> = 110).</div><div class="part"><input type="checkbox" class="ck ca" id="a4_54"><input type="checkbox" class="ck ce" id="e4_54"><div class="ptq">Chloride = ?</div><div class="btns"><label class="b ba" for="a4_54">✓ Show Answer</label><label class="b be" for="e4_54">💡 Explain</label></div><div class="box ans"><p><b>9.0 mmol (0.009 mole)</b></p><p>0.5 / 110 = 0.0045 mole = 4.5 mmol CaCl<sub>2</sub><br>Cl<sub>2</sub> → 4.5 × 2 = 9.0 mmol chloride</p></div><div class="box ex"><p>Two Cl per molecule → double.</p></div></div></article><article class="aB"><span class="qno">37</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.16 · Page 184</div><button type="button" class="bw bws" data-k="pc4q_55">✍️ Solve here</button></div><div class="qt">Calculate the number of moles of water in 500 mg of CaCl<sub>2</sub>.6H<sub>2</sub>O (MW 219).</div><div class="part"><input type="checkbox" class="ck ca" id="a4_55"><input type="checkbox" class="ck ce" id="e4_55"><div class="ptq">Water = ?</div><div class="btns"><label class="b ba" for="a4_55">✓ Show Answer</label><label class="b be" for="e4_55">💡 Explain</label></div><div class="box ans"><p><b>0.0137 mole = 13.7 mmol</b></p><p>y = 0.5 × 6 / 219 = 0.0137 mole</p></div><div class="box ex"><p>6 moles of water per mole.</p></div></div></article><article class="aB"><span class="qno">38</span><div class="qh"><div class="srcl sB">Textbook Question · Q9 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_57">✍️ Solve here</button></div><div class="qt">Calcium phosphate, Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub>.</div><div class="part"><input type="checkbox" class="ck ca" id="a4_56"><input type="checkbox" class="ck ce" id="e4_56"><div class="ptq"><span class="pl">a.</span> Molecular weight = ?</div><div class="btns"><label class="b ba" for="a4_56">✓ Show Answer</label><label class="b be" for="e4_56">💡 Explain</label></div><div class="box ans"><p><b>310</b></p><p>(3 × 40) + 2 × (31 + 64) = 120 + 190 = 310</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a4_57"><input type="checkbox" class="ck ce" id="e4_57"><div class="ptq"><span class="pl">b.</span> A powder contains 3.3 g. Millimoles of calcium ion = ?</div><div class="btns"><label class="b ba" for="a4_57">✓ Show Answer</label><label class="b be" for="e4_57">💡 Explain</label></div><div class="box ans"><p><b>32 mmol</b></p><p>3300 / 310 = 10.6 mmol salt × 3 Ca = 32 mmol</p></div><div class="box ex"><p>Three Ca per molecule.</p></div></div></article><article class="aB"><span class="qno">39</span><div class="qh"><div class="srcl sB">Textbook Question · Q13 · Page 191</div><button type="button" class="bw bws" data-k="pc4q_58">✍️ Solve here</button></div><div class="qt">"Low sodium" means less than 1 millimole of sodium per tablet or 10-mL dose. What is the maximum amount of sodium chloride in a 10-mL dose?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_58"><input type="checkbox" class="ck ce" id="e4_58"><div class="ptq">NaCl = ?</div><div class="btns"><label class="b ba" for="a4_58">✓ Show Answer</label><label class="b be" for="e4_58">💡 Explain</label></div><div class="box ans"><p><b>58.5 mg</b></p><p>1 mmol Na<sup>+</sup> = 1 mmol NaCl = 58.5 mg</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article></section><section id="c4s5"><div class="sh"><h2>6. Millimoles in Infusions & Molar Solutions</h2><p>4 lecture · 7 textbook questions</p></div><article class="aL"><span class="qno">40</span><div class="qh"><div class="srcl sL">Lecture Question · Slides 8–9</div><button type="button" class="bw bws" data-k="pc4q_59">✍️ Solve here</button></div><div class="qt">How many millimoles of sodium are there in 500 ml infusion containing 1.8 mg/ml sodium chloride?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_59"><input type="checkbox" class="ck ce" id="e4_59"><div class="ptq">mmol Na = ?</div><div class="btns"><label class="b ba" for="a4_59">✓ Show Answer</label><label class="b be" for="e4_59">💡 Explain</label></div><div class="box ans"><p><b>15.4 mmol</b></p><p>Total number = mg/ml ÷ mg of substance containing 1 mmol × volume (ml)<br>= 1.8 / 58.5 × 500 = 15.4 mmol<br>Or (Slide 9): 1.8 mg → 1 ml, x → 500 ml → 900 mg<br>58.5 mg → 1 mmol, 900 mg → x → 15.4 mmol</p></div><div class="box ex"><p>1 mmol NaCl = 58.5 mg.</p></div></div></article><article class="aL"><span class="qno">41</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 10</div><button type="button" class="bw bws" data-k="pc4q_60">✍️ Solve here</button></div><div class="qt">How many millimoles of sodium are there in a 1 litre infusion containing 1800 mg/litre sodium chloride?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_60"><input type="checkbox" class="ck ce" id="e4_60"><div class="ptq">mmol = ?</div><div class="btns"><label class="b ba" for="a4_60">✓ Show Answer</label><label class="b be" for="e4_60">💡 Explain</label></div><div class="box ans"><p><b>30.8 mmol</b></p><p>mmol/litre = mg/litre ÷ mg containing 1 mmol<br>= 1800 / 58.5 = 30.8 mmol</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aL"><span class="qno">42</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 11</div><button type="button" class="bw bws" data-k="pc4q_61">✍️ Solve here</button></div><div class="qt">How many millimoles of sodium are in one litre sodium chloride infusion 0.9%?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_61"><input type="checkbox" class="ck ce" id="e4_61"><div class="ptq">mmol = ?</div><div class="btns"><label class="b ba" for="a4_61">✓ Show Answer</label><label class="b be" for="e4_61">💡 Explain</label></div><div class="box ans"><p><b>154 mmol</b></p><p>Total mmol = % w/v × 10 × volume ÷ mg containing 1 mmol<br>= 0.9 × 10 × 1000 / 58.5 = 154 mmol<br>Or: 0.9 g → 100 mL, x → 1000 mL → 9 g = 9000 mg<br>9000 / 58.5 = 154 mmol</p></div><div class="box ex"><p>% × 10 = mg/mL.</p></div></div></article><article class="aL"><span class="qno">43</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 12</div><button type="button" class="bw bws" data-k="pc4q_62">✍️ Solve here</button></div><div class="qt"><i>Student activity:</i> You need to add 35 mmol of potassium chloride to one litre of infusion. You have ampule containing potassium chloride 2 g/10 ml. Calculate how much do you need to withdraw? (KCl = 39 + 35.5 = 74.5)</div><div class="part"><input type="checkbox" class="ck ca" id="a4_62"><input type="checkbox" class="ck ce" id="e4_62"><div class="ptq">Volume = ?</div><div class="btns"><label class="b ba" for="a4_62">✓ Show Answer</label><label class="b be" for="e4_62">💡 Explain</label></div><div class="box ans"><p><b>≈ 13 ml (13.04 ml)</b></p><p>1 mmol KCl = 74.5 mg → 35 mmol = 35 × 74.5 = 2607.5 mg = 2.6075 g<br>2 g → 10 ml<br>2.6075 g → x &nbsp;&nbsp;x = 2.6075 × 10 / 2 = 13.04 ml</p></div><div class="box ex"><p>No answer on the slide — mmol → mg → ml.</p></div></div></article><article class="aB"><span class="qno">44</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.17 · Page 185</div><button type="button" class="bw bws" data-k="pc4q_63">✍️ Solve here</button></div><div class="qt">How many moles of solute are there in 20 mL of a 1 mol/L solution?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_63"><input type="checkbox" class="ck ce" id="e4_63"><div class="ptq">Moles = ?</div><div class="btns"><label class="b ba" for="a4_63">✓ Show Answer</label><label class="b be" for="e4_63">💡 Explain</label></div><div class="box ans"><p><b>0.02 mole</b></p><p>y = 1 × 20 / 1000 = 0.02 mole<br><span class="same">⚠️ The book's last line says "200 mL" by mistake — it is 20 mL.</span></p></div><div class="box ex"><p>mol/L × litres.</p></div></div></article><article class="aB"><span class="qno">45</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.18 · Page 185</div><button type="button" class="bw bws" data-k="pc4q_64">✍️ Solve here</button></div><div class="qt">How much sodium chloride is required to make 25 mL of a 0.5 molar solution? How many moles of sodium ion will there be?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_64"><input type="checkbox" class="ck ce" id="e4_64"><div class="ptq">NaCl and Na<sup>+</sup> = ?</div><div class="btns"><label class="b ba" for="a4_64">✓ Show Answer</label><label class="b be" for="e4_64">💡 Explain</label></div><div class="box ans"><p><b>0.73 g NaCl; 0.0125 mole Na<sup>+</sup></b></p><p>y = 0.5 × 25 / 1000 = 0.0125 mole<br>0.0125 × 58.5 = 0.731 g<br>Na<sup>+</sup> = 0.0125 mole</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">46</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.19 · Page 186</div><button type="button" class="bw bws" data-k="pc4q_65">✍️ Solve here</button></div><div class="qt">How many millimoles of sodium and chloride ions are contained in 1 L of Sodium Chloride Infusion BP (0.9%)? <span class="same">(Same as the lecture question on Slide 11.)</span></div><div class="part"><input type="checkbox" class="ck ca" id="a4_65"><input type="checkbox" class="ck ce" id="e4_65"><div class="ptq">mmol = ?</div><div class="btns"><label class="b ba" for="a4_65">✓ Show Answer</label><label class="b be" for="e4_65">💡 Explain</label></div><div class="box ans"><p><b>154 mmol/L each</b></p><p>9 g in 1 L → 9 / 58.5 = 0.154 mole = 154 mmol<br>Na<sup>+</sup> 154 mmol and Cl<sup>−</sup> 154 mmol</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">47</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.20 · Page 187</div><button type="button" class="bw bws" data-k="pc4q_66">✍️ Solve here</button></div><div class="qt">How many millimoles/L of chloride ions are in Potassium Chloride (0.3%) and Sodium Chloride (0.9%) Infusion BP? (KCl 74.5, NaCl 58.5)</div><div class="part"><input type="checkbox" class="ck ca" id="a4_66"><input type="checkbox" class="ck ce" id="e4_66"><div class="ptq">Chloride = ?</div><div class="btns"><label class="b ba" for="a4_66">✓ Show Answer</label><label class="b be" for="e4_66">💡 Explain</label></div><div class="box ans"><p><b>194 mmol/L</b></p><p>NaCl: 9 / 58.5 = 154 mmol<br>KCl: 3 / 74.5 = 0.04 mole = 40 mmol<br>Cl<sup>−</sup> = 154 + 40 = 194 mmol/L</p></div><div class="box ex"><p>Both salts give chloride — add them.</p></div></div></article><article class="aB"><span class="qno">48</span><div class="qh"><div class="srcl sB">Textbook Question · Example 10.21 · Page 188</div><button type="button" class="bw bws" data-k="pc4q_67">✍️ Solve here</button></div><div class="qt">How much sodium fluoride (MW 42) is required to make 250 mL of a mouthwash containing 0.012 mol/L?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_67"><input type="checkbox" class="ck ce" id="e4_67"><div class="ptq">NaF = ?</div><div class="btns"><label class="b ba" for="a4_67">✓ Show Answer</label><label class="b be" for="e4_67">💡 Explain</label></div><div class="box ans"><p><b>0.126 g</b></p><p>0.012 × 42 = 0.504 g per 1 L<br>y = 0.504 × 250 / 1000 = 0.126 g</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">49</span><div class="qh"><div class="srcl sB">Textbook Question · Q5 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_68">✍️ Solve here</button></div><div class="qt">A syrup contains 7.5% of potassium chloride. How many millimoles of K<sup>+</sup> are contained in 1 mL?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_68"><input type="checkbox" class="ck ce" id="e4_68"><div class="ptq">mmol K<sup>+</sup> = ?</div><div class="btns"><label class="b ba" for="a4_68">✓ Show Answer</label><label class="b be" for="e4_68">💡 Explain</label></div><div class="box ans"><p><b>1 mmol</b></p><p>7.5% → 75 mg/mL<br>75 / 74.5 = 1.007 ≈ 1 mmol</p></div><div class="box ex"><p>Set up proportional sets (amount ↔ molecular weight), keep the same units, then cross-multiply.</p></div></div></article><article class="aB"><span class="qno">50</span><div class="qh"><div class="srcl sB">Textbook Question · Q10 · Page 190</div><button type="button" class="bw bws" data-k="pc4q_69">✍️ Solve here</button></div><div class="qt">Magnesium sulfate injection is 50% magnesium sulfate (MgSO<sub>4</sub>.7H<sub>2</sub>O). How many millimoles of magnesium ion per mL?</div><div class="part"><input type="checkbox" class="ck ca" id="a4_69"><input type="checkbox" class="ck ce" id="e4_69"><div class="ptq">mmol/mL = ?</div><div class="btns"><label class="b ba" for="a4_69">✓ Show Answer</label><label class="b be" for="e4_69">💡 Explain</label></div><div class="box ans"><p><b>2 mmol/mL</b></p><p>MW = 24.3 + 32 + 64 + 126 = 246.3<br>50% → 500 mg/mL<br>500 / 246.3 = 2.03 ≈ 2 mmol/mL</p></div><div class="box ex"><p>Include the 7 waters.</p></div></div></article></section></div></div><a class="totop" href="#top" aria-label="Back to top">↑</a><script>(function(){
+'use strict';
+document.documentElement.classList.add('mpjs');
+var FN=['log','sin','cos','tan','abs','ln','√'];
+var SEQ=[')/(','log(','sin(','cos(','tan(','abs(','ln(','√(','^('];
+var st={k:null,lines:[''],L:0,c:0,undo:[]};
+var P,LS,TT,layer='123',shift=false;
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+/* ---------- storage ---------- */
+function load(k){try{var v=JSON.parse(localStorage.getItem('bmpad_'+k)||'null');if(v&&v.length)return v.map(String);}catch(e){}return [''];}
+function save(){try{if(st.lines.join('')==='')localStorage.removeItem('bmpad_'+st.k);else localStorage.setItem('bmpad_'+st.k,JSON.stringify(st.lines));}catch(e){}}
+/* ---------- parser for display ---------- */
+function parse(s){
+  var i=0,n=s.length;
+  function fnAt(){for(var f=0;f<FN.length;f++){var nm=FN[f];if(s.substr(i,nm.length)===nm&&s.charAt(i+nm.length)==='(')return nm;}return null;}
+  function atom(){
+    if(i>=n)return null;var ch=s.charAt(i);
+    if(ch===')'||ch==='/'||ch==='^')return null;
+    var nm=fnAt();
+    if(nm){var st0=i;i+=nm.length;return {t:'fn',name:nm,start:st0,g:grp()};}
+    if(ch==='(')return grp();
+    if(/[0-9.]/.test(ch)){var a=i;while(i<n&&/[0-9.]/.test(s.charAt(i)))i++;return {t:'num',a:a,b:i};}
+    i++;return {t:'ch',i:i-1};
+  }
+  function grp(){var o=i;i++;var inner=seq(true);var c=-1;if(i<n&&s.charAt(i)===')'){c=i;i++;}return {t:'grp',o:o,inner:inner,c:c};}
+  function atomSup(){var a=atom();while(i<n&&s.charAt(i)==='^'){var h=i;i++;a={t:'sup',base:a,ex:atom(),h:h};}return a;}
+  function seq(inGrp){
+    var items=[];
+    while(i<n){
+      var ch=s.charAt(i);
+      if(ch===')'){if(inGrp)break;items.push({t:'ch',i:i});i++;continue;}
+      if(ch==='/'){var sl=i;i++;var num=items.length?items.pop():null;items.push({t:'frac',num:num,den:atomSup(),sl:sl});continue;}
+      if(ch==='^'){var h=i;i++;var base=items.length?items.pop():null;items.push({t:'sup',base:base,ex:atom(),h:h});continue;}
+      var a=atom();if(a)items.push(a);else{items.push({t:'ch',i:i});i++;}
+    }
+    return items;
+  }
+  return seq(false);
+}
+function render(s,c){
+  var CR='<span class="cr"></span>';
+  function em(i,txt,cls,noCr){return (i===c&&!noCr?CR:'')+'<span class="'+(cls||'ch')+'" data-i="'+i+'">'+txt+'</span>';}
+  function chTxt(ch){if(ch===' ')return '&#8201;&#8201;';return esc(ch);}
+  function chCls(ch){return /[A-Za-z]/.test(ch)?'ch vr':('=+−×÷≈≠≤≥<>→⇒±'.indexOf(ch)>=0?'ch o':'ch');}
+  var BOX='<span class="bx"></span>';function box(i){return '<span class="bx" data-b="'+i+'"></span>';}
+  function seqH(items){var h='';for(var k=0;k<items.length;k++)h+=node(items[k]);return h;}
+  function bare(nd){
+    if(!nd)return BOX;
+    if(nd.t==='grp'){return em(nd.o,'','hid',1)+(nd.inner.length?seqH(nd.inner):box(nd.o+1))+(nd.c>=0?em(nd.c,'','hid'):'');}
+    return node(nd);
+  }
+  function node(nd){
+    if(!nd)return BOX;
+    switch(nd.t){
+      case 'ch':var ch=s.charAt(nd.i);return em(nd.i,chTxt(ch),chCls(ch));
+      case 'num':var h='';for(var k=nd.a;k<nd.b;k++)h+=em(k,s.charAt(k));return h;
+      case 'grp':return em(nd.o,'(')+(nd.inner.length?seqH(nd.inner):BOX)+(nd.c>=0?em(nd.c,')'):'');
+      case 'sup':return (nd.base?node(nd.base):BOX)+(c===nd.h?CR:'')+'<sup>'+em(nd.h,'','hid',1)+bare(nd.ex)+'</sup>';
+      case 'frac':return ((nd.num&&nd.num.t==='grp'&&c===nd.num.o)?CR:'')+'<span class="fr"><span class="nu">'+bare(nd.num)+(c===nd.sl?CR:'')+'</span><span class="de">'+em(nd.sl,'','hid',1)+bare(nd.den)+'</span></span>';
+      case 'fn':
+        var nm=nd.name,g=nd.g,out='';
+        if(nm==='abs'){for(var q=0;q<3;q++)out+=em(nd.start+q,'','hid');return out+em(g.o,'|')+(g.inner.length?seqH(g.inner):BOX)+(g.c>=0?em(g.c,'|'):'');}
+        if(nm==='√'){return em(nd.start,'√','ch rt')+'<span class="sq">'+bare(g)+'</span>';}
+        for(var q2=0;q2<nm.length;q2++)out+=em(nd.start+q2,nm.charAt(q2),'ch fn');
+        return out+em(g.o,'(')+(g.inner.length?seqH(g.inner):BOX)+(g.c>=0?em(g.c,')'):'');
+    }
+    return '';
+  }
+  var h=seqH(parse(s));
+  if(c===s.length)h+=CR;
+  return h;
+}
+/* ---------- evaluator ---------- */
+function evaluate(src){
+  var t=[],i=0,s=src,n=s.length;
+  while(i<n){
+    var ch=s.charAt(i);
+    if(ch===' '){i++;continue;}
+    if(/[0-9.]/.test(ch)){var a=i,dot=0;while(i<n){var d=s.charAt(i);if(/[0-9]/.test(d))i++;else if(d==='.'&&!dot){dot=1;i++;}else if(d===','&&/[0-9]/.test(s.charAt(i-1))&&/^[0-9]{3}(?![0-9])/.test(s.substr(i+1,4)))i++;else break;}
+      var numS=s.slice(a,i).replace(/,/g,'');if(numS==='.')return null;t.push({k:'n',v:parseFloat(numS)});if(s.charAt(i)==='.'||(s.charAt(i)==='e'&&/[0-9]/.test(s.charAt(i+1)||'')))return null;continue;}
+    var fn=null;for(var f=0;f<FN.length;f++){if(s.substr(i,FN[f].length)===FN[f]){fn=FN[f];break;}}
+    if(fn){t.push({k:'f',v:fn});i+=fn.length;continue;}
+    if(ch==='π'){t.push({k:'n',v:Math.PI});i++;continue;}
+    if(ch==='e'&&!/[A-Za-z]/.test(s.charAt(i+1)||'')&&!/[A-Za-z]/.test(s.charAt(i-1)||'')){t.push({k:'n',v:Math.E});i++;continue;}
+    if('+-−'.indexOf(ch)>=0){t.push({k:ch==='+'?'+':'-'});i++;continue;}
+    if('×·*'.indexOf(ch)>=0){t.push({k:'*'});i++;continue;}
+    if('÷/'.indexOf(ch)>=0){t.push({k:'/'});i++;continue;}
+    if('^()!%'.indexOf(ch)>=0){t.push({k:ch});i++;continue;}
+    return null;
+  }
+  if(!t.length)return null;
+  var p=0,bad=false;
+  function pk(){return t[p]?t[p].k:null;}
+  function startsPrimary(){var k=pk();return k==='n'||k==='f'||k==='(';}
+  function expr(){var v=term();while(pk()==='+'||pk()==='-'){var o=t[p++].k;var r=term();var nv=o==='+'?v+r:v-r;if(Math.abs(nv)<1e-12*Math.max(Math.abs(v),Math.abs(r)))nv=0;v=nv;}return v;}
+  function term(){var v=unary();for(;;){var k=pk();if(k==='*'||k==='/'){p++;var r=unary();v=k==='*'?v*r:v/r;}else if(startsPrimary()){v=v*unary();}else break;}return v;}
+  function unary(){var k=pk();if(k==='-'){p++;return -unary();}if(k==='+'){p++;return unary();}return power();}
+  function power(){var b=postfix();if(pk()==='^'){p++;var e=unary();return Math.pow(b,e);}return b;}
+  function tz(x){return Math.abs(x)<1e-12?0:x;}
+  function fact(x){if(x<0||x!==Math.floor(x)||x>170){bad=true;return NaN;}var r=1;for(var q=2;q<=x;q++)r*=q;return r;}
+  function postfix(){var v=primary();for(;;){if(pk()==='!'){p++;v=fact(v);}else if(pk()==='%'){p++;v=v/100;}else break;}return v;}
+  function primary(){
+    var tk=t[p];if(!tk){bad=true;return NaN;}
+    if(tk.k==='n'){p++;return tk.v;}
+    if(tk.k==='('){p++;var v=expr();if(pk()===')')p++;else if(p<t.length)bad=true;return v;}
+    if(tk.k==='f'){p++;var a;if(pk()==='('){a=primary();}else{a=power();}
+      switch(tk.v){case 'ln':return Math.log(a);case 'log':return Math.log10(a);case 'sin':return tz(Math.sin(a));case 'cos':return tz(Math.cos(a));case 'tan':return tz(Math.tan(a));case 'abs':return Math.abs(a);case '√':return Math.sqrt(a);}}
+    bad=true;return NaN;
+  }
+  var v=expr();
+  if(bad||p<t.length||typeof v!=='number'||!isFinite(v))return null;
+  var nontrivial=t.length>1||t[0].k==='f';
+  if(t.length===1&&t[0].k==='n'&&(t[0].v===Math.PI||t[0].v===Math.E))nontrivial=true;
+  return nontrivial?v:null;
+}
+function fmt(v){
+  if(v===0)return '0';var a=Math.abs(v);
+  if(a>=1e9||a<1e-5){var e=v.toExponential(4).split('e');return e[0].replace(/\.?0+$/,'').replace('-','−')+' × 10^'+String(parseInt(e[1],10)).replace('-','−');}
+  var r=a<1?parseFloat(v.toPrecision(6)):parseFloat(parseFloat(v.toPrecision(12)).toFixed(6));var s=String(Math.abs(r));
+  if(s.indexOf('e')>=0)s=Math.abs(r).toFixed(6);
+  var parts=s.split('.');parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,',');
+  return (r<0?'−':'')+parts.join('.');
+}
+function lineResult(s){
+  var segs=s.split(/[=≈]/);var seg=segs[segs.length-1];
+  if(!seg.trim()&&segs.length>1)seg=segs[segs.length-2];
+  if(!seg.trim())return '';
+  var v=evaluate(seg);if(v===null)return '';
+  return '= '+fmt(v);
+}
+/* ---------- editing ---------- */
+function snap(){st.undo.push(JSON.stringify([st.lines,st.L,st.c]));if(st.undo.length>150)st.undo.shift();}
+function cur(){return st.lines[st.L];}
+function setCur(t){st.lines[st.L]=t;}
+function matchClose(s,o){var d=0;for(var j=o;j<s.length;j++){var ch=s.charAt(j);if(ch==='(')d++;else if(ch===')'){d--;if(d===0)return j;}}return -1;}
+function insert(txt,back){snap();var s=cur();setCur(s.slice(0,st.c)+txt+s.slice(st.c));st.c+=txt.length-(back||0);}
+function bs(){
+  var s=cur(),c=st.c;
+  if(c===0){if(st.L>0){snap();var prev=st.lines[st.L-1];st.lines.splice(st.L-1,2,prev+s);st.L--;st.c=prev.length;}return;}
+  if(s.slice(Math.max(0,c-3),c)===')/('){st.c=c-3;return;}
+  var ch=s.charAt(c-1);
+  if(ch===')'){var d=0,o=-1;for(var j=c-1;j>=0;j--){var cj=s.charAt(j);if(cj===')')d++;else if(cj==='('){d--;if(d===0){o=j;break;}}}
+    if(o>=0&&o!==c-2){st.c=c-1;return;}
+    if(o>=0&&o===c-2){snap();var tk='(';for(var q0=0;q0<SEQ.length;q0++){var T0=SEQ[q0];if(T0!==')/('&&o+1>=T0.length&&s.slice(o+1-T0.length,o+1)===T0){tk=T0;break;}}setCur(s.slice(0,o+1-tk.length)+s.slice(c));st.c=o+1-tk.length;return;}
+  }
+  snap();
+  if(ch==='('){
+    var tok='(';for(var q=0;q<SEQ.length;q++){var T=SEQ[q];if(T!==')/('&&c>=T.length&&s.slice(c-T.length,c)===T){tok=T;break;}}
+    var o=c-1,m=matchClose(s,o);
+    var after=m>=0?s.slice(c,m)+s.slice(m+1):s.slice(c);
+    // removing an empty fraction "()/()"
+    if(tok==='('&&s.slice(c-1,c+4)==='()/()'){setCur(s.slice(0,c-1)+s.slice(c+4));st.c=c-1;return;}
+    setCur(s.slice(0,c-tok.length)+after);st.c=c-tok.length;return;
+  }
+  setCur(s.slice(0,c-1)+s.slice(c));st.c=c-1;
+}
+function left(){var s=cur(),c=st.c;if(c===0){if(st.L>0){st.L--;st.c=st.lines[st.L].length;}return;}
+  for(var q=0;q<SEQ.length;q++){var T=SEQ[q];if(c>=T.length&&s.slice(c-T.length,c)===T){st.c=c-T.length;return;}}st.c=c-1;}
+function right(){var s=cur(),c=st.c;if(c>=s.length){if(st.L<st.lines.length-1){st.L++;st.c=0;}return;}
+  for(var q=0;q<SEQ.length;q++){var T=SEQ[q];if(s.substr(c,T.length)===T){st.c=c+T.length;return;}}st.c=c+1;}
+function snapC(s,c){for(var q=0;q<SEQ.length;q++){var T=SEQ[q],j=s.indexOf(T);while(j>=0){if(c>j&&c<j+T.length)return j+T.length;j=s.indexOf(T,j+1);}}return c;}
+function encl(s,c){var d=0;for(var j=c-1;j>=0;j--){var ch=s.charAt(j);if(ch===')')d++;else if(ch==='('){if(d===0){return [j,matchClose(s,j)];}d--;}}return null;}
+function openOf(s,cl){var d=0;for(var j=cl;j>=0;j--){var ch=s.charAt(j);if(ch===')')d++;else if(ch==='('){d--;if(d===0)return j;}}return -1;}
+function role(s,g){var o=g[0],cl=g[1];
+  if(o>0&&s.charAt(o-1)==='^')return 'sup';
+  if(o>1&&s.charAt(o-1)==='/'&&s.charAt(o-2)===')')return 'den';
+  if(cl>=0&&s.charAt(cl+1)==='/'&&s.charAt(cl+2)==='(')return 'num';
+  return '';}
+function up(){var s=cur(),c=st.c,g=encl(s,c);
+  // walk outward through groups looking for a denominator (go to numerator)
+  for(var h=g;h;h=encl(s,h[0])){var r=role(s,h);if(r==='den'){st.c=h[0]-2;return;}if(r==='sup')break;}
+  if(s.substr(c,2)==='^('){st.c=c+2;return;}
+  if(c>0&&s.charAt(c-1)===')'){var o=openOf(s,c-1);if(o>0&&s.charAt(o-1)==='^'){st.c=c-1;return;}}
+  if(c>0&&s.charAt(c-1)!=='('&&s.substr(c,1)==='^'){st.c=c+(s.charAt(c+1)==='('?2:1);return;}
+  if(st.L>0){st.L--;st.c=cur().length;}}
+function down(){var s=cur(),c=st.c,g=encl(s,c);
+  for(var h=g;h;h=encl(s,h[0])){var r=role(s,h);if(r==='sup'){st.c=h[1]>=0?h[1]+1:s.length;return;}if(r==='num'){st.c=h[1]+3;return;}if(r==='den')break;}
+  if(st.L<st.lines.length-1){st.L++;st.c=cur().length;}}
+function enter(){snap();var s=cur(),d=0;for(var j=0;j<st.c;j++){var h=s.charAt(j);if(h==='(')d++;else if(h===')')d--;}var at=d>0?s.length:st.c;st.lines.splice(st.L,1,s.slice(0,at),s.slice(at));st.L++;st.c=0;}
+function clearAll(){if(st.lines.join('')==='')return;snap();st.lines=[''];st.L=0;st.c=0;}
+function undo(){var u=st.undo.pop();if(!u)return;var v=JSON.parse(u);st.lines=v[0];st.L=v[1];st.c=v[2];}
+/* ---------- keyboard ---------- */
+var K={
+ '123':[['<i>x</i>','i:x','vx'],['<i>t</i>','i:t','vx'],['eˣ','t:e^()|1','op'],['ln','t:ln()|1','sm'],['π','i:π','op'],['e','i:e','op'],
+        ['7'],['8'],['9'],['÷','i:÷','op'],['(','i:(','op'],[')','i:)','op'],
+        ['4'],['5'],['6'],['×','i:×','op'],['a²','i:^2','op'],['aⁿ','t:^()|1','op'],
+        ['1'],['2'],['3'],['−','i:−','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['√','t:√()|1','op'],
+        ['0'],['.'],['=','i:=','op'],['+','i:+','op'],['≈','i:≈','op'],['⌫','bs','op']],
+ 'f':[['(','i:(','op'],[')','i:)','op'],['aⁿ','t:^()|1','op'],['<span style="display:inline-flex;flex-direction:column;font-size:13px;line-height:1.05"><span style="border-bottom:1.5px solid">□</span><span>□</span></span>','t:()/()|4','op'],['=','i:=','op'],['!'],
+      ['sin','t:sin()|1','sm'],['cos','t:cos()|1','sm'],['tan','t:tan()|1','sm'],['|x|','t:abs()|1'],['%'],['±'],
+      ['≠'],['≤'],['≥'],['<'],['>'],['∞'],
+      ['→'],['⇒'],['Δ'],['′'],['″'],['⌫','bs','op']],
+ 'x':[['x'],['y'],['t'],['f'],['g'],['h'],
+      ['a'],['b'],['k'],['r'],['n'],['P'],
+      ['Q'],['N'],['S'],['C'],['T'],['V'],
+      ['(','i:(','op'],[')','i:)','op'],['=','i:=','op'],['+','i:+','op'],['−','i:−','op'],['⌫','bs','op'],
+      ['f(x)','t:f()|1','sm'],['f′(x)','t:f′()|1','sm'],['f″(x)','t:f″()|1','sm'],['Δx','i:Δx','sm'],['Δt','i:Δt','sm'],['aⁿ','t:^()|1','op']],
+ 'abc':null
+};
+var ABC1='qwertyuiop',ABC2='asdfghjkl',ABC3='zxcvbnm';
+function abcKeys(){var a=[],U=function(ch){return shift?ch.toUpperCase():ch;};
+  ABC1.split('').forEach(function(ch){a.push([U(ch)]);});
+  ABC2.split('').forEach(function(ch){a.push([U(ch)]);});a.push(['\u2019','i:\u2019']);
+  a.push(['⇧','shift','op'+(shift?' ac':'')]);ABC3.split('').forEach(function(ch){a.push([U(ch)]);});a.push(['⌫','bs','op w2']);
+  a.push(['%']);a.push(['$']);a.push(['°C','i:°C','sm']);a.push(['space','i: ','sm w4']);a.push([',']);a.push([':']);a.push(['?']);
+  return a;}
+function keyHTML(list,cls){return '<div class="kp '+cls+' on">'+list.map(function(k){var act=k[1]||('i:'+k[0]);var c=k[2]||'';var lab=k[0].length<=2?esc(k[0]):k[0];return '<button type="button" class="k '+c+'" data-a="'+esc(act)+'">'+lab+'</button>';}).join('')+'</div>';}
+function drawKeys(){
+  var kb=P.querySelector('.kb .kz');
+  kb.innerHTML=layer==='abc'?keyHTML(abcKeys(),'abc'):keyHTML(K[layer],'');
+  P.querySelectorAll('.kt button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-l')===layer);});
+}
+function act(a){
+  if(a.indexOf('i:')===0)insert(a.slice(2));
+  else if(a.indexOf('t:')===0){var m=a.slice(2).split('|');insert(m[0],parseInt(m[1],10));}
+  else if(a==='bs')bs();else if(a==='left')left();else if(a==='right')right();else if(a==='up')up();else if(a==='down')down();
+  else if(a==='enter')enter();
+  else if(a==='shift'){shift=!shift;drawKeys();return;}
+  if(layer==='abc'&&shift&&a.indexOf('i:')===0&&a!=='i: '){shift=false;drawKeys();}
+  draw();save();
+}
+/* ---------- drawing ---------- */
+function draw(){
+  var h='';var empty=st.lines.length===1&&st.lines[0]==='';
+  st.lines.forEach(function(s,i){
+    var isC=i===st.L;
+    var body=render(s,isC?st.c:-1);
+    if(empty)body+='<span class="ph">&nbsp;Type your work — results appear on the right</span>';
+    h+='<div class="ln'+(isC?' cur':'')+'" data-l="'+i+'"><span class="lnn">'+(i+1)+'</span><span class="lnx">'+body+'</span><span class="lnr">'+esc(lineResult(s))+'</span></div>';
+  });
+  LS.innerHTML=h;
+  var cr=LS.querySelector('.cr');
+  if(cr){var ln=cr.closest('.ln'),x=cr.closest('.lnx');
+    var lr=ln.getBoundingClientRect(),pr=LS.getBoundingClientRect();
+    if(lr.bottom>pr.bottom)LS.scrollTop+=lr.bottom-pr.bottom+4;else if(lr.top<pr.top)LS.scrollTop-=pr.top-lr.top+4;
+    var cx=cr.getBoundingClientRect(),xr=x.getBoundingClientRect();
+    if(cx.right>xr.right-6)x.scrollLeft+=cx.right-xr.right+30;else if(cx.left<xr.left+6)x.scrollLeft-=xr.left-cx.left+30;}
+}
+/* ---------- build panel ---------- */
+function build(){
+  P=document.createElement('div');P.id='mp';
+  P.innerHTML='<div class="mph"><span class="mpt"></span><span class="mseg"><button type="button" data-t="mw" class="on" aria-label="Write">✍️</button><button type="button" data-t="md" aria-label="Draw">📈</button></span><button type="button" data-t="kb" aria-label="Hide keyboard">⌨️ ▾</button><button type="button" data-t="undo" aria-label="Undo">↶</button><button type="button" data-t="clr" aria-label="Clear">🗑</button><button type="button" class="mpx" data-t="close">✓ Done</button></div>'+
+    '<div class="mpl"></div>'+
+    '<div class="dz"><div class="dt"><button type="button" data-d="p" class="on" aria-label="Pen">✏️</button><button type="button" data-d="l" aria-label="Straight line">╱</button><button type="button" data-d="e" aria-label="Eraser">🧽</button><span class="dsep"></span><button type="button" data-c="#1d1b26" class="dc on" style="--c:#1d1b26" aria-label="Black"></button><button type="button" data-c="#1a56c4" class="dc" style="--c:#1a56c4" aria-label="Blue"></button><button type="button" data-c="#d93025" class="dc" style="--c:#d93025" aria-label="Red"></button><span class="dsep"></span><button type="button" data-g="1" aria-label="Grid">▦ Axes</button></div><canvas></canvas></div>'+
+    '<div class="kt"><button type="button" data-l="123">123</button><button type="button" data-l="f">f(x)</button><button type="button" data-l="x">x y t</button><button type="button" data-l="abc">ABC</button></div>'+
+    '<div class="kb"><div class="kz"></div><div class="kr">'+
+    '<button type="button" class="k op" data-a="left">◀</button><button type="button" class="k op" data-a="right">▶</button><button type="button" class="k op" data-a="up">▲</button><button type="button" class="k op" data-a="down">▼</button><button type="button" class="k sm" data-a="i: ">space</button><button type="button" class="k ac sm" data-a="enter">↵ line</button></div></div>';
+  document.body.appendChild(P);LS=P.querySelector('.mpl');TT=P.querySelector('.mpt');
+  var rep=null,repT=null;
+  function stopRep(){clearTimeout(repT);clearInterval(rep);rep=repT=null;}
+  P.addEventListener('pointerdown',function(e){
+    var b=e.target.closest('button');
+    if(b&&P.contains(b)){
+      e.preventDefault();
+      if(b.hasAttribute('data-a')){var a=b.getAttribute('data-a');b.classList.add('pr');act(a);
+        if(a==='bs'||a==='left'||a==='right'){stopRep();repT=setTimeout(function(){rep=setInterval(function(){act(a);},70);},600);}}
+      else if(b.hasAttribute('data-l')){layer=b.getAttribute('data-l');shift=false;drawKeys();}
+      else if(b.hasAttribute('data-d')){D.tool=b.getAttribute('data-d');P.querySelectorAll('.dt [data-d]').forEach(function(x){x.classList.toggle('on',x===b);});}
+      else if(b.hasAttribute('data-c')){D.col=b.getAttribute('data-c');if(D.tool==='e')D.tool='p';P.querySelectorAll('.dt [data-c]').forEach(function(x){x.classList.toggle('on',x===b);});P.querySelectorAll('.dt [data-d]').forEach(function(x){x.classList.toggle('on',x.getAttribute('data-d')===D.tool);});}
+      else if(b.hasAttribute('data-g')){D.d.g=(D.d.g+2)%3;gLabel();dRedraw();dSave();}
+      else if(b.hasAttribute('data-t')){var tt=b.getAttribute('data-t');if(tt==='clr'){if(!b.classList.contains('arm')){b.classList.add('arm');b.textContent='مسح؟ ✓';clearTimeout(b._t);b._t=setTimeout(function(){b.classList.remove('arm');b.textContent='🗑';},2500);return;}clearTimeout(b._t);b.classList.remove('arm');b.textContent='🗑';}if(tt==='close')close();else if(tt==='mw'||tt==='md'){setMode(tt==='md'?'d':'w');}else if(mode==='d'&&tt==='undo'){dUndo();}else if(mode==='d'&&tt==='clr'){dClear();}else if(tt==='kb'){var hid=P.classList.toggle('nokb');b.textContent=hid?'⌨️ ▴':'⌨️ ▾';pad();}else if(tt==='undo'){undo();draw();save();}else if(tt==='clr'){clearAll();draw();save();}}
+      return;
+    }
+  });
+  ['pointerup','pointercancel'].forEach(function(ev){document.addEventListener(ev,function(){stopRep();},true);});window.addEventListener('blur',stopRep);
+  ['pointerup','pointercancel','pointerleave'].forEach(function(ev){P.addEventListener(ev,function(e){stopRep();P.querySelectorAll('.pr').forEach(function(b){b.classList.remove('pr');});});});
+  P.addEventListener('click',function(e){if(e.target.closest('button')){e.preventDefault();return;}
+    var ln=e.target.closest('.ln');
+    if(ln){st.L=parseInt(ln.getAttribute('data-l'),10);var s=cur();
+      var sp=e.target.closest('[data-i]'),bx=e.target.closest('[data-b]');
+      if(bx)st.c=parseInt(bx.getAttribute('data-b'),10);
+      else if(sp){var r=sp.getBoundingClientRect(),i=parseInt(sp.getAttribute('data-i'),10);st.c=(e.clientX>r.left+r.width/2)?i+1:i;}
+      else{var x=ln.querySelector('.lnx').getBoundingClientRect();st.c=(e.clientX<x.left+4)?0:s.length;}
+      st.c=snapC(s,Math.max(0,Math.min(s.length,st.c)));draw();}
+  });
+  document.addEventListener('keydown',function(e){
+    if(!P.classList.contains('on')||mode==='d'||e.ctrlKey||e.metaKey||e.altKey)return;
+    var k=e.key,m={'*':'×','-':'−','x':'x'};
+    if(k==='Escape'){close();}
+    else if(k==='Backspace'){act('bs');}
+    else if(k==='Enter'){act('enter');}
+    else if(k==='ArrowLeft'){act('left');}else if(k==='ArrowRight'){act('right');}else if(k==='ArrowUp'){act('up');}else if(k==='ArrowDown'){act('down');}
+    else if(k.length===1){act('i:'+(m[k]||k));}
+    else return;
+    e.preventDefault();
+  });
+  window.addEventListener('resize',function(){if(P.classList.contains('on')){pad();if(mode==='d')dSize();}});
+  dInit();
+}
+/* ---------- drawing ---------- */
+var mode='w',D={d:{s:[],g:2},tool:'p',col:'#1d1b26',un:[],cv:null,cx:null,W:0,H:0,cur:null};
+function dLoad(k){try{var v=JSON.parse(localStorage.getItem('bmdraw_'+k)||'null');if(v&&v.s)return v;}catch(e){}return {s:[],g:2};}
+function dSave(){try{if(!D.d.s.length)localStorage.removeItem('bmdraw_'+st.k);else localStorage.setItem('bmdraw_'+st.k,JSON.stringify(D.d));}catch(e){}}
+function gLabel(){var b=P.querySelector('.dt [data-g]');b.textContent=['▢ Blank','▦ Grid','▦ Axes'][D.d.g];}
+function dInit(){
+  var cv=P.querySelector('.dz canvas');D.cv=cv;D.cx=cv.getContext('2d');
+  function pt(e){var r=cv.getBoundingClientRect();return [(e.clientX-r.left)/D.W,(e.clientY-r.top)/D.W];}
+  cv.addEventListener('pointerdown',function(e){
+    e.preventDefault();if(D.cur)return;D.pid=e.pointerId;try{cv.setPointerCapture(e.pointerId);}catch(x){}
+    var q=pt(e);
+    if(D.tool==='e'){D.un.push(JSON.stringify(D.d.s));D.cur={t:'e'};dErase(q);return;}
+    D.un.push(JSON.stringify(D.d.s));if(D.un.length>80)D.un.shift();
+    D.cur={t:D.tool==='l'?'l':'p',c:D.col,w:D.tool==='l'?2.5:3,p:[q,q.slice()]};
+    if(D.cur.t==='p')D.cur.p=[q];
+    D.d.s.push(D.cur);dRedraw();
+  });
+  cv.addEventListener('pointermove',function(e){
+    if(!D.cur||e.pointerId!==D.pid)return;e.preventDefault();var q=pt(e);
+    if(D.cur.t==='e'){dErase(q);return;}
+    if(D.cur.t==='l')D.cur.p[1]=q;else{var l=D.cur.p[D.cur.p.length-1];if(Math.abs(l[0]-q[0])+Math.abs(l[1]-q[1])>0.002)D.cur.p.push(q);}
+    dRedraw();
+  });
+  function end(e){if(!D.cur||e.pointerId!==D.pid)return;
+    if(D.cur.t==='e'){if(D.un.length&&D.un[D.un.length-1]===JSON.stringify(D.d.s))D.un.pop();}
+    D.cur=null;dRedraw();dSave();markBtn(st.k);}
+  cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);
+}
+function dErase(q){
+  var r=14/D.W,keep=[],hit=false;
+  function dseg(p,a,b){var dx=b[0]-a[0],dy=b[1]-a[1],L=dx*dx+dy*dy,t=L?((p[0]-a[0])*dx+(p[1]-a[1])*dy)/L:0;t=Math.max(0,Math.min(1,t));var x=a[0]+t*dx-p[0],y=a[1]+t*dy-p[1];return Math.sqrt(x*x+y*y);}
+  D.d.s.forEach(function(sk){var h=false;if(sk.p.length===1)h=dseg(q,sk.p[0],sk.p[0])<r;else for(var i=1;i<sk.p.length;i++){if(dseg(q,sk.p[i-1],sk.p[i])<r){h=true;break;}}if(h)hit=true;else keep.push(sk);});
+  if(hit){D.d.s=keep;dRedraw();}
+}
+function dSize(){var cv=D.cv,r=cv.getBoundingClientRect();if(!r.width)return;var dpr=window.devicePixelRatio||1;D.W=r.width;D.H=r.height;cv.width=Math.round(r.width*dpr);cv.height=Math.round(r.height*dpr);D.cx.setTransform(dpr,0,0,dpr,0,0);dRedraw();}
+function dRedraw(){
+  var c=D.cx,W=D.W,H=D.H;if(!W)return;
+  c.clearRect(0,0,W,H);c.fillStyle='#fff';c.fillRect(0,0,W,H);
+  var g=D.d.g,step=W/16;
+  if(g>=1){c.strokeStyle='#e6e1f2';c.lineWidth=1;c.beginPath();for(var x=step;x<W;x+=step){c.moveTo(Math.round(x)+.5,0);c.lineTo(Math.round(x)+.5,H);}for(var y=H/2%step;y<H;y+=step){c.moveTo(0,Math.round(y)+.5);c.lineTo(W,Math.round(y)+.5);}c.stroke();}
+  if(g===2){var ox=Math.round(W/2/step)*step,oy=Math.round(H/2/step)*step;c.strokeStyle='#6e6a7c';c.lineWidth=1.5;c.beginPath();c.moveTo(6,oy);c.lineTo(W-6,oy);c.moveTo(ox,H-6);c.lineTo(ox,6);c.stroke();
+    c.fillStyle='#6e6a7c';c.beginPath();c.moveTo(W-6,oy);c.lineTo(W-14,oy-4);c.lineTo(W-14,oy+4);c.fill();c.beginPath();c.moveTo(ox,6);c.lineTo(ox-4,14);c.lineTo(ox+4,14);c.fill();
+    c.font='italic 15px "Times New Roman",serif';c.fillText('x',W-16,oy+18);c.fillText('y',ox+8,16);c.fillText('0',ox-12,oy+16);}
+  c.lineCap='round';c.lineJoin='round';
+  D.d.s.forEach(function(sk){
+    c.strokeStyle=sk.c;c.fillStyle=sk.c;c.lineWidth=sk.w;var p=sk.p;
+    if(p.length===1){c.beginPath();c.arc(p[0][0]*W,p[0][1]*W,sk.w/1.6,0,7);c.fill();return;}
+    c.beginPath();c.moveTo(p[0][0]*W,p[0][1]*W);
+    if(sk.t==='l'||p.length===2){c.lineTo(p[p.length-1][0]*W,p[p.length-1][1]*W);}
+    else{for(var i=1;i<p.length-1;i++){var mx=(p[i][0]+p[i+1][0])/2*W,my=(p[i][1]+p[i+1][1])/2*W;c.quadraticCurveTo(p[i][0]*W,p[i][1]*W,mx,my);}c.lineTo(p[p.length-1][0]*W,p[p.length-1][1]*W);}
+    c.stroke();
+  });
+}
+function dUndo(){var u=D.un.pop();if(u===undefined)return;D.d.s=JSON.parse(u);dRedraw();dSave();markBtn(st.k);}
+function dClear(){if(!D.d.s.length)return;D.un.push(JSON.stringify(D.d.s));D.d.s=[];dRedraw();dSave();markBtn(st.k);}
+function setMode(m){mode=m;P.classList.toggle('dm',m==='d');P.querySelectorAll('.mseg button').forEach(function(b){b.classList.toggle('on',(b.getAttribute('data-t')==='md')===(m==='d'));});
+  if(m==='d'){gLabel();requestAnimationFrame(function(){dSize();pad();});}else{draw();pad();}}
+function pad(){document.body.style.paddingBottom=(P.offsetHeight+20)+'px';}
+function open(k,title,part){
+  if(!P)build();
+  st.k=k;st.lines=load(k);st.L=st.lines.length-1;st.c=st.lines[st.L].length;st.undo=[];
+  TT.textContent=title;D.d=dLoad(k);D.un=[];D.cur=null;
+  P.classList.add('on');document.body.classList.add('mpon');layer='123';shift=false;drawKeys();draw();
+  setMode((st.lines.join('')===''&&D.d.s.length)?'d':'w');
+  if(part){var r=part.getBoundingClientRect();window.scrollTo({top:window.scrollY+r.top-36,behavior:'smooth'});}
+  markBtn(k);
+}
+function close(){save();P.classList.remove('on');document.body.classList.remove('mpon');document.body.style.paddingBottom='';markBtn(st.k);}
+function markBtn(k){var b=document.querySelector('.bw[data-k="'+k+'"]');if(!b)return;var has=false;try{has=!!(localStorage.getItem('bmpad_'+k)||localStorage.getItem('bmdraw_'+k));}catch(e){}b.textContent=has?'✍️ Continue my work':'✍️ Solve here';}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.bw');if(!b)return;e.preventDefault();
+  var part=b.closest('.part'),art=b.closest('article');
+  var src=art&&art.querySelector('.srcl')?art.querySelector('.srcl').textContent.split('·').pop().trim():'';
+  var pl=part&&part.querySelector('.pl')?' '+part.querySelector('.pl').textContent:'';
+  open(b.getAttribute('data-k'),(src+pl).trim(),part);
+});
+function initBtns(){document.querySelectorAll('.bw').forEach(function(b){markBtn(b.getAttribute('data-k'));});}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initBtns);else initBtns();
+window.__mp={evaluate:evaluate,render:render,fmt:fmt,lineResult:lineResult};
+})();
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});}</script></body></html>
