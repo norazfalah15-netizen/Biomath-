@@ -1,0 +1,218 @@
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pharm Calc · Lecture 7</title><link rel="icon" type="image/png" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="Pharmacy Study"><meta name="theme-color" content="#5b3fc4"><meta name="description" content="Questions with answers and explanations"><meta property="og:type" content="website"><meta property="og:site_name" content="Pharmacy Study"><meta property="og:title" content="Pharm Calc · Lecture 7 — Pharmacy Study"><meta property="og:description" content="Questions with answers and explanations"><meta property="og:image" content="https://pharmacy-study.vercel.app/og.jpg?v=3"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://pharmacy-study.vercel.app/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://pharmacy-study.vercel.app/og.jpg?v=3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet"></noscript><style>*{box-sizing:border-box}
+:root{--bg:#f7f6fb;--card:#fff;--ink:#1d1b26;--soft:#6e6a7c;--line:#e7e3f1;--ac:#6a4bb0;--acl:#efeafa;--op:#f4f3f8;--ok:#e8f6ed;--okb:#86c49b;--no:#fbeeee;--nob:#e0a9a9}
+@media (prefers-color-scheme:dark){:root{--bg:#141318;--card:#1d1b24;--ink:#ecebf2;--soft:#a39fb3;--line:#2f2b3b;--ac:#a68cf0;--acl:#2a2440;--op:#25222e;--ok:#1c3324;--okb:#4f8a63;--no:#3a2222;--nob:#9a5c5c}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito","IBM Plex Sans Arabic",system-ui,sans-serif;padding:16px;line-height:1.5}
+.wrap{max-width:780px;margin:0 auto}
+.back{display:inline-block;text-decoration:none;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:8px 14px;font-weight:700}
+h1{margin:16px 0 2px;font-size:24px;text-align:center}
+.sub{text-align:center;color:var(--soft);margin:0 0 14px}
+nav{display:grid;gap:8px;margin:10px 0 20px}nav[hidden],.lec[hidden]{display:none}.tocb{font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid #b9a9e3;border-radius:12px;padding:10px 16px;cursor:pointer;margin-bottom:6px}
+nav a{display:block;text-decoration:none;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:700}
+section{scroll-margin-top:12px;margin-bottom:26px}
+.sh{background:var(--acl);border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;margin-bottom:12px}
+.sh h2{margin:0;font-size:20px}.sh p{margin:2px 0 0;color:var(--soft);font-size:14px}
+article{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.qn{color:var(--ac);font-weight:800;font-size:14px}.src{color:var(--soft);font-weight:600}
+.qt{font-weight:800;font-size:17px;margin:6px 0 12px}
+.fig{display:block;max-width:100%;height:auto;margin:12px auto;background:#fff;border-radius:8px}
+.ops{display:grid;gap:8px}
+.op{background:var(--op);border-radius:12px;padding:11px 14px}
+.op.ok{background:var(--ok);border-color:var(--okb)}.op.no{background:var(--no);border-color:var(--nob)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;align-items:start}
+.b{width:100%;font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid #b9a9e3;border-radius:12px;padding:10px 6px;cursor:pointer;white-space:nowrap}
+.b.on{background:var(--acl)}
+.box{margin-top:10px;border-radius:12px;padding:10px 14px}.box p{margin:4px 0}
+.ans{background:var(--ok)}.ex{background:var(--acl)}
+pre.fs{font-family:ui-monospace,Menlo,Consolas,monospace;background:#fff;color:#111;border-radius:8px;padding:8px 12px;display:inline-block;margin:4px 0;line-height:1.25;font-weight:400}
+.two{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin:10px 0}.two>div{text-align:center;background:#fff;border-radius:10px;padding:8px}.two b{color:#111}.fsv{display:block;margin:auto}
+h1.lt{line-height:1.2}h1.lt span{display:block;font-size:20px;margin-top:4px}
+.skw{text-align:center;margin:10px 0}.sk{background:#fff;border-radius:10px;padding:6px;max-width:100%;height:auto}
+.ofig{display:inline-block;vertical-align:middle;max-width:85%;max-height:150px;background:#fff;border-radius:8px;padding:4px}.op .fsv{display:inline-block;vertical-align:middle;background:#fff;border-radius:8px}
+.ck{position:absolute;opacity:0;pointer-events:none;width:0;height:0}
+.lec,.box,.toc{display:none}.ct:checked~.toc{display:grid}
+.ca:checked~.ans,.ce:checked~.ex{display:block}.ca:checked~.btns .ba,.ce:checked~.btns .be{background:var(--acl)}
+label.b,label.tocb{display:block;text-align:center;user-select:none;-webkit-user-select:none}label.tocb{display:inline-block}
+.tabs{display:grid;gap:10px;margin:8px 0}.bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 10px}.bar .tocb{display:block;margin:0}
+.tab{display:block;text-align:start;padding:14px 16px!important;font-size:17px;text-decoration:none;font:inherit;font-weight:800;color:var(--ac);background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:10px 8px;cursor:pointer;line-height:1.25}
+.tab span{display:block;font-weight:600;font-size:13px;color:var(--soft)}
+.tab.on{background:var(--acl);border-color:#b9a9e3}
+.bar .sgb{grid-column:1/-1}.sgb .on,.cS{display:none}.sg:checked~.bar .sgb{background:var(--acl);border-color:#b9a9e3}
+.sg:checked~.bar .sgb .on,.sg:checked~section .cS,.sg:checked~.sub .cS{display:inline}.sg:checked~.bar .sgb .off,.sg:checked~section .cA,.sg:checked~.sub .cA{display:none}
+.sg:checked~section article.pq,.sg:checked~section.nod,.sg:checked~.toc a.nod{display:none}
+#r0:checked~#L0,#r1:checked~#L1,#r2:checked~#L2,#r3:checked~#L3,#r4:checked~#L4,#r5:checked~#L5,#r6:checked~#L6,#r7:checked~#L7,#r8:checked~#L8,#r9:checked~#L9,#r10:checked~#L10,#r11:checked~#L11,#r12:checked~#L12,#r13:checked~#L13{display:block}.bar .xb{grid-column:1/-1;background:var(--ac);color:#fff;border-color:var(--ac)}.xb .xc{display:none}.cx:checked~.bar .xb .xo{display:none}.cx:checked~.bar .xb .xc{display:inline}
+.expl{display:none;font-family:"IBM Plex Sans Arabic",Nunito,system-ui,sans-serif;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:16px;margin:4px 0 18px;line-height:1.75;font-size:16px;text-align:right}
+.cx:checked~.expl{display:block}
+.expl .xh{font-weight:800;font-size:19px;color:var(--ac);margin-bottom:4px}
+.expl .xi{color:var(--soft);font-size:14px;margin:4px 0 10px}
+.expl .xs{border-top:1px dashed var(--line);padding-top:12px;margin-top:12px}
+.expl .xt{font-weight:800;font-size:17px;margin-bottom:8px}
+.expl ul{margin:6px 0;padding-right:20px;padding-left:0}
+.expl .fm{direction:ltr;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:24px;background:var(--acl);border-radius:12px;padding:10px;margin:8px 0;font-style:italic}
+.expl .fm.sm{font-size:18px;padding:6px;margin:6px 0;background:transparent}
+.expl .en{direction:ltr;unicode-bidi:isolate;display:inline-block;font-family:"Cambria Math","Times New Roman",serif}
+.expl .xk{background:#fff7e0;color:#5c4400;border-radius:12px;padding:10px 12px;margin:10px 0;font-size:15px}
+@media (prefers-color-scheme:dark){.expl .xk{background:#3a3016;color:#f3e2b0}}
+.expl .ex{border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}
+.expl .el{font-weight:800;color:var(--ac);font-size:15px;margin-bottom:4px}
+.expl .ex p{margin:4px 0}
+.expl .st{direction:ltr;text-align:left;font-family:"Cambria Math","Times New Roman",serif;font-size:18px;padding:2px 6px}
+.expl .st.ok{background:#e6f4ea;color:#1e7a3c;border-radius:8px;font-weight:700;margin-top:2px}
+@media (prefers-color-scheme:dark){.expl .st.ok{background:#173a24;color:#9be0b2}}
+.expl .xtb{width:100%;border-collapse:collapse;margin:8px 0;font-size:15px}
+.expl .xtb th,.expl .xtb td{border:1px solid var(--line);padding:7px 8px;text-align:right;vertical-align:middle}
+.expl .xtb th{background:var(--acl)}
+.expl .xtb td.en{display:table-cell;text-align:center;font-size:17px}
+.expl>.xb{display:block;margin-top:14px;background:var(--ac);color:#fff;border-color:var(--ac)}
+.expl sup{font-size:.7em}
+.expl ol{margin:6px 0;padding-right:22px;padding-left:0}.expl li{margin:3px 0}
+.expl .xtb[dir=ltr] th,.expl .xtb[dir=ltr] td{text-align:center;white-space:nowrap}.expl .xtb[dir=ltr]{display:block;overflow-x:auto}
+
+.en.nw,bdi.nw{white-space:nowrap}.bar .lob{grid-column:1/-1}.lob .lon{display:none}.lo:checked~.bar .lob{background:var(--acl);border-color:var(--ac)}.lo:checked~.bar .lob .lof{display:none}.lo:checked~.bar .lob .lon{display:inline}.lo:checked~section article:not(.aL),.lo:checked~section.noL{display:none}.part{border-top:1px dashed var(--line);margin-top:14px;padding-top:12px}.ptq{font-weight:700;margin:0 0 8px;line-height:1.45}.pl{display:inline-block;color:var(--ac);font-weight:800;margin-right:4px}.same{font-size:12px;opacity:.75;margin:-2px 0 6px}html{scroll-padding-top:34px}article{scroll-margin-top:34px}.srcl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:999px;margin:0 0 6px;text-transform:uppercase}.sL{background:#e6f4ea;color:#1e7a3c}.sB{background:#e8f0fe;color:#1a56c4}.sP{background:#fdecea;color:#b3261e}.btns .bw{grid-column:1/-1;display:none;text-align:center;color:#fff;background:var(--ac);border-color:var(--ac)}
+#mp{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:var(--card);border-top:1.5px solid var(--line);box-shadow:0 -8px 30px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:92vh;font-family:Nunito,system-ui,sans-serif;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+#mp.on{display:flex}
+body.mpon .totop{display:none}
+#mp .mph{display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:1px solid var(--line)}
+#mp .mpt{flex:1;font-weight:800;font-size:14px;color:var(--ac);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mp .mph button{font:inherit;font-weight:800;font-size:13px;border:1.5px solid var(--line);background:var(--bg,#f6f5fa);color:var(--ink);border-radius:10px;padding:6px 10px;cursor:pointer}
+#mp .mph .mpx{background:var(--ac);color:#fff;border-color:var(--ac)}
+#mp .mpl{overflow-y:auto;padding:6px 10px;height:19vh;min-height:96px}#mp.nokb .kt,#mp.nokb .kb{display:none}#mp.nokb .mpl{height:24vh}
+#mp .ln{display:flex;align-items:center;gap:8px;min-height:44px;padding:4px 8px;border-radius:10px;border:1.5px solid transparent;cursor:text}
+#mp .ln.cur{border-color:#b9a9e3;background:var(--acl)}
+#mp .lnn{flex:none;width:18px;font-size:11px;color:var(--soft);text-align:right}
+#mp .lnx{flex:1;font-family:"Cambria Math","Latin Modern Math","STIX Two Math","Times New Roman",serif;font-size:21px;line-height:1.5;color:var(--ink);overflow-x:auto;white-space:nowrap;padding:2px 0}
+#mp .lnr{flex:none;font-size:15px;font-weight:800;color:#1e7a3c;background:#e6f4ea;border-radius:8px;padding:2px 8px;white-space:nowrap}
+#mp .lnr:empty{display:none}
+#mp .ph{color:var(--soft);font-family:Nunito,system-ui,sans-serif;font-size:14px}
+#mp .cr{display:inline-block;width:2px;height:1.1em;background:var(--ac);vertical-align:middle;margin:0 -1px;animation:mpb 1s steps(1) infinite}
+@keyframes mpb{50%{opacity:0}}
+#mp .ch{display:inline}
+#mp .hid{display:inline-block;width:0;overflow:hidden}
+#mp .fn{font-style:normal;font-family:Nunito,system-ui,sans-serif;font-size:.85em;margin-right:1px}
+#mp .vr{font-style:italic}
+#mp sup{font-size:.68em;vertical-align:.75em;line-height:0}
+#mp .fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;font-size:.88em;line-height:1.15}
+#mp .fr>.nu{border-bottom:1.5px solid currentColor;padding:0 3px 1px}
+#mp .fr>.de{padding:1px 3px 0}
+#mp .bx{display:inline-block;min-width:.7em;height:.9em;border:1.5px dashed #b9a9e3;border-radius:3px;vertical-align:middle;margin:0 1px}
+#mp .sq{display:inline-block;border-top:1.5px solid currentColor;padding:1px 2px 0;margin-left:0;line-height:1.2}#mp .rt{display:inline-block;font-family:"Times New Roman",serif;font-size:1.15em;line-height:1;vertical-align:-.08em;margin-right:-.05em}#mp .o{margin:0 .14em}
+#mp .kt{display:flex;gap:4px;padding:6px 8px 0}
+#mp .kt button{flex:1;font:inherit;font-weight:800;font-size:14px;border:none;border-radius:10px 10px 0 0;padding:8px 0;background:transparent;color:var(--soft);cursor:pointer}
+#mp .kt button.on{background:var(--acl);color:var(--ac)}
+#mp .kb{background:var(--acl);padding:6px 6px calc(8px + env(safe-area-inset-bottom))}
+#mp .kp{display:none;grid-template-columns:repeat(6,1fr);gap:5px}
+#mp .kp.on{display:grid}
+#mp .kp.abc{grid-template-columns:repeat(10,1fr)}
+#mp .k{font-family:"Cambria Math","Times New Roman",serif;font-size:20px;font-weight:600;min-height:42px;border:none;border-radius:9px;background:var(--card);color:var(--ink);box-shadow:0 1.5px 0 rgba(0,0,0,.15);cursor:pointer;padding:0 2px;display:flex;align-items:center;justify-content:center;line-height:1}
+#mp .kp.abc .k{font-size:17px;min-height:42px}
+#mp .k:active,#mp .k.pr{background:var(--line)}#mp,#mp *{-webkit-tap-highlight-color:transparent}
+#mp .k.op{color:var(--ac);font-weight:800}
+#mp .k.sm{font-family:Nunito,system-ui,sans-serif;font-size:14px;font-weight:800}
+#mp .k.ac{background:var(--ac);color:#fff}
+#mp .k.w2{grid-column:span 2}#mp .k.w3{grid-column:span 3}#mp .k.w4{grid-column:span 4}
+#mp .kr{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin-top:5px}
+@media (min-width:700px){#mp{left:50%;right:auto;width:680px;transform:translateX(-50%);border-radius:16px 16px 0 0;border:1.5px solid var(--line)}}
+
+html.mpjs .btns .bw{display:block}
+#mp .mseg{display:inline-flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+#mp .mph .mseg button{border:none;border-radius:0;padding:6px 9px;background:transparent}
+#mp .mph .mseg button.on{background:var(--acl)}
+#mp .dz{display:none;flex-direction:column}
+#mp.dm .dz{display:flex}#mp.dm .mpl,#mp.dm .kt,#mp.dm .kb,#mp.dm [data-t="kb"]{display:none}
+#mp .dt{display:flex;align-items:center;gap:6px;padding:8px 10px;flex-wrap:wrap}
+#mp .dt button{font:inherit;font-weight:800;font-size:15px;min-width:42px;height:38px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);cursor:pointer;padding:0 8px}
+#mp .dt button.on{background:var(--acl);border-color:var(--ac)}
+#mp .dt .dc{min-width:30px;width:30px;height:30px;border-radius:50%;padding:0;background:var(--c);border:3px solid #fff;box-shadow:0 0 0 1.5px var(--line)}
+#mp .dt .dc.on{box-shadow:0 0 0 2.5px var(--ac);background:var(--c)}
+#mp .dt .dsep{width:1px;height:26px;background:var(--line)}
+#mp .dt [data-g]{margin-left:auto;font-size:13px}
+#mp .dz canvas{display:block;width:100%;height:min(52vh,460px);touch-action:none;background:#fff;border-top:1px solid var(--line)}
+#mp .k.vx{font-size:22px;color:#1a56c4;font-weight:700}
+#mp .k sup{font-size:.6em;vertical-align:.6em}
+
+#mp .mph button.arm{background:#d93025;color:#fff;border-color:#d93025}.lzsrc{display:none}
+.bar .lzb{grid-column:1/-1;display:none;text-align:center;color:#fff!important;border:none!important;background:linear-gradient(135deg,#6a4bb0,#9b6cf0)!important;box-shadow:0 6px 18px rgba(106,75,176,.35);font-size:17px;padding:14px!important}
+html.lzjs .bar .lzb{display:block}
+html.lzon,html.lzon body{overflow:hidden}
+#lzo{position:fixed;inset:0;z-index:2000;background:var(--bg,#f6f5fa);display:none;flex-direction:column;font-family:"IBM Plex Sans Arabic",Nunito,system-ui,sans-serif;color:var(--ink)}
+#lzo.on{display:flex}
+#lzo .lh{display:flex;align-items:center;gap:8px;padding:10px 12px calc(6px);padding-top:max(10px,env(safe-area-inset-top));background:var(--card);border-bottom:1px solid var(--line)}
+#lzo .lx{flex:none;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font-size:16px;cursor:pointer}
+#lzo .lt2{flex:1;font-weight:800;font-size:15px;color:var(--ac);text-align:center;line-height:1.3;direction:ltr}
+#lzo .ls{flex:none;font:inherit;font-weight:800;font-size:13px;border:1.5px solid var(--line);background:var(--acl);color:var(--ac);border-radius:12px;padding:7px 10px;cursor:pointer}
+#lzo .lp{height:4px;background:var(--line)}#lzo .lp i{display:block;height:100%;width:0;background:linear-gradient(90deg,#9b6cf0,#6a4bb0);transition:width .3s}
+#lzo .lds{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:8px 12px 2px}
+#lzo .ld{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:var(--line);cursor:pointer}
+#lzo .ld.dn{background:#b9a9e3}#lzo .ld.on{background:var(--ac);width:22px;border-radius:5px}
+#lzo .lb{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:10px 14px 24px}
+#lzo section.sl{display:none;max-width:640px;margin:0 auto;animation:lzin .28s ease}
+#lzo section.sl.cur{display:block}
+@keyframes lzin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#lzo .sh2{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;line-height:1.35;margin:6px 0 12px}
+#lzo .si{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:var(--acl)}
+#lzo .sl p{font-size:17px;line-height:1.8;margin:8px 0}
+#lzo .sl ul,#lzo .sl ol{padding-right:22px;padding-left:0;margin:6px 0;font-size:16.5px;line-height:1.8}
+#lzo .big{font-size:19px;font-weight:700;line-height:1.7;background:var(--card);border-radius:16px;padding:14px;border:1.5px solid var(--line)}
+#lzo .fm{direction:ltr;text-align:center;font-family:"Cambria Math","Times New Roman",serif;font-size:26px;font-style:italic;background:var(--card);border:2px solid #b9a9e3;border-radius:16px;padding:14px 10px;margin:12px 0;box-shadow:0 4px 14px rgba(106,75,176,.12)}
+#lzo .fm small{display:block;font-family:"IBM Plex Sans Arabic",system-ui;font-style:normal;font-size:13px;color:var(--soft);margin-top:4px;direction:rtl}
+#lzo .en{direction:ltr;unicode-bidi:isolate;font-family:"Cambria Math","Times New Roman",serif}
+#lzo .xk,#lzo .tip{background:#fff7e0;color:#5c4400;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+#lzo .warn{background:#fdecea;color:#8c1d18;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+#lzo .an{background:#e8f0fe;color:#123d82;border-radius:14px;padding:12px 14px;margin:12px 0;font-size:16px;line-height:1.75}
+@media (prefers-color-scheme:dark){#lzo .xk,#lzo .tip{background:#3a3016;color:#f3e2b0}#lzo .warn{background:#3d1a18;color:#f5c2bd}#lzo .an{background:#16284a;color:#bcd3fb}}
+#lzo .cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+#lzo .cards>div{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px;font-size:15px;line-height:1.6}
+#lzo .cards>div b{display:block;font-size:16px;margin-bottom:2px}
+#lzo .xtb{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px;background:var(--card);border-radius:12px;overflow:hidden}
+#lzo .xtb th,#lzo .xtb td{border:1px solid var(--line);padding:8px;text-align:right;vertical-align:middle}
+#lzo .xtb th{background:var(--acl)}
+#lzo .xtb[dir=ltr]{display:block;overflow-x:auto}#lzo .xtb[dir=ltr] th,#lzo .xtb[dir=ltr] td{text-align:center;white-space:nowrap}
+/* worked example */
+#lzo .wk{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:14px;margin:12px 0}
+#lzo .wq{font-weight:800;font-size:16.5px;line-height:1.65;margin-bottom:8px}
+#lzo .wq .tg{display:inline-block;font-size:12px;background:var(--ac);color:#fff;border-radius:999px;padding:1px 10px;margin-left:6px;vertical-align:2px}
+#lzo .ws{list-style:none;padding:0!important;margin:0;counter-reset:st}
+#lzo .ws>li{counter-increment:st;position:relative;padding:8px 40px 8px 10px;margin:6px 0;border-radius:12px;background:var(--acl);font-size:16px;line-height:1.7}
+#lzo .ws>li::before{content:counter(st);position:absolute;right:8px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--ac);color:#fff;font-weight:800;font-size:13px;display:grid;place-items:center}
+#lzo .ws .m,#lzo .wa .m{display:block;direction:ltr;text-align:left;font-family:"Cambria Math","Times New Roman",serif;font-size:18px;margin-top:2px}
+#lzo .wa{margin-top:8px;border-radius:12px;padding:10px 12px;background:#e6f4ea;color:#14532d;font-weight:800;font-size:16.5px;line-height:1.7}
+@media (prefers-color-scheme:dark){#lzo .wa{background:#173a24;color:#a7f0c0}}
+#lzo .hd{display:none!important}
+#lzo .in{animation:lzin .3s ease}
+#lzo .wb{display:flex;gap:8px;margin-top:10px}
+#lzo .wb button{flex:1;font:inherit;font-weight:800;font-size:14.5px;border-radius:12px;padding:11px 8px;cursor:pointer;border:1.5px solid #b9a9e3;background:var(--card);color:var(--ac)}
+#lzo .wb .wn{background:var(--ac);color:#fff;border-color:var(--ac)}
+/* quiz */
+#lzo .qz{background:linear-gradient(135deg,rgba(155,108,240,.12),rgba(26,115,232,.08));border:2px dashed #b9a9e3;border-radius:18px;padding:14px;margin:14px 0}
+#lzo .qz::before{content:"🎯 جربي بنفسك";display:block;font-weight:800;color:var(--ac);font-size:14px;margin-bottom:6px}
+#lzo .qq{font-weight:800;font-size:16.5px;line-height:1.65;margin-bottom:10px}
+#lzo .qz button{display:block;width:100%;text-align:right;font:inherit;font-size:16px;padding:11px 14px;margin:7px 0;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;line-height:1.5}
+#lzo .qz button.ok{background:#e6f4ea;border-color:#34a853;color:#14532d;font-weight:800}
+#lzo .qz button.no{background:#fdecea;border-color:#d93025;color:#8c1d18}
+@media (prefers-color-scheme:dark){#lzo .qz button.ok{background:#173a24;color:#a7f0c0}#lzo .qz button.no{background:#3d1a18;color:#f5c2bd}}
+#lzo .qw{display:none;font-size:15.5px;line-height:1.7;margin-top:6px;padding:10px 12px;border-radius:12px;background:var(--card)}
+#lzo .qw.sh{display:block;animation:lzin .3s ease}
+/* viz */
+#lzo .vz{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:10px 12px 12px;margin:12px 0}
+#lzo .vz::before{content:"🎛️ حركي الأزرار وشوفي وش يصير";display:block;font-weight:800;color:var(--ac);font-size:13.5px;margin-bottom:4px}
+#lzo .vzs{display:block;width:100%;height:auto;direction:ltr;background:#fff;border-radius:12px}
+#lzo .vzs .gl{stroke:#eceaf4;stroke-width:1}#lzo .vzs .ax{stroke:#6e6a7c;stroke-width:1.5}#lzo .vzs .gd{stroke:#9b8fc0;stroke-width:1.2;stroke-dasharray:4 3}
+#lzo .vzs .tk{font:10px system-ui,sans-serif;fill:#6e6a7c}#lzo .vzs .al{font:italic 13px "Times New Roman",serif;fill:#3c3850}
+#lzo .vzr{direction:rtl;text-align:center;font-weight:800;font-size:14px;margin:6px 0 2px}
+#lzo .vzl{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:13px;margin-top:4px;direction:ltr}
+#lzo .vzl i{display:inline-block;width:14px;height:4px;border-radius:2px;margin-right:4px;vertical-align:middle}
+#lzo .vzc{display:flex;align-items:center;gap:10px;margin:8px 0 0;direction:ltr}
+#lzo .vzn{flex:none;min-width:86px;font-family:"Cambria Math","Times New Roman",serif;font-size:16px}
+#lzo .vzc input{flex:1;accent-color:#6a4bb0;height:28px}
+#lzo .vzt{font-size:14px;color:var(--soft);margin-top:6px;line-height:1.6}
+/* footer nav */
+#lzo .lf{display:flex;align-items:center;gap:10px;padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom));background:var(--card);border-top:1px solid var(--line)}
+#lzo .lf button{flex:1;font:inherit;font-weight:800;font-size:16px;border-radius:14px;padding:13px 8px;cursor:pointer;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+#lzo .lf .lnx{background:var(--ac);color:#fff;border-color:var(--ac)}
+#lzo .lf button:disabled{opacity:.35}
+#lzo .lc{flex:none;font-weight:800;color:var(--soft);font-size:13px;min-width:44px;text-align:center}
+#lzo sup{font-size:.7em}
+bdi.nw,.en.nw{white-space:nowrap}
+.bar .lzk{background:linear-gradient(135deg,#1a73e8,#4f9cf9)!important;box-shadow:0 6px 18px rgba(26,115,232,.3);font-size:16px}
+#lzo .lds:has(.ld:only-child){display:none}
+#lzo .xtb td.en,#lzo .xtb .en{white-space:nowrap;font-size:15px}
+</style><style>.pst{overflow-x:auto;margin:8px 0}.ps{border-collapse:collapse;font-size:15px;background:#fff;color:#111}.ps td,.ps th{border:1px solid #bbb;padding:5px 12px;text-align:center;white-space:nowrap}.ps th{background:#eef2f7;font-weight:700}.ptq .pst{margin:4px 0}.same{font-size:12.5px;opacity:.8;font-weight:600}.lec#L1{display:block}.qh{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:6px}.qh .srcl{margin:0}.bws{font:inherit;font-weight:800;font-size:12.5px;line-height:1;padding:7px 11px;border-radius:999px;border:none;background:var(--ac);color:#fff;cursor:pointer;white-space:nowrap;flex:none}.btns{grid-template-columns:1fr 1fr}article{position:relative}.btns{display:flex!important;gap:8px;flex-wrap:wrap}.btns .b{width:auto!important;flex:none;padding:6px 12px!important;font-size:12.5px!important;line-height:1.2!important;border-radius:999px!important;min-height:0!important}.chips{grid-column:1/-1;display:flex;gap:6px}.chips .tocb{flex:1 1 0;min-width:0;padding:7px 4px;font-size:12.5px;border-radius:999px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;grid-column:auto}.xob{grid-column:auto}.toc a .tcn{display:block;font-size:12.5px;font-weight:600;color:var(--soft);margin-top:3px}.hsb{grid-column:auto}.hsb .hsn{display:none}.hs:checked~.bar .hsb .hsf{display:none}.hs:checked~.bar .hsb .hsn{display:inline}.hs:checked~.bar .hsb{background:var(--acl);border-color:var(--ac)}.hs:checked~section .bws{display:none!important}.aX{display:none}.xo:checked~section article.aX{display:block}.sX{background:#fff1e0;color:#b45309}.xob .xon{display:none}.xo:checked~.bar .xob .xof{display:none}.xo:checked~.bar .xob .xon{display:inline}.xo:checked~.bar .xob{background:var(--acl);border-color:var(--ac)}.qno{position:absolute;top:5px;right:16px;font-size:12px;font-weight:800;color:var(--soft);line-height:1}</style></head><body id="top"><div class="wrap"><a class="back" href="/pharmaceutical-calculations/">← Pharmaceutical Calculations</a><input type="radio" name="lec" class="ck" id="r1" checked><div class="lec" id="L1"><h1 class="lt">Lecture 7<span>Creatinine Clearance</span></h1><p class="sub" data-x="9 lecture questions (total 9) — the textbook has no examples on this topic">9 lecture questions (total 9) — the textbook has no examples on this topic</p><input type="checkbox" class="ck ct" id="c1"><input type="checkbox" class="ck lo" id="o1"><input type="checkbox" class="ck xo" id="x1"><div class="bar"><label class="tocb" for="c1" style="grid-column:1/-1">☰ Contents</label><div class="chips"><label class="tocb lob" for="o1"><span class="lof">📌 Lecture only</span><span class="lon">✓ Lecture only</span></label></div></div><nav class="toc"><a href="#c7s0">1. Cockroft-Gault & Choosing the Weight<span class="tcn">2 lecture questions (total 2)</span></a><a href="#c7s1">2. Ideal Body Weight (IBW)<span class="tcn">3 lecture questions (total 3)</span></a><a href="#c7s2">3. Adjusted Body Weight (AjBW)<span class="tcn">1 lecture questions (total 1)</span></a><a href="#c7s3">4. Creatinine Clearance & Dosing<span class="tcn">2 lecture questions (total 2)</span></a><a href="#c7s4">5. Adjusting CrCl for Body Surface Area<span class="tcn">1 lecture questions (total 1)</span></a></nav><section id="c7s0"><div class="sh"><h2>1. Cockroft-Gault & Choosing the Weight</h2><p data-x="2 lecture questions (total 2)">2 lecture questions (total 2)</p></div><article class="aL"><span class="qno">1</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 3</div></div><div class="qt">Cockroft-Gault equation — write it and the units.</div><div class="part"><input type="checkbox" class="ck ca" id="a7_1"><input type="checkbox" class="ck ce" id="e7_1"><div class="ptq">CrCl (mL/min) = ?</div><div class="btns"><label class="b ba" for="a7_1">✓ Show Answer</label><label class="b be" for="e7_1">💡 Explain</label></div><div class="box ans"><p><b>(140 − Age) × Weight × Constant / Serum creatinine</b></p><p>Age in years<br>Weight in kg (actual, ideal or adjusted — depends on BMI)<br>Serum creatinine in micromol/litre<br>Constant = 1.23 for men; 1.04 for women</p></div><div class="box ex"><p>Same formula as the book, page 122.</p></div></div></article><article class="aL"><span class="qno">2</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 4</div></div><div class="qt">Which weight is used in the Cockroft-Gault equation?</div><div class="part"><input type="checkbox" class="ck ca" id="a7_2"><input type="checkbox" class="ck ce" id="e7_2"><div class="ptq">Weight by BMI = ?</div><div class="btns"><label class="b ba" for="a7_2">✓ Show Answer</label><label class="b be" for="e7_2">💡 Explain</label></div><div class="box ans"><p><b>&lt;18.5 → ABW · 18.5–24.9 → IBW · ≥25 → AjBW</b></p><p><div class="pst"><table class="ps"><tr><th>BMI</th><th>weight</th></tr><tr><td>&lt; 18.5 kg/m²</td><td>Use ABW (actual)</td></tr><tr><td>18.5 – 24.9 kg/m²</td><td>Use IBW (ideal)</td></tr><tr><td>25 – 29.9 kg/m²</td><td>Use AjBW (adjusted)</td></tr><tr><td>≥ 30 kg/m²</td><td>Use AjBW (adjusted)</td></tr></table></div>BMI = weight (kg) / height (m)²</p></div><div class="box ex"><p>Underweight → actual; normal → ideal; overweight/obese → adjusted.</p></div></div></article></section><section id="c7s1"><div class="sh"><h2>2. Ideal Body Weight (IBW)</h2><p data-x="3 lecture questions (total 3)">3 lecture questions (total 3)</p></div><article class="aL"><span class="qno">3</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 5</div></div><div class="qt">The ideal body weight (IBW) — write the formulas.</div><div class="part"><input type="checkbox" class="ck ca" id="a7_3"><input type="checkbox" class="ck ce" id="e7_3"><div class="ptq"><span class="pl">a.</span> Males</div><div class="btns"><label class="b ba" for="a7_3">✓ Show Answer</label><label class="b be" for="e7_3">💡 Explain</label></div><div class="box ans"><p><b>IBW = 50 kg + 2.3 kg for each inch over 5 feet</b></p><p>or in pounds: 110 lb + 5 lb for each inch over 5 feet</p></div><div class="box ex"><p>5 feet = 60 inches.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a7_4"><input type="checkbox" class="ck ce" id="e7_4"><div class="ptq"><span class="pl">b.</span> Females</div><div class="btns"><label class="b ba" for="a7_4">✓ Show Answer</label><label class="b be" for="e7_4">💡 Explain</label></div><div class="box ans"><p><b>IBW = 45.5 kg + 2.3 kg for each inch over 5 feet</b></p><p>or in pounds: 100 lb + 5 lb for each inch over 5 feet</p></div><div class="box ex"><p></p></div></div></article><article class="aL"><span class="qno">4</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 6</div></div><div class="qt">What is the IBW of a man who is 174 cm tall and weighs 70 kilograms?</div><div class="part"><input type="checkbox" class="ck ca" id="a7_5"><input type="checkbox" class="ck ce" id="e7_5"><div class="ptq">IBW = ?</div><div class="btns"><label class="b ba" for="a7_5">✓ Show Answer</label><label class="b be" for="e7_5">💡 Explain</label></div><div class="box ans"><p><b>≈ 69.6 kg</b></p><p>174 / 2.54 = 68.5 inches<br>Over 5 feet (60 in): 68.5 − 60 = 8.5 inches<br>IBW = 50 + 2.3 × 8.5 = 69.6 kg</p></div><div class="box ex"><p>cm → inches first. The actual weight (70 kg) is not needed for IBW. No answer on the slide — solved by us.</p></div></div></article><article class="aL"><span class="qno">5</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 7</div></div><div class="qt">What is the IBW for a woman who is 64 inches tall and weighs 70 kilograms?</div><div class="part"><input type="checkbox" class="ck ca" id="a7_6"><input type="checkbox" class="ck ce" id="e7_6"><div class="ptq">IBW = ?</div><div class="btns"><label class="b ba" for="a7_6">✓ Show Answer</label><label class="b be" for="e7_6">💡 Explain</label></div><div class="box ans"><p><b>54.7 kg</b></p><p>64 − 60 = 4 inches<br>IBW = 45.5 + 2.3 × 4 = 54.7 kg</p></div><div class="box ex"><p>Woman → start from 45.5 kg. No answer on the slide — solved by us.</p></div></div></article></section><section id="c7s2"><div class="sh"><h2>3. Adjusted Body Weight (AjBW)</h2><p data-x="1 lecture questions (total 1)">1 lecture questions (total 1)</p></div><article class="aL"><span class="qno">6</span><div class="qh"><div class="srcl sL">Lecture Question · Slides 8–9</div></div><div class="qt">AjBW (obese patients, actual weight &gt; IBW) = IBW + 0.4 × (actual body weight − IBW). Calculate the AjBW of a woman who is 157 cm tall and weighs 80 kilograms.</div><div class="part"><input type="checkbox" class="ck ca" id="a7_7"><input type="checkbox" class="ck ce" id="e7_7"><div class="ptq">AjBW = ?</div><div class="btns"><label class="b ba" for="a7_7">✓ Show Answer</label><label class="b be" for="e7_7">💡 Explain</label></div><div class="box ans"><p><b>≈ 61.8 kg</b></p><p>157 / 2.54 = 61.8 inches → 1.8 inches over 5 feet<br>IBW = 45.5 + 2.3 × 1.8 = 49.7 kg<br>AjBW = 49.7 + 0.4 × (80 − 49.7) = 49.7 + 12.1 = 61.8 kg</p></div><div class="box ex"><p>IBW first, then adjust 40% of the extra weight. No answer on the slide — solved by us.</p></div></div></article></section><section id="c7s3"><div class="sh"><h2>4. Creatinine Clearance & Dosing</h2><p data-x="2 lecture questions (total 2)">2 lecture questions (total 2)</p></div><article class="aL"><span class="qno">7</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 10</div></div><div class="qt">Determine the loading and maintenance doses of gentamicin for a 76-year-old male weighing 190 lb with a height of 6 feet and serum creatinine of 2.4 mg/dL (212 mcmol/L). Loading dose 1.5 mg/kg of IBW; maintenance 1 mg/kg of IBW every 8 hours after the initial dose.</div><div class="part"><input type="checkbox" class="ck ca" id="a7_8"><input type="checkbox" class="ck ce" id="e7_8"><div class="ptq"><span class="pl">a.</span> Loading and maintenance doses = ?</div><div class="btns"><label class="b ba" for="a7_8">✓ Show Answer</label><label class="b be" for="e7_8">💡 Explain</label></div><div class="box ans"><p><b>IBW 77.6 kg → loading 116.4 mg; maintenance 77.6 mg every 8 h</b></p><p>6 feet = 72 inches → 12 inches over 5 feet<br>IBW = 50 + 2.3 × 12 = 77.6 kg<br>Loading = 1.5 × 77.6 = 116.4 mg<br>Maintenance = 1 × 77.6 = 77.6 mg every 8 hours</p></div><div class="box ex"><p>The doctor asked for IBW, so use IBW (not the actual 190 lb). No answer on the slide — solved by us.</p></div></div><div class="part"><input type="checkbox" class="ck ca" id="a7_9"><input type="checkbox" class="ck ce" id="e7_9"><div class="ptq"><span class="pl">b.</span> Extra: his creatinine clearance (Cockroft-Gault) = ?</div><div class="btns"><label class="b ba" for="a7_9">✓ Show Answer</label><label class="b be" for="e7_9">💡 Explain</label></div><div class="box ans"><p><b>≈ 30 mL/min</b></p><p>190 lb / 2.2 = 86.4 kg; 72 in = 1.83 m → BMI = 86.4 / 1.83² = 25.8 → use AjBW<br>AjBW = 77.6 + 0.4 × (86.4 − 77.6) = 81.1 kg<br>CrCl = (140 − 76) × 81.1 × 1.23 / 212 = 30.1 mL/min</p></div><div class="box ex"><p>Serum creatinine in micromol/L → use 212, not 2.4.<br><span class="same">⚠️ The slide doesn't ask for CrCl directly — this part is extra practice.</span></p></div></div></article><article class="aL"><span class="qno">8</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 11</div></div><div class="qt">What is the creatinine clearance for a 40-year-old male patient with S.Cr of 4 mg/dL (354 µmol/L)? The patient is 5 ft 4 in in height and weighs 103 kg.</div><div class="part"><input type="checkbox" class="ck ca" id="a7_10"><input type="checkbox" class="ck ce" id="e7_10"><div class="ptq">CrCl = ?</div><div class="btns"><label class="b ba" for="a7_10">✓ Show Answer</label><label class="b be" for="e7_10">💡 Explain</label></div><div class="box ans"><p><b>≈ 26.7 mL/min</b></p><p>Height = 64 in = 162.6 cm → BMI = 103 / 1.626² = 39 → obese → use AjBW<br>IBW = 50 + 2.3 × 4 = 59.2 kg<br>AjBW = 59.2 + 0.4 × (103 − 59.2) = 76.7 kg<br>CrCl = (140 − 40) × 76.7 × 1.23 / 354 = 26.7 mL/min</p></div><div class="box ex"><p>BMI → choose weight → Cockroft-Gault (man = 1.23). No answer on the slide — solved by us.</p></div></div></article></section><section id="c7s4"><div class="sh"><h2>5. Adjusting CrCl for Body Surface Area</h2><p data-x="1 lecture questions (total 1)">1 lecture questions (total 1)</p></div><article class="aL"><span class="qno">9</span><div class="qh"><div class="srcl sL">Lecture Question · Slide 12</div></div><div class="qt">Adjusted CrCl = BSA / 1.73 × eCrCl. If a patient weighing 120 lb and measuring 60 in. in height has a calculated creatinine clearance of 40 mL per minute, adjust the CrCl based on body surface area.</div><div class="part"><input type="checkbox" class="ck ca" id="a7_11"><input type="checkbox" class="ck ce" id="e7_11"><div class="ptq">Adjusted CrCl = ?</div><div class="btns"><label class="b ba" for="a7_11">✓ Show Answer</label><label class="b be" for="e7_11">💡 Explain</label></div><div class="box ans"><p><b>≈ 35 mL/min</b></p><p>120 lb / 2.2 = 54.5 kg; 60 in × 2.54 = 152.4 cm<br>BSA = √(152.4 × 54.5 / 3600) = 1.52 m²<br>Adjusted CrCl = 1.52 / 1.73 × 40 = 35.1 mL/min</p></div><div class="box ex"><p>Find BSA, then scale to the average adult (1.73 m²). No answer on the slide — solved by us.</p></div></div></article></section></div></div><a class="totop" href="#top" aria-label="Back to top">↑</a><script>(function(){var x=document.getElementById("x1"),o=document.getElementById("o1");var A=[].slice.call(document.querySelectorAll("article"));A.forEach(function(a){a.dataset.n=a.querySelector(".qno").textContent});var sub=document.querySelector("p.sub"),note=" — the textbook has no examples on this topic";function lab(l,b,e){var t=[];if(l)t.push(l+" lecture");if(b)t.push(b+" textbook");if(e)t.push(e+" extra");return t.join(" · ")+((l+b+e)==1?" question":" questions")+" (total "+(l+b+e)+")"}function vis(a){return a.offsetParent!==null}function f(){var T=[0,0,0];[].slice.call(document.querySelectorAll("section")).forEach(function(s){var c=[0,0,0];[].slice.call(s.querySelectorAll("article")).forEach(function(a){if(!vis(a))return;var k=a.classList.contains("aL")?0:a.classList.contains("aB")?1:2;c[k]++;T[k]++});var p=s.querySelector(".sh p");if(p)p.textContent=lab(c[0],c[1],c[2]);var na=document.querySelector('.toc a[href="#'+s.id+'"]');if(na){na.style.display=vis(s)?"":"none";var sp=na.querySelector(".tcn");if(sp)sp.textContent=lab(c[0],c[1],c[2])}});if(sub)sub.textContent=lab(T[0],T[1],T[2])+note;var i=0;A.forEach(function(a){var q=a.querySelector(".qno");if(x&&x.checked){i++;q.textContent=i}else q.textContent=a.dataset.n})}if(x)x.addEventListener("change",f);if(o)o.addEventListener("change",f);window.addEventListener("pageshow",f);f()})();</script></body></html>
