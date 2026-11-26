@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لاب سرعة التفاعل</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#1d2433;--mute:#6b7385;--acc:#2f6fed;--ok:#1f9d6b;--line:#e3e6ee}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,system-ui,sans-serif;font-size:17px;line-height:1.7}
+.wrap{max-width:640px;margin:0 auto;padding:16px 14px 60px}
+.tabs{display:flex;gap:8px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5}
+.tab{flex:1;padding:12px;border:0;border-radius:12px;background:#e8ebf4;color:var(--mute);font:inherit;font-weight:700;cursor:pointer}
+.tab.on{background:var(--acc);color:#fff}
+.view{display:none}.view.on{display:block}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0;cursor:pointer;transition:.15s}
+.step.done{background:#eefaf4;border-color:#bfe8d3}
+.step.done .t{color:var(--mute);text-decoration:line-through}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:700}
+.step.done .num{background:var(--ok)}
+.t{font-weight:500}
+.en{direction:ltr;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:14.5px;background:#f1f4fb;border-radius:8px;padding:6px 10px;margin-top:6px;color:#2b3550}
+.en.nm{background:#e4ecff;color:var(--acc);font-weight:700;font-family:inherit;display:inline-block;margin:0 0 6px}
+.sec{font-weight:700;margin:22px 4px 4px;color:var(--acc)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.row{display:flex;align-items:center;gap:10px;margin:8px 0}
+.row .lab{flex:1;font-weight:500}
+input[type=text]{width:110px;padding:10px;border:1px solid var(--line);border-radius:10px;font:inherit;text-align:center;direction:ltr}
+input:focus{outline:2px solid var(--acc);border-color:transparent}
+table{width:100%;border-collapse:collapse;direction:ltr;text-align:center;font-size:15px}
+th,td{padding:8px 4px;border-bottom:1px solid var(--line)}
+th{color:var(--mute);font-weight:500;font-size:13px}
+td.hl{font-weight:700;color:var(--acc)}
+.k{background:var(--acc);color:#fff;border-radius:14px;padding:16px;margin:12px 0;text-align:center}
+.k .v{font-size:30px;font-weight:700;direction:ltr}
+.k .s{opacity:.85;font-size:14px;direction:ltr}
+svg{width:100%;height:auto;display:block;direction:ltr}
+.blk{padding:6px 0;border-bottom:1px solid var(--line)}
+.blk:last-child{border-bottom:0}
+.res{display:flex;flex-wrap:wrap;gap:6px;direction:ltr;font-size:13.5px;color:var(--mute);margin:2px 0 4px}
+.res:empty{display:none}
+.res span{background:#f1f4fb;border-radius:8px;padding:2px 8px}
+.res b{background:var(--acc);color:#fff;border-radius:8px;padding:2px 10px}
+.res .bad{background:#fdecec;color:#c0392b}
+.fi{padding:10px 0;border-bottom:1px solid var(--line)}
+.fi:last-child{border-bottom:0}
+.fi .f{direction:ltr;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:15px;background:#f1f4fb;border-radius:8px;padding:6px 10px;display:inline-block;color:#2b3550}
+.fi .d{margin-top:6px;font-size:16px}
+.hint{color:var(--mute);font-size:14px;margin:4px 4px}
+.fm{direction:ltr;text-align:left;font-family:ui-monospace,Menlo,monospace;font-size:14px;background:#f1f4fb;border-radius:10px;padding:10px 12px;margin:10px 0;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tabs">
+    <button class="tab on" data-v="a">التجربة</button>
+    <button class="tab" data-v="b">الحساب</button>
+  </div>
+
+  <div class="view on" id="a">
+    <div class="sec">التجهيز</div>
+    <div class="step"><div class="num">1</div><div><div class="t">اكتبي أسماء على كل الأواني قبل ما تبدين</div></div></div>
+    <div class="step"><div class="num">2</div><div><div class="en nm">Replacement Bottle</div><div class="t">حمض وماء بدون إستر</div><div class="en">20 ml 2N HCl + 18 ml H2O</div></div></div>
+    <div class="step"><div class="num">3</div><div><div class="en nm">Burette</div><div class="t">عبيه بالقاعدة</div><div class="en">N/4 NaOH</div></div></div>
+    <div class="step"><div class="num">4</div><div><div class="en nm">Titration flask</div><div class="t">ماء مع المؤشر</div><div class="en">50 ml H2O + 2 drops phenolphthalein</div></div></div>
+    <div class="step"><div class="num">5</div><div><div class="en nm">Reaction flask</div><div class="t">حركيه وسجلي وقت الصفر</div><div class="en">20 ml 2N HCl + 18 ml H2O + 2 ml ethyl acetate</div></div></div>
+    <div class="sec">كرري عند 0 و 15 و 30 و 45 و 60 و 75 دقيقة</div>
+    <div class="step"><div class="num">6</div><div><div class="t">اسحبي 5 مل فوراً</div><div class="en">Reaction flask → Titration flask</div></div></div>
+    <div class="step"><div class="num">7</div><div><div class="t">عوضي 5 مل</div><div class="en">Replacement Bottle → Reaction flask</div></div></div>
+    <div class="step"><div class="num">8</div><div><div class="en nm">Burette</div><div class="t">عايري لين يصير اللون وردي خفيف</div><div class="en">Titrate against N/4 NaOH</div></div></div>
+    <div class="step"><div class="num">9</div><div><div class="t">اكتبي القراءة اللي طلعت لك من البيوريت</div></div></div>
+    <div class="step"><div class="num">10</div><div><div class="en nm">Titration flask</div><div class="t">اغسلي وجهزي من جديد للمرة الجاية</div></div></div>
+  </div>
+
+  <div class="view" id="b">
+    <div class="card">
+      <div class="row"><div class="lab">قراءة التيتريشن الأولى (الدقيقة 0)</div><input type="text" inputmode="decimal" autocomplete="off" id="A" placeholder="مل"></div>
+    </div>
+    <div class="card" id="inputs"></div>
+
+    <div class="card" style="overflow-x:auto">
+      <table>
+        <thead><tr><th>min</th><th>V</th><th>Q (g)</th><th>R (g)</th><th>C %</th><th>Log C</th></tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+
+    <div class="card"><svg id="g" viewBox="0 0 400 300"></svg></div>
+
+    <div class="k" id="kbox" style="display:none">
+      <div class="v" id="kv"></div>
+      <div class="s" id="ks"></div>
+    </div>
+
+    <div class="card">
+      <div class="fi"><div class="f">V = B − A</div><div class="d">قراءة التيتريشن بعد ما يوصل اللون الوردي، ناقص قراءة التيتريشن الأولى. الناتج هو كمية NaOH الصافية. مثال: قراءة التيتريشن الأولى 1، وقراءة التيتريشن الثاني 4، فالناتج 3.</div></div>
+      <div class="fi"><div class="f">Q = V × 0.022 × 8</div><div class="d">اضربي كمية NaOH الصافية في 0.022، وبعدها في 8. الناتج هو الإستر اللي تفاعل بالجرام.</div></div>
+      <div class="fi"><div class="f">R = 1.8 − Q</div><div class="d">اطرحي الإستر اللي تفاعل من 1.8. الناتج هو الإستر اللي بقى بالجرام.</div></div>
+      <div class="fi"><div class="f">C = R ÷ 1.8 × 100</div><div class="d">اقسمي الإستر اللي بقى على 1.8، وبعدها اضربي في 100. الناتج هو النسبة المئوية للإستر المتبقي.</div></div>
+      <div class="fi"><div class="f">Log C</div><div class="d">اضغطي زر Log في الآلة الحاسبة على النسبة المئوية. هذا الرقم اللي ترسمينه.</div></div>
+      <div class="fi"><div class="f">k = −(slope × 2.303)</div><div class="d">بعد الرسم: خذي نقطتين من الخط، واطرحي الرقم الأقل من الأعلى، وقسميه على فرق الوقت بينهم. هذا هو الميل. اضربيه في 2.303 وغيري الإشارة لموجب. الموقع يحسبها لك هنا للمقارنة.</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const T=[0,15,30,45,60,75];
+const $=id=>document.getElementById(id);
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===b.dataset.v));
+});
+document.querySelectorAll('.step').forEach(s=>s.onclick=()=>s.classList.toggle('done'));
+
+const inp=$('inputs');
+T.slice(1).forEach(t=>{
+  const r=document.createElement('div');r.className='blk';
+  r.innerHTML=`<div class="row"><div class="lab">القراءة عند الدقيقة ${t}</div><input type="text" inputmode="decimal" autocomplete="off" data-t="${t}" placeholder="مل"></div><div class="res" id="res${t}"></div>`;
+  inp.appendChild(r);
+});
+document.querySelectorAll('input[type=text]').forEach(i=>i.addEventListener('input',calc));
+
+function num(v){v=String(v).replace(/[٠-٩]/g,c=>c.charCodeAt(0)-1632).replace(/[۰-۹]/g,c=>c.charCodeAt(0)-1776).replace(/[٫،,]/g,'.').replace(/\s/g,'');return v===''?NaN:Number(v)}
+function fmt(x,d){return Number.isFinite(x)?x.toFixed(d):'–'}
+function calc(){
+  const A=num($('A').value);
+  const pts=[{t:0,y:2}];
+  let html=`<tr><td>0</td><td>–</td><td>0</td><td>1.80</td><td>100</td><td class="hl">2.00</td></tr>`;
+  T.slice(1).forEach(t=>{
+    const B=num(document.querySelector(`input[data-t="${t}"]`).value);
+    const res=$('res'+t);
+    if(!Number.isFinite(B)){res.innerHTML='';html+=`<tr><td>${t}</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>`;return}
+    if(!Number.isFinite(A)){res.innerHTML='<span class="bad">اكتبي قراءة التيتريشن الأولى فوق</span>';html+=`<tr><td>${t}</td><td>–</td><td>–</td><td>–</td><td>–</td><td>–</td></tr>`;return}
+    const V=B-A,Q=V*0.022*8,R=1.8-Q,C=R/1.8*100;
+    if(V<0||R<=0){res.innerHTML='<span class="bad">راجعي القراءة</span>';html+=`<tr><td>${t}</td><td>${fmt(V,1)}</td><td colspan="4">راجعي القراءة</td></tr>`;return}
+    const L=Math.log10(C);
+    res.innerHTML=`<span>V ${fmt(V,1)}</span><span>Q ${fmt(Q,3)}</span><span>R ${fmt(R,3)}</span><span>C ${fmt(C,1)}%</span><b>Log C ${fmt(L,3)}</b>`;
+    pts.push({t,y:L});
+    html+=`<tr><td>${t}</td><td>${fmt(V,1)}</td><td>${fmt(Q,3)}</td><td>${fmt(R,3)}</td><td>${fmt(C,1)}</td><td class="hl">${fmt(L,3)}</td></tr>`;
+  });
+  $('tb').innerHTML=html;
+  draw(pts);
+}
+function draw(pts){
+  const W=400,H=300,l=48,r=14,tp=14,b=40;
+  const xs=v=>l+(v/80)*(W-l-r);
+  let ymin=1.5,ymax=2.05;
+  pts.forEach(p=>{if(p.y<ymin)ymin=Math.floor(p.y*20)/20});
+  const ys=v=>tp+(1-(v-ymin)/(ymax-ymin))*(H-tp-b);
+  let s='';
+  for(let v=0;v<=80;v+=10){s+=`<line x1="${xs(v)}" y1="${tp}" x2="${xs(v)}" y2="${H-b}" stroke="#e3e6ee"/><text x="${xs(v)}" y="${H-b+16}" font-size="11" text-anchor="middle" fill="#6b7385">${v}</text>`}
+  for(let v=Math.ceil(ymin*20)/20;v<=ymax+1e-9;v+=0.05){s+=`<line x1="${l}" y1="${ys(v)}" x2="${W-r}" y2="${ys(v)}" stroke="#e3e6ee"/><text x="${l-6}" y="${ys(v)+4}" font-size="11" text-anchor="end" fill="#6b7385">${v.toFixed(2)}</text>`}
+  s+=`<line x1="${l}" y1="${H-b}" x2="${W-r}" y2="${H-b}" stroke="#1d2433"/><line x1="${l}" y1="${tp}" x2="${l}" y2="${H-b}" stroke="#1d2433"/>`;
+  s+=`<text x="${(l+W-r)/2}" y="${H-6}" font-size="12" text-anchor="middle" fill="#1d2433">Time (min)</text>`;
+  s+=`<text transform="translate(12 ${(tp+H-b)/2}) rotate(-90)" font-size="12" text-anchor="middle" fill="#1d2433">Log C</text>`;
+  let kbox=$('kbox');
+  if(pts.length>=2){
+    const n=pts.length,mx=pts.reduce((a,p)=>a+p.t,0)/n,my=pts.reduce((a,p)=>a+p.y,0)/n;
+    const sxx=pts.reduce((a,p)=>a+(p.t-mx)**2,0),sxy=pts.reduce((a,p)=>a+(p.t-mx)*(p.y-my),0);
+    const m=sxy/sxx,c=my-m*mx;
+    s+=`<line x1="${xs(0)}" y1="${ys(c)}" x2="${xs(80)}" y2="${ys(c+m*80)}" stroke="#2f6fed" stroke-width="2"/>`;
+    $('kv').textContent='k = '+(-m*2.303).toFixed(4)+' min⁻¹';
+    $('ks').textContent='slope = '+m.toFixed(5);
+    kbox.style.display='block';
+  } else kbox.style.display='none';
+  pts.forEach(p=>{s+=`<circle cx="${xs(p.t)}" cy="${ys(p.y)}" r="4.5" fill="#d62828"/>`});
+  $('g').innerHTML=s;
+}
+calc();
+</script>
+</body>
+</html>
