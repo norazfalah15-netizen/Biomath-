@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Alkyl Halides</title>
+<style>
+:root{--ac:#1f7a6d;--ac2:#e6f1ef;--am:#d98e04;--tx:#1b2a28;--mu:#5c6f6b;--bg:#f5f8f7;--cd:#fff;--ln:#dbe6e3;--rd:#b4452f}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;font-size:17px;line-height:1.95}
+.wrap{max-width:860px;margin:0 auto;padding:18px 16px 70px}
+.en{direction:ltr;unicode-bidi:isolate;display:inline-block;white-space:nowrap}
+.ltr{direction:ltr;text-align:right}
+h1{font-size:30px;margin:26px 0 22px;direction:ltr;text-align:center;color:var(--ac)}
+h2{font-size:23px;margin:0;direction:ltr;text-align:left;line-height:1.4}
+.sb2{font-weight:700;font-size:19px;margin:24px 0 8px;color:var(--ac);border-inline-start:5px solid var(--ac);padding:2px 12px}
+ul.big li{font-weight:700;font-size:19px;margin:10px 0}
+h3{font-size:19px;margin:34px 0 10px;color:var(--ac);direction:ltr;text-align:left;border-bottom:2px solid var(--ac2);padding-bottom:6px}
+p{margin:10px 0}
+.home a{display:flex;align-items:center;gap:14px;background:var(--cd);border:1px solid var(--ln);border-radius:16px;padding:16px 18px;margin:12px 0;color:var(--tx);text-decoration:none;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.home a:active{background:var(--ac2)}
+.home .n{flex:none;width:40px;height:40px;border-radius:50%;background:var(--ac);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+.home .t{direction:ltr;text-align:left;font-weight:600;font-size:18px;line-height:1.5}
+.top{display:flex;align-items:center;gap:14px;position:sticky;top:0;background:var(--bg);padding:12px 0;z-index:5;border-bottom:1px solid var(--ln)}
+.back{border:0;background:var(--ac);color:#fff;width:44px;height:44px;border-radius:50%;font-size:24px;line-height:1;cursor:pointer;flex:none}
+.box{background:var(--ac2);border-inline-start:5px solid var(--ac);border-radius:12px;padding:12px 16px;margin:14px 0}
+.warn{background:#fdf3e1;border-inline-start-color:var(--am)}
+.note{padding:8px 14px;font-size:14px}.note p{margin:6px 0}.note .ltr{margin:6px 0}
+.card{background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:12px 14px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin:12px 0}
+.st{background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:10px 8px 12px;text-align:center}
+.st svg{max-width:100%;height:auto;max-height:170px}
+.st .nm{direction:ltr;font-weight:600;font-size:15px;line-height:1.4;margin-top:4px}
+.st .sb{font-size:14px;color:var(--mu);line-height:1.6;margin-top:4px}
+.chip{display:inline-block;background:var(--ac);color:#fff;border-radius:999px;padding:1px 12px;font-size:14px;margin:2px;direction:ltr}
+.chip.am{background:var(--am)}
+.chips{display:flex;flex-wrap:nowrap;gap:8px;margin:12px 0;direction:ltr}
+.hal{background:var(--cd);border:2px solid var(--ac);border-radius:14px;padding:10px 4px;text-align:center;direction:ltr;flex:1 1 0;min-width:0;font-size:14px}
+.hal b{display:block;font-size:30px;color:var(--ac);line-height:1.2}
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;background:var(--cd);border-radius:12px;overflow:hidden;font-size:15.5px}
+th,td{border:1px solid var(--ln);padding:8px 10px;text-align:center;line-height:1.6}
+th{background:var(--ac);color:#fff}
+td.l{direction:ltr;text-align:left}
+table.nu{font-size:14.5px}table.nu tr.g td{border-top:3px solid var(--ac)}table.nu th,table.nu td{padding:8px 4px}.tw.nw{margin:12px -10px}
+table.uses th:nth-child(1){width:34%}table.uses th:nth-child(2){width:16%}table.uses td:nth-child(2){white-space:nowrap}table.uses td,table.uses th{padding:8px 6px;font-size:14.5px}
+tr.hl td,td.hl{background:#fdf3e1;font-weight:700}
+sub{font-size:.7em}
+.fm{direction:ltr;unicode-bidi:isolate;display:inline-block;white-space:nowrap}
+.rx{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;direction:ltr;margin:8px 0;padding:10px 6px;background:var(--cd);border:1px solid var(--ln);border-radius:14px}
+.it{text-align:center;font-size:15px;line-height:1.3;direction:ltr}
+.it small{display:block;color:var(--mu);font-size:12.5px;margin-top:3px}
+.rx .pl{font-size:20px;color:var(--mu)}
+.arr{display:flex;flex-direction:column;align-items:center;font-size:12.5px;color:var(--mu);min-width:56px;line-height:1.2}
+.arr i{font-style:normal;font-size:26px;line-height:.8;color:var(--ac)}
+.rx svg{max-height:120px;height:auto}
+.rx2{background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:12px 8px;margin:10px 0;direction:ltr;text-align:center}
+.rx2 .row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px}
+.rx2 .dn{display:flex;flex-direction:column;align-items:center;color:var(--mu);font-size:13px;margin:4px 0;line-height:1.2}
+.rx2 .dn i{font-style:normal;font-size:24px;color:var(--ac);line-height:1}
+.rx2 .it svg{max-height:110px;width:auto}
+.t4{font-weight:700;direction:ltr;text-align:left;color:var(--ac);margin:10px 0 2px}
+.q{font-weight:700;color:var(--ac);direction:ltr;display:inline-block;margin-inline-end:6px}
+ul{margin:8px 0;padding-inline-start:22px}
+li{margin:4px 0}
+.ans{background:#fff;border:1px dashed var(--ac);border-radius:12px;padding:8px 14px;margin:10px 0}
+.ans .en{font-weight:700}
+.step{display:flex;gap:10px;align-items:flex-start;margin:8px 0}
+.step b{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;text-align:center;line-height:28px;font-size:14px;margin-top:4px}
+.step div{flex:1}
+.tr{display:flex;gap:12px;align-items:center;background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:10px 14px;margin:10px 0}
+.tr .tx{flex:1;line-height:1.7}
+.tr .tn{direction:ltr;text-align:right;font-weight:700;font-size:18px;color:var(--ac)}
+.tr .ex{direction:ltr;text-align:right;color:var(--mu);font-size:14px}
+.tr .sv2{flex:0 0 125px;display:flex;justify-content:center}
+.tr .sv2 svg{max-width:125px;max-height:115px;height:auto;width:auto}
+.gt{margin:22px 0 6px;font-weight:700;color:var(--mu);font-size:15px}
+.cr{color:#c0392b;font-weight:700}.cs{color:#d6336c;font-weight:700}
+.grp{margin:18px 0}
+.gh{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:16.5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid2 .sv{height:150px;display:flex;align-items:center;justify-content:center}
+@media(max-width:520px){body{font-size:16.5px}.grid{grid-template-columns:repeat(2,1fr)}}
+.eh{color:#1f7a6d}.ec{color:#c0392b;font-weight:700}.noo .eo,.noo .es,.noo .en2{color:inherit!important;font-weight:inherit!important}
+.eo{color:#d98e04}.en2{color:#2f5fa8}.es{color:#8a5aa8}.eh,.eo,.en2,.es{font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<script>
+/* ---------- molecule drawing ---------- */
+const L=40,AC='#1f7a6d',AM='#d98e04';
+class M{
+ constructor(){this.a=[];this.b=[];this.n=[];this.k=[];this.mk=[]}
+ at(x,y,l=''){this.a.push({x,y,l});return this.a.length-1}
+ go(i,ang,l='',o=1,st=''){const p=this.a[i],r=ang*Math.PI/180;const j=this.at(p.x+L*Math.cos(r),p.y-L*Math.sin(r),l);this.b.push([i,j,o,st]);return j}
+ bd(i,j,o=1,st=''){this.b.push([i,j,o,st])}
+ ring(n,cx,cy,rot,arom=false,dbl=[]){
+  const R=L/(2*Math.sin(Math.PI/n)),ids=[];
+  for(let k=0;k<n;k++){const t=(rot+k*360/n)*Math.PI/180;ids.push(this.at(cx+R*Math.cos(t),cy-R*Math.sin(t)))}
+  for(let k=0;k<n;k++){const j=(k+1)%n;const d=dbl.some(e=>(e[0]===k&&e[1]===j)||(e[0]===j&&e[1]===k));this.b.push([ids[k],ids[j],d?2:1,''])}
+  if(arom)this.k.push([cx,cy,R*0.58]);
+  return ids}
+ num(i,t,dx=0,dy=0){this.n.push([i,t,dx,dy])}
+ mark(i){this.mk.push(i);return this}
+ svg(sc=1){
+  const A=this.a;let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;
+  A.forEach(p=>{x0=Math.min(x0,p.x);x1=Math.max(x1,p.x);y0=Math.min(y0,p.y);y1=Math.max(y1,p.y)});
+  const pd=22;x0-=pd;y0-=pd;x1+=pd;y1+=pd;
+  const W=x1-x0,H=y1-y0;
+  let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${x0} ${y0} ${W} ${H}" width="${W*sc}" height="${H*sc}" style="direction:ltr" font-family="Arial,Helvetica,sans-serif" font-size="14">`;
+  this.mk.forEach(i=>{s+=`<circle cx="${A[i].x}" cy="${A[i].y}" r="13" fill="${AM}" fill-opacity=".28" stroke="${AM}" stroke-width="1.2"/>`});
+  if(this.mk.length)A.forEach(p=>{if(/^(F|Cl|Br|I)$/.test(p.l)){const r=p.l.length>1?13:11;s+=`<circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${AC}" fill-opacity=".18" stroke="${AC}" stroke-width="1.2"/>`}});
+  this.k.forEach(c=>{s+=`<circle cx="${c[0]}" cy="${c[1]}" r="${c[2]}" fill="none" stroke="#1b2a28" stroke-width="1.6"/>`});
+  const vis=l=>l.replace(/_/g,'').length;
+  this.b.forEach(([i,j,o,st])=>{
+   const P=A[i],Q=A[j];let dx=Q.x-P.x,dy=Q.y-P.y;const len=Math.hypot(dx,dy);const ux=dx/len,uy=dy/len;
+   const gap=p=>p.l?(Math.abs(ux)*3.7*vis(p.l)+Math.abs(uy)*7+2):0;
+   const gp=gap(P),gq=gap(Q);
+   const ax=P.x+ux*gp,ay=P.y+uy*gp,bx=Q.x-ux*gq,by=Q.y-uy*gq;
+   const nx=-uy,ny=ux;
+   const ln=(x1,y1,x2,y2,w=1.7)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="#1b2a28" stroke-width="${w}" stroke-linecap="round"/>`;
+   if(st==='w'){s+=`<polygon points="${ax},${ay} ${bx+nx*4},${by+ny*4} ${bx-nx*4},${by-ny*4}" fill="#1b2a28"/>`}
+   else if(st==='h'){for(let t=1;t<=6;t++){const f=t/6.5,cx=ax+(bx-ax)*f,cy=ay+(by-ay)*f,w=1+3.6*f;s+=ln(cx+nx*w,cy+ny*w,cx-nx*w,cy-ny*w,1.4)}}
+   else if(o===1){s+=ln(ax,ay,bx,by)}
+   else if(o===2){const d=2.5;s+=ln(ax+nx*d,ay+ny*d,bx+nx*d,by+ny*d)+ln(ax-nx*d,ay-ny*d,bx-nx*d,by-ny*d)}
+   else{const d=3.4;s+=ln(ax,ay,bx,by)+ln(ax+nx*d,ay+ny*d,bx+nx*d,by+ny*d)+ln(ax-nx*d,ay-ny*d,bx-nx*d,by-ny*d)}
+  });
+  A.forEach(p=>{if(!p.l)return;
+   const hal=/^(F|Cl|Br|I)$/.test(p.l);
+   const t=p.l.replace(/_(\d)/g,'<tspan dy="4" font-size="10">$1</tspan><tspan dy="-4"> </tspan>').replace(/ <\/tspan>/g,'</tspan>');
+   s+=`<text x="${p.x}" y="${p.y}" text-anchor="middle" dominant-baseline="central" fill="${hal?AC:'#1b2a28'}" font-weight="${hal?700:500}" stroke="#fff" stroke-width="3.5" paint-order="stroke">${t}</text>`});
+  this.n.forEach(([i,t,dx,dy])=>{s+=`<text x="${A[i].x+dx}" y="${A[i].y+dy}" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#d98e04" font-weight="700">${t}</text>`});
+  return s+'</svg>'}
+}
+/* ---------- structures ---------- */
+const S={};
+S.CCl4=()=>{const m=new M(),c=m.at(0,0,'C');[45,135,225,315].forEach(a=>m.go(c,a,'Cl'));return m};
+S.CHCl3=()=>{const m=new M(),c=m.at(0,0,'C');m.go(c,90,'H');m.go(c,180,'Cl');m.go(c,0,'Cl');m.go(c,270,'Cl');return m};
+S.halothane=()=>{const m=new M(),a=m.at(0,0,'C');m.go(a,90,'F');m.go(a,180,'F');m.go(a,270,'F');const b=m.go(a,0,'C');m.go(b,90,'H');m.go(b,270,'Br');m.go(b,0,'Cl');return m};
+S.methoxyflurane=()=>{const m=new M(),a=m.at(0,0,'CH_3'),o=m.go(a,0,'O'),c=m.go(o,0,'C');m.go(c,90,'F');m.go(c,270,'F');const d=m.go(c,0,'C');m.go(d,90,'H');m.go(d,270,'Cl');m.go(d,0,'Cl');return m};
+
+S.thyroxine=()=>{const m=new M();
+ const r1=m.ring(6,0,0,0,true);
+ m.go(r1[3],180,'HO');m.go(r1[2],120,'I');m.go(r1[4],240,'I');
+ const o=m.go(r1[0],0,'O');
+ const r2=m.ring(6,m.a[o].x+2*L,0,0,true);m.bd(o,r2[3]);
+ m.go(r2[2],120,'I');m.go(r2[4],240,'I');
+ const ch2=m.go(r2[0],0,''),ca=m.go(ch2,-60,'');
+ m.go(ca,240,'NH_2');const c=m.go(ca,0,'');m.go(c,60,'O',2);m.go(c,300,'OH');
+ return m};
+S.chloramphenicol=()=>{const m=new M();
+ const r=m.ring(6,0,0,0,true);m.go(r[3],180,'O_2N');
+ const c1=m.go(r[0],0,'');m.go(c1,90,'OH');
+ const c2=m.go(c1,-60,'');m.go(c2,240,'CH_2OH');
+ const n=m.go(c2,0,'NH'),c=m.go(n,60,'');m.go(c,120,'O',2);
+ const d=m.go(c,0,'');m.go(d,60,'Cl');m.go(d,300,'Cl');
+ return m};
+S.tyrian=()=>{const m=new M();
+ const R5=L/(2*Math.sin(Math.PI/5)),a5=R5*Math.cos(Math.PI/5),hx=-R5-a5-0.866*L,rad=Math.PI/180;
+ const half=T=>{
+  const at=(x,y,l='')=>{const q=T(x,y);return m.at(q[0],q[1],l)};
+  const P=[];for(let k=0;k<5;k++){const t=k*72*rad;P.push([-R5+R5*Math.cos(t),-R5*Math.sin(t)])}
+  const c2=at(P[0][0],P[0][1]),c3=at(P[1][0],P[1][1]),c3a=at(P[2][0],P[2][1]),c7a=at(P[3][0],P[3][1]),n=at(P[4][0],P[4][1],'NH');
+  m.bd(c2,c3);m.bd(c3,c3a);m.bd(c3a,c7a);m.bd(c7a,n);m.bd(n,c2);
+  const bz=[90,150,210,270].map(d=>at(hx+L*Math.cos(d*rad),-L*Math.sin(d*rad)));
+  m.bd(c3a,bz[0]);m.bd(bz[0],bz[1]);m.bd(bz[1],bz[2]);m.bd(bz[2],bz[3]);m.bd(bz[3],c7a);
+  const hc=T(hx,0);m.k.push([hc[0],hc[1],0.58*L]);
+  const o=at(P[1][0]+L*Math.cos(72*rad),P[1][1]-L*Math.sin(72*rad),'O');m.bd(c3,o,2);
+  const v=[hx+L*Math.cos(210*rad),-L*Math.sin(210*rad)];
+  const br=at(v[0]+L*Math.cos(210*rad),v[1]-L*Math.sin(210*rad),'Br');m.bd(bz[2],br);
+  return c2};
+ const a=half((x,y)=>[x,y]),b=half((x,y)=>[L-x,-y]);
+ m.bd(a,b,2);return m};
+S.CH3I=()=>{const m=new M(),c=m.at(0,0,'C');m.go(c,90,'I');m.go(c,180,'H');m.go(c,0,'H');m.go(c,270,'H');m.mark(c);return m};
+S.chloroethane=(mk=true)=>{const m=new M(),a=m.at(0,0,'CH_3'),b=m.go(a,30,'CH_2');m.go(b,-30,'Cl');if(mk)m.mark(b);return m};
+S.bromobenzene=()=>{const m=new M(),r=m.ring(6,0,0,90,true);m.go(r[0],90,'Br');m.mark(r[0]);return m};
+S.vinylCl=()=>{const m=new M(),a=m.at(0,0,'CH_2'),b=m.go(a,30,'CH',2);m.go(b,-30,'Cl');m.mark(b);return m};
+S.allylCl=()=>{const m=new M(),a=m.at(0,0,'CH_2'),b=m.go(a,30,'CH',2),c=m.go(b,-30,'CH_2');m.go(c,30,'Cl');m.mark(c);return m};
+S.benzylBr=()=>{const m=new M(),r=m.ring(6,0,0,90,true),c=m.go(r[0],90,'CH_2');m.go(c,30,'Br');m.mark(c);return m};
+S.bromobutane2=()=>{const m=new M(),a=m.at(0,0,'CH_3'),b=m.go(a,30,'');m.go(b,90,'Br');const c=m.go(b,-30,'');m.go(c,30,'CH_3');m.mark(b);return m};
+S.benzylic2=()=>{const m=new M(),r=m.ring(6,0,0,90,true),c=m.go(r[0],90,'');m.go(c,30,'Br');m.go(c,150,'CH_3');m.mark(c);return m};
+S.benzylic3=()=>{const m=new M(),r=m.ring(6,0,0,90,true),c=m.go(r[0],90,'');m.go(c,30,'Br');m.go(c,150,'CH_3');m.go(c,90,'CH_3');m.mark(c);return m};
+S.bromocyclopentane=(mk=true)=>{const m=new M(),r=m.ring(5,0,0,90);m.go(r[0],90,'Br');if(mk)m.mark(r[0]);return m};
+S.chlorobutene3=()=>{const m=new M(),a=m.at(0,0,'CH_2'),b=m.go(a,30,'CH',2),c=m.go(b,-30,'');m.go(c,270,'Cl');m.go(c,30,'CH_3');m.mark(c);return m};
+S.chloromethylbutane=()=>{const m=new M(),a=m.at(0,0,'CH_3'),b=m.go(a,30,'');m.go(b,90,'Cl');m.go(b,150,'CH_3');const c=m.go(b,-30,'');m.go(c,30,'CH_3');m.mark(b);return m};
+S.bromomethylcp=()=>{const m=new M(),r=m.ring(5,0,0,90);m.go(r[0],60,'Br');m.go(r[0],120,'CH_3');m.mark(r[0]);return m};
+S.chloromethylbutene=()=>{const m=new M(),a=m.at(0,0,'CH_2'),b=m.go(a,30,'CH',2),c=m.go(b,-30,'');m.go(c,270,'Cl');m.go(c,30,'CH_3');m.go(c,330,'CH_3');m.mark(c);return m};
+/* nomenclature */
+S.hint=()=>{const m=new M(),c7=m.at(0,0,'');const c6=m.go(c7,30,'',2),c5=m.go(c6,-30,''),c4=m.go(c5,30,''),c3=m.go(c4,-30,''),c2=m.go(c3,30,''),c1=m.go(c2,-30,'');
+ m.go(c5,270,'Cl');m.go(c3,270,'OH');const me=m.go(c2,90,'');
+ [[c7,'7'],[c6,'6'],[c5,'5'],[c4,'4'],[c3,'3'],[c2,'2'],[c1,'1']].forEach(([i,t])=>m.num(i,t,i===c2?-12:0,i===c2?-8:-14));
+ m.num(me,'',0,0);return m};
+S.bromomethylpentane=()=>{const m=new M(),c5=m.at(0,0,''),c4=m.go(c5,30,''),c3=m.go(c4,-30,'');m.go(c3,270,'Br');const c2=m.go(c3,30,''),c1=m.go(c2,90,''),me=m.go(c2,330,'');
+ [[c5,'5',0,14],[c4,'4',0,-14],[c3,'3',-10,12],[c2,'2',-14,-6],[c1,'1',12,0]].forEach(([i,t,dx,dy])=>m.num(i,t,dx,dy));return m};
+S.bromocyclohexene=()=>{const m=new M(),r=m.ring(6,0,0,90,false,[[1,2]]);m.go(r[5],30,'Br');
+ [[r[2],'1',-14,0],[r[1],'2',-14,0],[r[0],'3',0,-14],[r[5],'4',2,-18],[r[4],'5',14,4],[r[3],'6',0,14]].forEach(([i,t,dx,dy])=>m.num(i,t,dx,dy));return m};
+S.chlorocyclohexanol=()=>{const m=new M(),r=m.ring(6,0,0,90);m.go(r[5],30,'OH',1,'h');m.go(r[4],330,'Cl',1,'w');
+ [[r[5],'1',-18,-3],[r[4],'2',-18,3],[r[3],'3',0,14],[r[2],'4',-14,6],[r[1],'5',-14,-6],[r[0],'6',0,-14]].forEach(([i,t,dx,dy])=>m.num(i,t,dx,dy));return m};
+S.iodomethylhexane=()=>{const m=new M(),c1=m.at(0,0,''),c2=m.go(c1,30,'');m.go(c2,90,'');const c3=m.go(c2,-30,''),c4=m.go(c3,30,'');m.go(c4,90,'I');const c5=m.go(c4,-30,''),c6=m.go(c5,30,'');
+ [[c1,'1',-4,14],[c2,'2',-14,-4],[c3,'3',0,14],[c4,'4',-14,-4],[c5,'5',0,14],[c6,'6',12,-4]].forEach(([i,t,dx,dy])=>m.num(i,t,dx,dy));return m};
+S.dichlorobutene=()=>{const m=new M(),c1=m.at(0,0,''),c2=m.go(c1,30,'',2),c3=m.go(c2,-30,''),c4=m.go(c3,30,'');m.go(c4,90,'Cl');m.go(c4,330,'Cl');
+ [[c1,'1',-2,14],[c2,'2',0,-14],[c3,'3',0,14],[c4,'4',-14,-4]].forEach(([i,t,dx,dy])=>m.num(i,t,dx,dy));return m};
+S.bromoethylcp=()=>{const m=new M(),r=m.ring(5,0,0,90);m.go(r[4],18,'Br');const e1=m.go(r[0],120,''),e2=m.go(e1,60,'');return m};
+/* reaction pieces */
+S.rBr=()=>{const m=new M(),r=m.ring(5,0,0,90);m.go(r[0],90,'Br');return m};
+S.rSH=()=>{const m=new M(),r=m.ring(5,0,0,90);m.go(r[0],90,'SH');return m};
+S.rCN=()=>{const m=new M(),r=m.ring(5,0,0,90),c=m.go(r[0],90,'');m.go(c,90,'N',3);return m};
+S.rCOO=()=>{const m=new M(),r=m.ring(5,0,0,90),c=m.go(r[0],90,'');m.go(c,150,'O',2);m.go(c,30,'O⁻');return m};
+S.rCOOEt=()=>{const m=new M(),r=m.ring(5,0,0,90),c=m.go(r[0],90,'');m.go(c,150,'O',2);const o=m.go(c,30,'O'),e=m.go(o,-30,'');m.go(e,30,'');return m};
+S.rOHm=()=>{const m=new M(),r=m.ring(6,0,0,90);m.go(r[0],90,'CH_2');return m};
+
+/* ---------- helpers ---------- */
+const fm=s=>`<span class="fm">${s.replace(/([A-Za-z)])(\d+)/g,'$1<sub>$2</sub>')}</span>`;
+const fcn=s=>fc(s).replace('<span class="fm">','<span class="fm noo">');
+const fc=s=>`<span class="fm">${s.replace(/([A-Za-z)])(\d+)/g,'$1<sub>$2</sub>').replace(/(Cl|Br|I|F|X)(?![a-z])|(O)|(N)(?![a-z])|(S)(?![a-z])/g,(m,h,o,n,sv)=>`<b class="${h?'eh':o?'eo':n?'en2':'es'}">${m}</b>`)}</span>`;
+const fw=s=>`<span>${s.replace(/([A-Za-z)])(\d+)/g,'$1<sub>$2</sub>').replace(/(Cl|Br|I|F|X)(?![a-z])|(O)|(N)(?![a-z])|(S)(?![a-z])/g,(m,h,o,n,sv)=>`<b class="${h?'eh':o?'eo':n?'en2':'es'}">${m}</b>`)}</span>`;
+const en=s=>`<span class="en">${s}</span>`;
+const st=(key,name,sub,mk,sc=1)=>`<div class="st">${S[key](mk).svg(sc)}<div class="nm">${name}</div>${sub?`<div class="sb">${sub}</div>`:''}</div>`;
+const sn=(key,name,sub,mk,sc=1)=>`<div class="st">${S[key](mk).svg(sc)}<div class="nm">${name}</div></div>`;
+const it=(c,sm)=>`<div class="it">${c}${sm?`<small>${sm}</small>`:''}</div>`;
+const sv=(key,mk,sc=.8)=>S[key](mk).svg(sc);
+const pl='<div class="pl">+</div>';
+const ar=(top,bot)=>`<div class="arr">${top||''}<i>⟶</i>${bot||''}</div>`;
+const rx=(...x)=>`<div class="rx">${x.join('')}</div>`;
+const PL='<span class="pl" style="font-size:20px;color:var(--mu)">+</span>';
+const rx2=(rows,conds,foot,post)=>{let h='<div class="rx2">';rows.forEach((r,i)=>{h+=`<div class="row">${r.join(PL)}</div>`;if(i<rows.length-1)h+=`<div class="dn">${conds[i]||''}<i>↓</i></div>`});if(foot)h+=`<div class="dn" style="margin-top:8px;color:#d98e04">${foot}</div>`;if(post)h+=`<div class="row" style="margin-top:6px">${post}</div>`;return h+'</div>'};
+
+/* ---------- sections ---------- */
+const SEC=[];
+
+SEC.push({t:'Halogens, uses and toxicity',h:()=>`
+<p>${en('Alkyl halide')} هو ${en('Organic compound')} مرتبط فيه ذرة هالوجين وحدة أو أكثر.</p>
+<h3>The halogens in alkyl halides</h3>
+<div class="chips">
+ <div class="hal"><b>F</b>Fluorine</div><div class="hal"><b>Cl</b>Chlorine</div><div class="hal"><b>Br</b>Bromine</div><div class="hal"><b>I</b>Iodine</div>
+</div>
+<h3>Uses</h3>
+<div class="tw"><table class="ltr uses">
+<tr><th>Compound</th><th>Halogen</th><th>Use</th></tr>
+<tr><td class="l">Thyroxine (T4)</td><td>I</td><td class="l">Part of the thyroid hormone, made naturally in the body</td></tr>
+<tr><td class="l">Chloramphenicol</td><td>Cl</td><td class="l">Antibiotic isolated from a soil bacterium</td></tr>
+<tr><td class="l">Tyrian purple</td><td>Br</td><td class="l">Natural dye</td></tr>
+<tr><td class="l">Halothane</td><td>F, Cl, Br</td><td class="l">Safe anesthetic</td></tr>
+<tr><td class="l">Methoxyflurane</td><td>F, Cl</td><td class="l">Safe anesthetic</td></tr>
+<tr><td class="l">Carbon tetrachloride</td><td>Cl</td><td class="l">Solvent, may cause liver damage</td></tr>
+<tr><td class="l">Chloroform</td><td>Cl</td><td class="l">Solvent, may cause liver damage</td></tr>
+</table></div>
+<h3>Toxicity</h3>
+<div class="box warn">مو كل المركبات الهالوجينية آمنة للشرب.<br>مثال: المذيبات ${en('Carbon tetrachloride')} و ${en('Chloroform')} ممكن تسبب تلف بالكبد.</div>
+`});
+
+SEC.push({t:'Types of organohalogen compounds',h:()=>{
+ const r=(k,type,ex,ar,hy,mk)=>`<div class="tr"><div class="tx"><div class="tn">${type}</div><div>${ar}</div><div style="margin-top:4px"><span class="chip${hy==='sp²'?' am':''}">C–X: ${hy}</span></div></div><div class="sv2">${S[k](mk).svg(1)}</div></div>`;
+ return `
+<p>تصنيف المركب حسب الكربون اللي مرتبط فيه الهالوجين (الكربون اللي فيه رابطة <span class="en">C–X</span>).</p>
+<div class="gt">الهالوجين على كربون عادي</div>
+${r('CH3I','Methyl halide','Methyl iodide','كربون واحد بس','sp³',false)}
+${r('chloroethane','Alkyl halide','Chloroethane','سلسلة كربونات','sp³',true)}
+<div class="gt">الهالوجين على كربون الرابطة المزدوجة أو الحلقة نفسه</div>
+${r('vinylCl','Vinylic halide','Vinyl chloride','على رابطة مزدوجة','sp²',true)}
+${r('bromobenzene','Aryl halide','Bromobenzene','على حلقة بنزين','sp²',true)}
+<div class="gt">الهالوجين على الكربون المرتبط بالرابطة المزدوجة أو بالحلقة</div>
+${r('allylCl','Allylic halide','Allyl chloride','جنب رابطة مزدوجة','sp³',true)}
+${r('benzylBr','Benzylic halide','Benzyl bromide','جنب حلقة بنزين','sp³',true)}
+`}});
+
+SEC.push({t:'Primary, secondary and tertiary halides',h:()=>`
+<p>تصنيف المركب حسب كم كربون (مجموعة ألكيل) مرتبط بالكربون اللي فيه الهالوجين (الكربون اللي فيه رابطة <span class="en">C–X</span>).</p>
+<div class="box"><div class="ltr">1 carbon → Primary (1°)<br>2 carbons → Secondary (2°)<br>3 carbons → Tertiary (3°)</div></div>
+<h3>Primary (1°)</h3>
+<div class="grid">
+ ${sn('chloroethane','Alkyl halide','',true)}
+ ${sn('benzylBr','Benzylic halide','',true)}
+ ${sn('allylCl','Allylic halide','',true)}
+</div>
+<h3>Secondary (2°)</h3>
+<div class="grid">
+ ${sn('bromobutane2','Alkyl halide','',true)}
+ ${sn('benzylic2','Benzylic halide','',true)}
+ ${sn('chlorobutene3','Allylic halide','',true)}
+</div>
+<h3>Tertiary (3°)</h3>
+<div class="grid">
+ ${sn('chloromethylbutane','Alkyl halide','',true)}
+ ${sn('benzylic3','Benzylic halide','',true)}
+ ${sn('chloromethylbutene','Allylic halide','',true)}
+</div>
+<div class="box">تصنيف <span class="en">1°</span> و <span class="en">2°</span> و <span class="en">3°</span> يكون بس لـ
+<div class="ltr">Alkyl<br>Allylic<br>Benzylic</div>
+لأن كربون الهالوجين مرتبط بأربع روابط، واحدة منها على الأقل مع كربون.
+<div class="ltr" style="margin-top:12px">Methyl<br>Vinylic<br>Aryl</div>
+ما يتصنفون <span class="en">1°</span> و <span class="en">2°</span> و <span class="en">3°</span>.</div>
+`});
+
+SEC.push({t:'Physical properties',h:()=>`
+<h3>Boiling point</h3>
+<div class="sb2">نوع الهالوجين</div>
+<p>الأثقل يرفع درجة الغليان.</p>
+<div class="ltr">Atomic mass: I &gt; Br &gt; Cl &gt; F</div>
+<div class="ltr"><span class="chip">R–I</span> &gt; <span class="chip">R–Br</span> &gt; <span class="chip">R–Cl</span> &gt; <span class="chip">R–F</span></div>
+<div class="sb2">عدد الهالوجين</div>
+<p>كل ما زادوا ارتفعت درجة الغليان.</p>
+<p><b>الأقل:</b></p><div class="ltr">${fm('CH3F')} (−78 °C)<br>${fm('CH3Cl')} (−24 °C)</div>
+<p><b>الأعلى:</b></p><div class="ltr">${fm('CBr4')} (189 °C)</div>
+<div class="box note"><p><span class="en">Alkyl iodides</span> الصلبة ما تغلي، يصير لها <span class="en">sublimation</span>، فما لها درجة غليان (<span class="en">${fm('CHI3')}، ${fm('CI4')}</span>).</p>
+<p>إذا انسخنت، ما تصير سايل وتغلي، تتحول من صلب لغاز على طول <span class="en"><span class="chip">Solid</span> → <span class="chip">Gas</span></span></p></div>
+<div class="sb2">طول سلسلة الكربون</div>
+<p>كل ما طالت ارتفعت درجة الغليان.</p>
+<div class="ltr">${fm('CH3Cl')} (−24 °C)<br>${fm('CH3CH2Cl')} (12.5 °C)</div>
+<h3>Water solubility</h3>
+<div class="box warn"><span class="en">Alkyl halides</span> ما تذوب بالماي.<div class="ltr">Water-insoluble</div></div>
+<ul class="big">
+<li>رابطة <span class="en">C–X</span> قطبية بشكل ضعيف.</li>
+<li>التجاذب بينها <span class="en">dipole–dipole</span> بس.</li>
+<li>ما تسوي روابط هيدروجينية (<span class="en">H-bonds</span>) لا مع بعضها ولا مع جزيئات الماي.</li>
+</ul>
+<div class="box note">كل ما كان الهالوجين أثقل قلّ الذوبان <span class="en">I &gt; Br &gt; Cl &gt; F</span><br>كل ما زاد عدد الهالوجينات قلّ الذوبان.<br>كل ما طالت سلسلة الكربون قلّ الذوبان.</div>
+`});
+
+SEC.push({t:'Preparation and reactions',h:()=>`
+<h3>Preparation of alkyl halides</h3>
+<div class="card"><b>1) من الألكين</b><div style="display:flex;direction:rtl;align-items:center;gap:12px;margin:8px 0 4px"><div class="ltr">Alkene</div><div class="ltr" style="font-size:20px;color:var(--mu)">+</div><div class="ltr" style="text-align:left;border-inline-start:3px solid var(--ln);padding-inline-start:12px;line-height:1.5"><div>${fc('HX')}</div><div style="margin-top:2px">${fc('X₂')}</div></div></div>
+${rx2([[it(fc('CH3CH=CH2')),it(fc('HCl'),'Markovnikov')],[it(fc('CH3CHClCH3'),'2-Chloropropane')]],[''],'Monohalide')}
+${rx2([[it(fc('CH2=CH2')),it(fc('Br2'))],[it(fc('BrCH2CH2Br'),'1,2-Dibromoethane')]],[''],'Dihalide')}
+</div>
+<div class="card"><b>2) من الكحول</b><div style="display:flex;direction:rtl;align-items:center;gap:12px;margin:8px 0 4px"><div class="ltr">Alcohol</div><div class="ltr" style="font-size:20px;color:var(--mu)">+</div><div class="ltr" style="text-align:left;border-inline-start:3px solid var(--ln);padding-inline-start:12px;line-height:1.5"><div>${fc('HX')}</div><div style="margin-top:2px">${fcn('SOCl₂ · PCl₃ · PBr₃')}</div></div></div>
+${rx2([[it(fcn('CH3CH(OH)CH2CH3'),'2-Butanol'),it(fc('HCl'))],[it(fc('CH3CH(Cl)CH2CH3'),'2-Chlorobutane'),it(fcn('H2O'))]],[''])}
+</div>
+
+<h3>Reactions of alkyl halides</h3>
+<div class="card"><div class="t4">1. Nucleophilic substitution</div>الـ <span class="en">nucleophile</span> يبدّل الهالوجين.</div>
+<div class="card" style="text-align:center">
+<svg viewBox="0 0 520 110" width="100%" style="max-width:520px;direction:ltr" font-family="Arial,Helvetica,sans-serif" font-size="18">
+ <defs><marker id="ah" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#d98e04"/></marker></defs>
+ <text x="20" y="85" fill="#1f7a6d" font-weight="700">Nu:⁻</text>
+ <text x="85" y="85">+</text>
+ <text x="110" y="85">R₃C</text><text x="168" y="85">–</text><text x="188" y="85" fill="#1f7a6d" font-weight="700">X</text>
+ <path d="M48 68 C66 24, 128 24, 138 62" fill="none" stroke="#d98e04" stroke-width="2" marker-end="url(#ah)"/>
+ <path d="M173 70 C174 34, 191 34, 193 62" fill="none" stroke="#d98e04" stroke-width="2" marker-end="url(#ah)"/>
+ <text x="250" y="82" font-size="28" fill="#1f7a6d">⟶</text>
+ <text x="300" y="85">R₃C</text><text x="358" y="85">–</text><text x="372" y="85" fill="#1f7a6d" font-weight="700">Nu</text>
+ <text x="410" y="85">+</text><text x="435" y="85" fill="#1f7a6d" font-weight="700">X:⁻</text>
+</svg>
+<div class="ltr" style="color:var(--mu);font-size:14px;text-align:center">Nucleophile + Alkyl halide ⟶ Product + Leaving group</div>
+</div>
+${rx2([[it(fc('(CH3)2CHCH2O⁻Na⁺')),it(fc('CH3CH2Br'))],[it(fc('(CH3)2CHCH2OCH2CH3'),'Ether'),it(fc('NaBr'))]],[''])}
+<div class="card"><div class="t4">2. Elimination (dehydrohalogenation)</div>نشيل ذرة هيدروجين وهالوجين من كربونين متجاورين ونطلع ألكين.</div>
+${rx2([[it(fc('CH3CH2O⁻Na⁺')),it(fc('R–CH2–CH2–Br'))],[it(fc('R–CH=CH2'),'Alkene'),it(fc('NaBr'))]],[''])}
+
+<h3>Nucleophiles</h3>
+<div class="ltr" style="display:flex;flex-wrap:nowrap;gap:4px;margin:12px 0;justify-content:center"><span class="chip" style="background:#d98e04;margin:0;padding:1px 8px;font-size:12.5px">Oxygen</span><span class="chip" style="background:#2f5fa8;margin:0;padding:1px 8px;font-size:12.5px">Nitrogen</span><span class="chip" style="background:#8a5aa8;margin:0;padding:1px 8px;font-size:12.5px">Sulphur</span><span class="chip" style="background:#c0392b;margin:0;padding:1px 8px;font-size:12.5px">Carbon</span><span class="chip" style="background:#1f7a6d;margin:0;padding:1px 8px;font-size:12.5px">Halogen</span></div>
+<div class="tw nw"><table class="ltr nu">
+<tr><th colspan="2">Nucleophile</th><th>Product</th></tr>
+<tr><td rowspan="3">Oxygen</td><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('HO⁻ (NaOH,&nbsp;KOH)')}</div><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('H₂O')}</div></td><td><div style="margin:6px 0">${fw('HO⁻ · H₂O')}<br>→ Alcohol</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('RO⁻ (CH₃O⁻Na⁺, C₂H₅O⁻Na⁺)')}</div><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('ROH (CH₃OH,&nbsp;C₂H₅OH)')}</div></td><td><div style="margin:6px 0">${fw('RO⁻ · ROH')}<br>→ Ether</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('RCOO⁻ (CH₃COO⁻Na⁺)')}</div></td><td><div style="margin:6px 0">${fw('RCOO⁻')}<br>→ Ester</div></td></tr>
+<tr class="g"><td rowspan="4">Nitrogen</td><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('NH₃')}</div></td><td><div style="margin:6px 0">${fw('NH₃')}<br>→ 1° amine</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('RNH₂ (1° amine)')}</div></td><td><div style="margin:6px 0">${fw('RNH₂')}<br>→ 2° amine</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('R₂NH (2° amine)')}</div></td><td><div style="margin:6px 0">${fw('R₂NH')}<br>→ 3° amine</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('R₃N (3° amine)')}</div></td><td><div style="margin:6px 0">${fw('R₃N')}<br>→&nbsp;Quaternary ammonium salt</div></td></tr>
+<tr class="g"><td rowspan="2">Sulphur</td><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('HS⁻ (KSH)')}</div></td><td><div style="margin:6px 0">${fw('HS⁻')}<br>→ Thiol</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('RS⁻ (RSH)')}</div></td><td><div style="margin:6px 0">${fw('RS⁻')}<br>→ Thioether</div></td></tr>
+<tr class="g"><td rowspan="2">Carbon</td><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">⁻<b class="ec">C</b>N (Na<b class="ec">C</b>N, K<b class="ec">C</b>N)</div></td><td><div style="margin:6px 0">⁻<b class="ec">C</b>N<br>→ Nitrile</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">RC≡<b class="ec">C</b>⁻ (RC≡<b class="ec">C</b>⁻Na⁺)</div></td><td><div style="margin:6px 0">RC≡<b class="ec">C</b>⁻<br>→ Alkyne</div></td></tr>
+<tr class="g"><td rowspan="2">Halogen</td><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('I⁻ (NaI)')}</div></td><td><div style="margin:6px 0">${fw('I⁻')}<br>→ Alkyl iodide</div></td></tr>
+<tr><td><div style="margin:6px 0;white-space:nowrap;font-size:13px">${fw('Br⁻ (NaBr)')}</div></td><td><div style="margin:6px 0">${fw('Br⁻')}<br>→ Alkyl bromide</div></td></tr>
+</table></div>
+`});
+
+/* ---------- SN1 & SN2 lecture ---------- */
+const SN1='S<sub>N</sub>1',SN2='S<sub>N</sub>2';
+const mch=n=>`<span class="chip${n===1?' am':''}">${n===1?SN1:SN2}</span>`;
+const bu=(X,st)=>mk=>{const m=new M(),a=m.at(0,0,''),b=m.go(a,30,''),c=m.go(b,-30,''),d=m.go(c,30,'');m.go(b,90,X,1,st||'');m.go(b,270,'H',1,st==='w'?'h':'w');if(mk)m.mark(b);return m};
+S.Cl2w=bu('Cl','w');S.Cl2=bu('Cl');S.I2w=bu('I','w');S.OH2h=bu('OH','h');S.OMe2h=bu('OCH_3','h');S.OMe2w=bu('OCH_3','w');S.SH2h=bu('SH','h');S.OAc2h=bu('OCOCH_3','h');S.OAc2w=bu('OCOCH_3','w');
+const pe=(X,st)=>mk=>{const m=new M(),a=m.at(0,0,''),b=m.go(a,30,''),c=m.go(b,-30,''),d=m.go(c,30,''),e=m.go(d,-30,'');m.go(b,90,X,1,st||'');if(mk)m.mark(b);return m};
+S.Br2peh=pe('Br','h');S.SMe2pew=pe('SCH_3','w');S.Cl2peh=pe('Cl','h');S.OAc2pew=pe('OCOCH_3','w');
+const mp=(X,st)=>mk=>{const m=new M(),a=m.at(0,0,''),b=m.go(a,-30,''),c=m.go(b,30,'');m.go(b,-90,'');const d=m.go(c,-30,''),e=m.go(d,30,'');m.go(c,90,X,1,st||'');if(mk)m.mark(c);return m};
+S.mpClw=mp('Cl','w');S.mpOMeh=mp('OCH_3','h');S.mpOMew=mp('OCH_3','w');
+S.cisBr=mk=>{const m=new M(),r=m.ring(6,0,0,90);m.go(r[0],90,'Br',1,'w');m.go(r[3],270,'C(CH_3)_3',1,'w');if(mk)m.mark(r[0]);return m};
+S.transSH=mk=>{const m=new M(),r=m.ring(6,0,0,90);m.go(r[0],90,'SH',1,'h');m.go(r[3],270,'C(CH_3)_3',1,'w');return m};
+S.bromoethane=mk=>{const m=new M(),a=m.at(0,0,''),b=m.go(a,30,'');m.go(b,-30,'Br');if(mk)m.mark(b);return m};
+const ib=X=>mk=>{const m=new M(),a=m.at(0,0,X),b=m.go(a,30,''),c=m.go(b,-30,'');m.go(c,30,'');m.go(c,-90,'');if(mk)m.mark(b);return m};
+S.iBuBr=ib('Br');S.iBuI=ib('I');
+S.tBuBrMe=mk=>{const m=new M(),a=m.at(0,0,'Br'),b=m.go(a,30,''),c=m.go(b,-30,'');m.go(b,90,'');m.go(b,150,'');m.go(c,30,'');m.go(c,330,'');m.go(c,270,'');if(mk)m.mark(b);return m};
+S.pBrMe=mk=>{const m=new M(),a=m.at(0,0,''),b=m.go(a,30,'');m.go(b,90,'Br');const c=m.go(b,-30,'');m.go(c,30,'');m.go(c,330,'');m.go(c,270,'');if(mk)m.mark(b);return m};
+S.OMeMeCp=mk=>{const m=new M(),r=m.ring(5,0,0,90);m.go(r[0],60,'OCH_3');m.go(r[0],120,'CH_3');return m};
+
+const E2=`<svg viewBox="0 0 360 212" style="direction:ltr;width:100%;max-width:400px;height:auto;display:block;margin:0 auto" font-family="Arial,Helvetica,sans-serif" font-size="12">
+<defs><marker id="m2" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto-start-reverse"><path d="M0 0L9 4.5L0 9z" fill="#d98e04"/></marker><marker id="ax2" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#5c6f6b"/></marker></defs>
+<line x1="30" y1="192" x2="30" y2="10" stroke="#5c6f6b" stroke-width="1.5" marker-end="url(#ax2)"/>
+<line x1="30" y1="192" x2="352" y2="192" stroke="#5c6f6b" stroke-width="1.5" marker-end="url(#ax2)"/>
+<text x="12" y="104" text-anchor="middle" fill="#5c6f6b" font-size="11" transform="rotate(-90 12 104)">Energy</text>
+<text x="190" y="208" text-anchor="middle" fill="#5c6f6b" font-size="11">Reaction progress</text>
+<line x1="75" y1="128" x2="345" y2="128" stroke="#9fb3af" stroke-dasharray="3 3"/>
+<path d="M34 128 H75 C115 128 125 52 175 52 C225 52 235 168 285 168 H345" fill="none" stroke="#1f7a6d" stroke-width="2.6"/>
+<line x1="175" y1="127" x2="175" y2="54" stroke="#d98e04" stroke-width="1.7" marker-start="url(#m2)" marker-end="url(#m2)"/>
+<text x="183" y="95" fill="#d98e04" font-weight="700">Ea</text>
+<line x1="322" y1="129" x2="322" y2="167" stroke="#d98e04" stroke-width="1.7" marker-start="url(#m2)" marker-end="url(#m2)"/>
+<text x="329" y="152" fill="#d98e04" font-weight="700">ΔH</text>
+<text x="36" y="146" fill="#1b2a28">HO⁻ + CH₃Br</text>
+<text x="345" y="185" text-anchor="end" fill="#1b2a28">CH₃OH + Br⁻</text>
+<text x="175" y="22" text-anchor="middle" fill="#1f7a6d" font-weight="700">[X] = Transition state</text>
+<text x="175" y="38" text-anchor="middle" fill="#1b2a28" font-size="11">[HO···CH₃···Br]⁻</text>
+</svg>`;
+const E1=`<svg viewBox="0 0 360 232" style="direction:ltr;width:100%;max-width:400px;height:auto;display:block;margin:0 auto" font-family="Arial,Helvetica,sans-serif" font-size="12">
+<defs><marker id="m1" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto-start-reverse"><path d="M0 0L9 4.5L0 9z" fill="#d98e04"/></marker><marker id="ax1" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#5c6f6b"/></marker></defs>
+<line x1="30" y1="205" x2="30" y2="10" stroke="#5c6f6b" stroke-width="1.5" marker-end="url(#ax1)"/>
+<line x1="30" y1="205" x2="352" y2="205" stroke="#5c6f6b" stroke-width="1.5" marker-end="url(#ax1)"/>
+<text x="38" y="20" fill="#5c6f6b" font-size="11">Energy</text>
+<text x="352" y="224" text-anchor="end" fill="#5c6f6b" font-size="11">Reaction progress</text>
+<line x1="40" y1="150" x2="335" y2="150" stroke="#9fb3af" stroke-dasharray="3 3"/>
+<line x1="45" y1="56" x2="122" y2="56" stroke="#9fb3af" stroke-dasharray="3 3"/>
+<path d="M36 150H62C85 150 90 56 125 56C158 56 152 112 185 112C218 112 212 74 245 74C275 74 275 176 300 176H345" fill="none" stroke="#1f7a6d" stroke-width="2.6"/>
+<line x1="50" y1="149" x2="50" y2="58" stroke="#d98e04" stroke-width="1.7" marker-start="url(#m1)" marker-end="url(#m1)"/>
+<text x="57" y="108" fill="#d98e04" font-weight="700">Ea</text>
+<line x1="330" y1="152" x2="330" y2="174" stroke="#d98e04" stroke-width="1.7" marker-start="url(#m1)" marker-end="url(#m1)"/>
+<text x="324" y="167" text-anchor="end" fill="#d98e04" font-weight="700">ΔE</text>
+<text x="125" y="44" text-anchor="middle" fill="#1f7a6d" font-weight="700">TS 1</text>
+<text x="245" y="62" text-anchor="middle" fill="#1f7a6d" font-weight="700">TS 2</text>
+<text x="185" y="127" text-anchor="middle" fill="#1b2a28" font-size="11">R₃C⁺</text>
+<text x="185" y="140" text-anchor="middle" fill="#1b2a28" font-size="10">carbocation</text>
+<text x="36" y="168" fill="#1b2a28">R₃C–X + Nu:</text>
+<text x="345" y="196" text-anchor="end" fill="#1b2a28">R₃C–Nu + X⁻</text>
+</svg>`;
+
+const SEC2=[];
+const dg=(k,mk,sc=.8)=>`<div class="sv2" style="display:flex;justify-content:center">${sv(k,mk,sc)}</div>`;
+const T=(h,rows)=>`<div class="tw"><table class="ltr"><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${rows.map(r=>`<tr>${r.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</table></div>`;
+
+SEC2.push({t:'SN2 mechanism',h:()=>`
+<p><b class="en">${SN2}</b> = <span class="en">Substitution Nucleophilic Bimolecular</span></p>
+<div class="gt">مثال</div>
+${rx2([[fw('CH3Br'),fw('CH3O⁻')],[fw('CH3OCH3'),fw('Br⁻')]],[''])}
+<div class="box"><p>خطوة وحدة بس (<span class="en">concerted</span>): النيوكليوفايل يدخل، وفي نفس اللحظة الـ <span class="en">leaving group</span> تطلع.</p></div>
+<div class="gt">سرعة التفاعل</div>
+<div class="box"><p class="en" style="text-align:center;font-size:17px;margin:4px 0"><b>Rate = k [RX] [Nu]</b></p><p>تعتمد على تركيز المركبين، عشان جذي اسمها <span class="en">bimolecular</span>.</p></div>
+<div class="note"><p>إذا ضاعفنا تركيز الـ <span class="en">RX</span> والـ <span class="en">Nu</span> الاثنين → السرعة تصير <b>4 أضعاف</b>.</p></div>
+<div class="note"><p><span class="en">Rate-determining step</span> = أبطأ خطوة.</p></div>
+<div class="gt">Energy diagram</div>
+${rx2([[fw('CH3Br'),fw('HO⁻')],[fw('CH3OH'),fw('Br⁻')]],[''])}
+${E2}
+${T(['Term','Meaning'],[['Ea','Activation energy'],['TS','Transition state'],['ΔH','Enthalpy difference']])}
+<div class="note"><p><span class="en">Ea</span> = الطاقة من المتفاعلات لين الـ <span class="en">transition state</span>.</p></div>
+<div class="note"><p>عند الـ <span class="en">transition state</span>: الرابطة <span class="en">C–Br</span> نص منكسرة، والرابطة <span class="en">C–O</span> نص متكونة.</p></div>
+<div class="note"><p>بعد الـ <span class="en">transition state</span> التفاعل يكمل: النص الباقي من <span class="en">C–Br</span> ينكسر، والنص الباقي من <span class="en">C–O</span> يتكون، والطاقة تنزل للنواتج.</p></div>
+<div class="note"><p><span class="en">ΔH</span> = الفرق بين طاقة المتفاعلات وطاقة النواتج. هني النواتج طاقتها أقل، يعني التفاعل يطلّع طاقة.</p></div>
+
+`});
+
+SEC2.push({t:'SN2: stereochemistry and reactivity',h:()=>`
+<div class="gt">Inversion of configuration</div>
+<p>النيوكليوفايل يدخل من الجهة المعاكسة للـ <span class="en">leaving group</span> (<span class="en">backside attack</span>) فالترتيب ينقلب (<span class="en">Walden inversion</span>)</p>
+${dg('Cl2w',0)}
+<div style="display:block;direction:ltr;text-align:center;color:var(--mu)">(R)-2-chlorobutane</div>
+<div style="display:block;direction:ltr;text-align:center;margin:6px 0;font-size:17px">+ HO⁻</div>
+<div style="text-align:center;color:#d98e04;font-size:22px">↓</div>
+${dg('OH2h',0)}
+<div style="display:block;direction:ltr;text-align:center;color:var(--mu)">(S)-butan-2-ol</div>
+<div class="gt">Reactivity (SN2)</div>
+<p>كل ما كان الكربون أكثر ازدحاماً (<span class="en">steric hindrance</span>) صار دخول النيوكليوفايل أصعب</p>
+<div class="box"><p class="en" style="text-align:center;margin:4px 0"><b>methyl &gt; 1° &gt; 2° &gt; 3°</b></p></div>
+${T(['Alkyl','Type','Relative rate'],[['Methyl','methyl','30'],['Ethyl','1°','1'],['Propyl','1°','0.4'],['Butyl','1°','0.4'],['Isopropyl','2°','0.025'],['tert-Butyl','3°','0']])}
+<div class="note"><p>الـ <span class="en">methyl</span> أسرع من الـ <span class="en">primary</span>.</p></div>
+<div class="note"><p>الـ <span class="en">tertiary</span> ما يصير له <span class="en">SN2</span>.</p></div>
+`});
+
+SEC2.push({t:'SN1 mechanism',h:()=>`
+<p><b class="en">${SN1}</b> = <span class="en">Substitution Nucleophilic Unimolecular</span></p>
+<div class="gt">مثال</div>
+${rx2([[fw('(CH3)3C–Br'),fw('H2O')],[fw('(CH3)3C–OH'),fw('HBr')]],[''])}
+<div class="box"><p>على <b>خطوتين</b>:</p><p>1. الـ <span class="en">leaving group</span> تطلع وتتكون <span class="en">carbocation</span> (الخطوة الأبطأ).</p><p>2. النيوكليوفايل يدخل على الـ <span class="en">carbocation</span>.</p></div>
+${rx2([[fw('(CH3)3C–Br')],[fw('(CH3)3C⁺'),fw('Br⁻')],[fw('(CH3)3C–OH')]],['<span class="en">Step 1 (slow)</span>','<span class="en">Step 2: + H₂O</span>'])}
+<div class="gt">سرعة التفاعل</div>
+<div class="box"><p class="en" style="text-align:center;font-size:17px;margin:4px 0"><b>Rate = k [RX]</b></p><p>تعتمد على تركيز الـ <span class="en">RX</span> بس، عشان جذي اسمها <span class="en">unimolecular</span>.</p></div>
+<div class="note"><p>إذا ضاعفنا تركيز الـ <span class="en">RX</span> → السرعة تتضاعف.</p><p>تركيز النيوكليوفايل ما يأثر بالسرعة.</p></div>
+<div class="note"><p><span class="en">Rate-determining step</span> = أبطأ خطوة (الخطوة الأولى)</p></div>
+<div class="gt">Energy diagram</div>
+${rx2([[fw('(CH3)3C–Br'),fw('H2O')],[fw('(CH3)3C–OH'),fw('HBr')]],[''])}
+${E1}
+${T(['Term','Meaning'],[['Ea','Activation energy'],['TS 1, TS 2','Two transition states'],['ΔE = ΔH','Energy, enthalpy difference']])}
+<div class="gt">Competing elimination</div>
+<p>التفاعل يعطي ناتجين مع بعض:</p>
+<div class="note"><p>الأكثر: <span class="en">substitution</span> (من <span class="en">SN1</span>)</p><p>الأقل: <span class="en">elimination</span> (يعطي <span class="en">alkene</span>)</p></div>
+${T(['Solvent, nucleophile','Substitution','Elimination'],[['Ethanol','2-ethoxy-2-methylpropane 80%','2-methylpropene 20%'],['Water','2-methylpropan-2-ol 70%','2-methylpropene 30%']])}
+`});
+
+SEC2.push({t:'SN1: stereochemistry and reactivity',h:()=>`
+<div class="gt">Racemization</div>
+<p>الـ <span class="en">carbocation</span> تعتبر <span class="en">planar</span>، مسطح فالنيوكليوفايل يدخل من الجهتين باحتمال متساوي، عكس ونفس جهة <span style="white-space:nowrap">الـ&nbsp;<span class="en">leaving group</span></span>، فيطلع <span class="en">R, S racemic mixture</span> إلا إذا الكربون مو <span class="en">chiral</span></p>
+<p>عكس الـ <span class="en">${SN2}</span> لأنه مو <span class="en">planar</span> فالنيوكليوفايل يدخل من جهة وحدة بس، عكس جهة <span style="white-space:nowrap">الـ&nbsp;<span class="en">leaving group</span></span></p>
+${dg('I2w',0)}
+<div style="display:block;direction:ltr;text-align:center;color:var(--mu)">(R)-2-iodobutane</div>
+<div style="display:block;direction:ltr;text-align:center;margin:6px 0;font-size:17px">+ CH₃COOH</div>
+<div style="text-align:center;color:#d98e04;font-size:22px">↓</div>
+${dg('OAc2w',0)}
+<div style="display:block;direction:ltr;text-align:center;color:var(--mu)">(R)-sec-butyl acetate</div>
+<div style="display:block;direction:ltr;text-align:center;margin:6px 0;font-size:17px">+</div>
+${dg('OAc2h',0)}
+<div style="display:block;direction:ltr;text-align:center;color:var(--mu)">(S)-sec-butyl acetate</div>
+<div class="note"><p class="en" style="text-align:center">(R) + (S) = racemic mixture</p></div>
+<div class="gt">Reactivity (SN1)</div>
+<p>الـ <span class="en">alkyl groups</span> تعطي الكربون إلكترونات فتثبت الـ <span class="en">carbocation</span></p>
+<div class="box"><p class="en" style="text-align:center;margin:4px 0"><b>3° &gt; 2° &gt;&gt; 1° &amp; methyl</b></p></div>
+${T(['Alkyl bromide','Type','Relative rate'],[['CH₃Br','methyl','1.00'],['CH₃CH₂Br','1°','1.00'],['(CH₃)₂CHBr','2°','11.6'],['(CH₃)₃CBr','3°','1.2 × 10⁶']])}
+<div class="note"><p>الـ <span class="en">methyl</span> والـ <span class="en">primary</span> ما يسوون <span class="en">${SN1}</span>.</p></div>
+<div class="note"><p>الـ <span class="en">tertiary</span> أسرع.</p></div>
+<div class="gt">Solvolysis</div>
+<p>لما المذيب نفسه هو النيوكليوفايل (مثل <span class="en">CH₃OH</span>) نسميه <span class="en">solvolysis</span>.</p>
+<div class="gt">Alcoholysis (Methanolysis)</div>
+<p>المذيب كحول والناتج <span class="en">ether</span></p>
+${rx2([[fw('(S)-3-chloro-2-methylpentane'),fw('CH3OH')],[fw('(S)-3-methoxy-2-methylpentane'),fw('(R)-3-methoxy-2-methylpentane')]],['25 °C'])}
+<div class="gt">Hydrolysis</div>
+<p>المذيب ماء والناتج <span class="en">alcohol</span></p>
+${rx2([[fw('(S)-3-chloro-2-methylpentane'),fw('H2O')],[fw('(S)-2-methylpentan-3-ol'),fw('(R)-2-methylpentan-3-ol')]],[''])}
+<div class="gt">Rearrangement</div>
+<p>إذا الـ <span class="en">carbocation</span> الـ 2° يقدر يتحول لـ 3°، يصير هذا الناتج الأساسي</p>
+${rx2([[fw('2-bromo-3,3-dimethylbutane'),fw('CH3OH')],[`<div style="width:100%;text-align:center"><div>${fw('2-methoxy-3,3-dimethylbutane')} <b class="en">4%</b> <span class="en" style="color:var(--mu)">2° (R, S)</span></div><div>${PL}</div><div>${fw('2-methoxy-2,3-dimethylbutane')} <b class="en">41%</b> <span class="en" style="color:var(--mu)">3°</span></div></div>`]],[''])}
+`});
+
+SEC2.push({t:'SN1 or SN2? The factors',h:()=>`
+<div class="gt">Structure of the alkyl halide</div>
+${T(['','SN2','SN1'],[['Methyl','Favored','Never'],['1°','Favored','Never'],['2°','Aprotic solvent + good Nu','Protic solvent + poor Nu'],['3°','Never (steric)','Favored']])}
+<div class="gt">Nucleophile</div>
+${T(['Strength','Examples'],[['Good','Br⁻, I⁻, CH₃S⁻, RS⁻, HO⁻, CH₃O⁻, RO⁻, CH₃COO⁻, RCOO⁻'],['Moderate','CH₃SH, RSH, R₂S, NH₃, RNH₂, R₂NH, R₃N'],['Poor','H₂O, CH₃OH, ROH, CH₃COOH, RCOOH']])}
+<div class="note"><p><span style="white-space:nowrap">الـ <b>good</b> يفضّل <span class="en">${SN2}</span>.</span> &nbsp; <span style="white-space:nowrap">الـ <b>poor</b> يفضّل <span class="en">${SN1}</span>.</span></p></div>
+<div class="gt">Solvent</div>
+${T(['Polar protic → SN1','Polar aprotic → SN2'],[['Water','DMSO'],['CH₃OH, C₂H₅OH','DMF'],['CF₃COOH, HCOOH, CH₃COOH','Acetone'],['','CH₂Cl₂ (DCM)'],['','Diethyl ether']])}
+<div class="gt">Leaving group</div>
+${T(['Good','Poor'],[['I⁻ &gt; Br⁻ &gt; Cl⁻ &gt; CH₃COO⁻','HO⁻, RO⁻, NH₂⁻']])}
+<p>الـ good يطلع بسهولة فالتفاعل أسرع.</p><p>الـ poor نادر يطلع.</p>
+<div class="gt">Concentration and temperature</div>
+<p>تركيز الـ&nbsp;<span class="en">nucleophile</span> يأثر على <span class="en">${SN2}</span> بس (لأن الـ <span class="en">Nu</span> داخل في الـ <span class="en">rate</span>).</p>
+${T(['SN2','SN1'],[['Rate = k [R–X] [Nu]','Rate = k [R–X]'],['Bimolecular','Unimolecular']])}
+<div class="gt">Summary</div>
+${T(['','SN2','SN1'],[['Methyl, 1°','Favored','Doesn’t occur'],['2°','Aprotic solvent, good Nu','Protic solvent, poor Nu'],['3°','Doesn’t occur','Favored'],['Solvent','Aprotic','Protic'],['Nucleophile','Good','Poor'],['Rate','k [R–X] [Nu]','k [R–X]'],['Stereochemistry','Inversion<br><span class="en">R → S</span><br><span class="en">S → R</span>','Racemization<br><span class="en">R, S</span>']])}
+`});
+
+const pf=s=>`<span>${s.replace(/([A-Za-z)])(\d+)/g,'$1<sub>$2</sub>').replace(/\(S\)/g,'(<b class="cs">S</b>)').replace(/\(R\)/g,'(<b class="cr">R</b>)')}</span>`;
+SEC2.push({t:'Predicting the products',h:()=>`
+<p>اسأل: نوع الـ <span class="en">alkyl halide</span>؟ قوة الـ <span class="en">Nu</span>؟ نوع المذيب؟</p>
+<p>الكربون اللي مو <span class="en">chiral</span> ماله <span class="en">R</span> أو <span class="en">S</span>.</p>
+<div class="sn1"><div class="gt">${SN1}</div>
+<div class="en" style="text-align:center;color:var(--mu);margin:14px 0 4px">2°, protic solvent, poor Nu</div>
+${rx2([[pf('(S)-2-chlorobutane'),pf('CH3OH')],[pf('(S)-2-methoxybutane'),pf('(R)-2-methoxybutane')]],[''],'',`<span class="en" style="color:var(--mu)">racemic</span>`)}
+<div class="en" style="text-align:center;color:var(--mu);margin:14px 0 4px">3°, protic solvent, poor Nu</div>
+${rx2([[pf('(S)-3-bromo-3-methylhexane'),pf('CH3OH')],[pf('(S)-3-methoxy-3-methylhexane'),pf('(R)-3-methoxy-3-methylhexane')]],[''],'',`<span class="en" style="color:var(--mu)">racemic</span>`)}
+</div>
+<div class="sn2"><div class="gt" style="margin-top:20px">${SN2}</div>
+<div class="en" style="text-align:center;color:var(--mu);margin:14px 0 4px">Methyl, aprotic solvent, good Nu</div>
+${rx2([[pf('RC≡C⁻ Na⁺'),pf('CH3Br')],[pf('pent-2-yne'),pf('NaBr')]],['DMSO'])}
+<p style="text-align:center;color:var(--mu);font-size:14px;margin:4px 0">مو <span class="en">chiral</span> فما فيه <span class="en">R</span> أو <span class="en">S</span></p>
+<div class="en" style="text-align:center;color:var(--mu);margin:14px 0 4px">1°, aprotic solvent, good Nu</div>
+${rx2([[pf('1-bromo-2-methylpropane'),pf('NaI')],[pf('1-iodo-2-methylpropane')]],['DMSO'])}
+<p style="text-align:center;color:var(--mu);font-size:14px;margin:4px 0">مو <span class="en">chiral</span> فما فيه <span class="en">R</span> أو <span class="en">S</span></p>
+<div class="en" style="text-align:center;color:var(--mu);margin:14px 0 4px">2°, aprotic solvent, good Nu, inversion</div>
+${rx2([[pf('(S)-2-bromopentane'),pf('CH3S⁻Na⁺')],[pf('(R)-2-(methylthio)pentane')]],['acetone'])}
+</div>
+`});
+
+/* ---------- router ---------- */
+const LECT=[{k:'a',t:'Alkyl Halides',s:SEC},{k:'b',t:'SN1 & SN2',s:SEC2}];
+const app=document.getElementById('app');
+function picker(){
+ app.innerHTML=`<div class="home" style="margin-top:28px">${LECT.map((l,i)=>`<a href="#${l.k}"><span class="n">${i+1}</span><span class="t" style="direction:ltr">${l.t}</span></a>`).join('')}</div>`;
+ window.scrollTo(0,0)}
+function lect(L){
+ app.innerHTML=`<div class="top"><button class="back" onclick="location.hash=''">←</button><h2 style="direction:ltr">${L.t}</h2></div><div class="home">${L.s.map((s,i)=>`<a href="#${L.k}${i+1}"><span class="n">${i+1}</span><span class="t">${s.t}</span></a>`).join('')}</div>`;
+ window.scrollTo(0,0)}
+function sec(L,i){
+ const s=L.s[i];
+ app.innerHTML=`<div class="top"><button class="back" onclick="location.hash='#${L.k}'">←</button><h2>${i+1}. ${s.t}</h2></div>${s.h()}`;
+ window.scrollTo(0,0)}
+function route(){
+ const h=location.hash.replace(/^#s(\d)$/,'#a$1');
+ const m=h.match(/^#([ab])(\d?)$/);
+ if(m){const L=LECT.find(x=>x.k===m[1]);if(!m[2])return lect(L);if(L.s[m[2]-1])return sec(L,m[2]-1)}
+ picker()}
+window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
