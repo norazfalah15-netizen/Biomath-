@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rheology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm study notes, clinical and clear
+   IDEA: a flow lab notebook — honey poured over layers
+   PICTURE: each section carries its own drawn rheogram or layer model
+   COLOUR and TYPE: honey amber leads, deep teal supports, coral accent; Cairo
+   LAYOUT: one list of sections, one section at a time, back arrow only */
+:root{color-scheme:light dark;--bg:light-dark(#fbf7ef,#14181a);--card:light-dark(#ffffff,#1d2326);--ink:light-dark(#1f2326,#ecece6);--mute:light-dark(#5d6266,#a6aba8);--line:light-dark(#e6dfd0,#2e3639);--honey:light-dark(#e9a83b,#e9a83b);--teal:light-dark(#0f6e63,#5ccab7);--coral:light-dark(#c8492f,#f08a6e);--tint:light-dark(#fdf1db,#2a2418)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.8 Cairo,system-ui,sans-serif;overflow-x:clip}
+main{max-width:720px;margin:0 auto;padding:clamp(20px,5vw,48px) max(5vw,18px) 64px}
+h1{font-size:clamp(34px,8vw,48px);line-height:1.1;margin:8px 0 28px;font-weight:800}
+h2{font-size:clamp(26px,6vw,34px);line-height:1.2;margin:4px 0 22px;font-weight:800}
+h3{font-size:19px;margin:28px 0 6px;color:var(--teal);font-weight:800}
+p{margin:6px 0}
+.list{display:grid;gap:12px}
+.list a{display:flex;align-items:center;gap:14px;padding:16px 18px;min-height:64px;background:var(--card);border:1px solid var(--line);border-radius:16px;color:var(--ink);text-decoration:none;font-weight:600;font-size:18px}
+.list a:hover,.list a:focus-visible{border-color:var(--honey);outline:none}
+.list b{flex:none;width:36px;height:36px;border-radius:50%;background:var(--tint);color:var(--honey);display:grid;place-items:center;font-size:16px}
+.en{display:block;direction:ltr;text-align:right;unicode-bidi:isolate;font-weight:600;color:var(--teal)}
+.f{display:block;direction:ltr;text-align:center;unicode-bidi:isolate;font-weight:800;font-size:20px;background:var(--tint);border-radius:12px;padding:10px 12px;margin:10px 0}
+ul{margin:6px 0;padding-inline-start:22px}li{margin:4px 0}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin:16px 0}
+.fig svg{display:block;width:100%;height:auto;direction:ltr}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:14px 0}
+.back{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:24px}
+.nav{display:flex;justify-content:space-between;margin-top:36px;gap:10px}
+.nav a{flex:1;text-align:center;padding:12px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:22px;min-height:48px}
+.nav a.hide{visibility:hidden}
+section{display:none}section.on{display:block}
+.t{font:600 13px Cairo,sans-serif;fill:var(--mute)}.tb{font:800 15px Cairo,sans-serif;fill:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:start;vertical-align:top}th{color:var(--teal)}
+</style>
+</head>
+<body>
+<main>
+
+<section id="home">
+<a class="back" href="/formulation-fundamentals/" aria-label="رجوع">←</a>
+<h1>Rheology</h1>
+<div class="list">
+<a href="#s1"><b>1</b>المقدمة</a>
+<a href="#s2"><b>2</b>قانون نيوتن للجريان</a>
+<a href="#s3"><b>3</b>السوائل النيوتنية</a>
+<a href="#s4"><b>4</b>Plastic flow</a>
+<a href="#s5"><b>5</b>Pseudoplastic flow</a>
+<a href="#s6"><b>6</b>Dilatant flow</a>
+<a href="#s7"><b>7</b>تأثير الحرارة</a>
+</div>
+</section>
+
+<section id="s1">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>المقدمة</h2>
+<span class="en">Rheology</span>
+<p>علم الجريان. يدرس شنو يصير للمواد لما تأثر عليها قوة: السوائل تجري، والصلبة يتغير شكلها.</p>
+<p>الكلمة من اليونانية:</p>
+<span class="en">rheo = to flow &nbsp;·&nbsp; logos = science</span>
+
+<h3>تقسيم المواد</h3>
+<p>المواد قسمين، حسب إذا تمشي على قانون نيوتن للجريان ولا لا:</p>
+<span class="en">Newtonian</span>
+<p>لزوجتها ثابتة، ما تتغير مع قوة الشد.</p>
+<span class="en">Non-Newtonian</span>
+<p>لزوجتها تتغير مع قوة الشد، وفيها 3 أنواع:</p>
+<span class="en">Plastic · Pseudoplastic · Dilatant</span>
+
+<h3>اللزوجة تتأثر بـ</h3>
+<table>
+<tr><th></th><th>Newtonian</th><th>Non-Newtonian</th></tr>
+<tr><td>الحرارة</td><td>✓</td><td>✓</td></tr>
+<tr><td>قوة الشد وسرعة الشد</td><td>✗</td><td>✓</td></tr>
+</table>
+</section>
+
+<section id="s2">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>قانون نيوتن للجريان</h2>
+<span class="en">Newton's Law of Flow</span>
+<p>نتخيل السائل طبقات فوق بعض، مثل رزمة ورق لعب.</p>
+<div class="fig"><svg viewBox="0 0 360 250" role="img" aria-label="Layers model">
+<g fill="#5ccab7" opacity=".9"><rect x="70" y="30" width="200" height="38" rx="4"/><rect x="70" y="72" width="200" height="38" rx="4" opacity=".85"/><rect x="70" y="114" width="200" height="38" rx="4" opacity=".7"/><rect x="70" y="156" width="200" height="38" rx="4" opacity=".55"/></g>
+<rect x="64" y="196" width="212" height="8" fill="#6b6b66"/>
+<g stroke="#c8492f" stroke-width="4"><line x1="190" y1="30" x2="190" y2="68"/><line x1="160" y1="72" x2="160" y2="110"/><line x1="130" y1="114" x2="130" y2="152"/><line x1="100" y1="156" x2="100" y2="194"/></g>
+<g stroke="currentColor" stroke-width="3" fill="currentColor" style="color:var(--ink)"><line x1="282" y1="49" x2="336" y2="49"/><polygon points="344,49 334,43 334,55"/><line x1="282" y1="91" x2="318" y2="91"/><polygon points="326,91 316,85 316,97"/><line x1="282" y1="133" x2="300" y2="133"/><polygon points="308,133 298,127 298,139"/></g>
+<line x1="10" y1="49" x2="56" y2="49" stroke="#c8492f" stroke-width="4"/><polygon points="66,49 54,42 54,56" fill="#c8492f"/>
+<text class="tb" x="14" y="38">F′</text>
+<text class="t" x="170" y="228" text-anchor="middle">Fixed bottom layer (v = 0)</text>
+</svg></div>
+<ul>
+<li>الطبقة السفلى ثابتة، سرعتها صفر.</li>
+<li>ندفع الطبقة العليا بقوة، فتتحرك.</li>
+<li>كل طبقة أعلى أسرع من اللي تحتها، والسرعة تزيد بشكل ثابت (linear).</li>
+<li>القوة نفسها في كل الطبقات، واللزوجة نفسها في كل الطبقات.</li>
+</ul>
+<div class="box">ليش القاع سرعته صفر؟ جزيئات السائل تلتصق بالسطح الصلب:
+<span class="en">Adhesion → no-slip condition</span></div>
+
+<h3>1. سرعة الشد</h3>
+<span class="en">Rate of shear (G)</span>
+<p>الفرق في السرعة بين طبقتين ÷ المسافة بينهم. هي الميل، وثابتة.</p>
+<span class="f">G = dv / dr &nbsp; (sec⁻¹)</span>
+
+<h3>2. قوة الشد</h3>
+<span class="en">Shearing stress (F)</span>
+<p>القوة ÷ مساحة الطبقة.</p>
+<span class="f">F = F′ / A &nbsp; (dyne/cm²)</span>
+
+<h3>3. اللزوجة</h3>
+<span class="en">Viscosity (η) — absolute / dynamic</span>
+<p>مقاومة السائل للجريان. كل ما زادت، احتجنا قوة أكبر عشان نوصل لنفس سرعة الشد. القوة والسرعة يزيدون بنفس النسبة، واللزوجة هي الرقم الثابت بينهم.</p>
+<span class="f">η = F / G</span>
+
+<h3>الوحدات</h3>
+<span class="en">poise (P) = dyne·sec/cm² = g/cm·sec</span>
+<span class="f">1 P = 100 cP = 0.1 Pa·s</span>
+<p>تعريف الـ poise: القوة اللازمة عشان طبقتين، مساحة كل وحدة 1 سم² وبينهم 1 سم، تتحرك وحدة عن الثانية بسرعة 1 سم/ث.</p>
+
+<h3>4. السيولة</h3>
+<span class="en">Fluidity (φ)</span>
+<p>عكس اللزوجة.</p>
+<span class="f">φ = 1 / η</span>
+
+<h3>5. اللزوجة الحركية</h3>
+<span class="en">Kinematic viscosity</span>
+<p>كم السائل يجري بوزنه بدون قوة من برا. اللزوجة تبطّئه، والكثافة تسرّعه.</p>
+<span class="f">η / ρ &nbsp; (stoke, cSt · SI: m²/s)</span>
+
+<h3>6. اللزوجة النسبية</h3>
+<span class="en">Relative viscosity (ηr)</span>
+<p>كم مرة المحلول أثقل من المذيب (غالبًا الماء). ما لها وحدة.</p>
+<span class="f">ηr = η / η₀</span>
+
+<h3>7. اللزوجة النوعية</h3>
+<span class="en">Specific viscosity (ηsp)</span>
+<p>الزيادة في اللزوجة بسبب المادة المذابة بس.</p>
+<span class="f">ηsp = ηr − 1</span>
+
+<h3>مثال</h3>
+<div class="box">4 طبقات، بين كل وحدة 1 سم. السرعات من تحت لفوق: 0، 2، 4، 6 سم/ث. القوة 30 dyne والمساحة 10 سم².
+<span class="f">G = (6 − 0) / 3 = 2 sec⁻¹</span>
+<span class="f">F = 30 / 10 = 3 dyne/cm²</span>
+<span class="f">η = 3 / 2 = 1.5 P = 150 cP</span></div>
+</section>
+
+<section id="s3">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>السوائل النيوتنية</h2>
+<span class="en">Newtonian fluids</span>
+<ul>
+<li>اللزوجة ثابتة، ما تتأثر بقوة الشد ولا بسرعة الشد.</li>
+<li>العلاقة بين قوة الشد وسرعة الشد خط مستقيم يبدأ من الصفر.</li>
+<li>نحتاج رقم واحد بس عشان نوصفها: الميل = اللزوجة.</li>
+</ul>
+<h3>الرسم</h3>
+<span class="en">Rheogram (flow curve)</span>
+<div class="fig"><svg viewBox="0 0 360 210" role="img" aria-label="Newtonian rheograms">
+<g stroke="#8a8f8c" stroke-width="2" fill="none"><path d="M40 170V30M40 170H160"/><path d="M210 170V30M210 170H330"/></g>
+<line x1="40" y1="170" x2="150" y2="50" stroke="#0f6e63" stroke-width="4"/>
+<line x1="210" y1="170" x2="325" y2="95" stroke="#e9a83b" stroke-width="4"/>
+<text class="tb" x="26" y="36">F</text><text class="tb" x="160" y="190">G</text>
+<text class="tb" x="196" y="36">G</text><text class="tb" x="330" y="190">F</text>
+<text class="t" x="100" y="204" text-anchor="middle">slope = η</text>
+<text class="t" x="270" y="204" text-anchor="middle">slope = φ</text>
+</svg></div>
+<p>إذا قوة الشد على المحور الصادي، الميل = اللزوجة. وإذا سرعة الشد فوق، الميل = السيولة.</p>
+<h3>أمثلة</h3>
+<span class="en">Water · Oil · Ethanol · Glucose aqueous solution · Electrolyte solutions</span>
+<p>كلها سوائل بسيطة (simple fluids). والعسل لزوجته تقريبًا 10,000 cP.</p>
+</section>
+
+<section id="s4">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>Plastic flow</h2>
+<span class="en">Plastic (Bingham) flow · Bingham bodies</span>
+<p>المادة ما تجري إلا لما قوة الشد تتعدى قيمة معينة اسمها:</p>
+<span class="en">Yield value (f)</span>
+<div class="fig"><svg viewBox="0 0 360 210" role="img" aria-label="Plastic rheogram">
+<g stroke="#8a8f8c" stroke-width="2" fill="none"><path d="M50 170V30M50 170H330"/></g>
+<rect x="52" y="164" width="88" height="5" fill="#b4b2a9"/>
+<line x1="140" y1="170" x2="300" y2="50" stroke="#c8492f" stroke-width="4"/>
+<circle cx="140" cy="170" r="6" fill="#c8492f"/>
+<text class="tb" x="36" y="36">G</text><text class="tb" x="334" y="190">F</text>
+<text class="tb" x="140" y="192" text-anchor="middle">f</text>
+<text class="t" x="95" y="155" text-anchor="middle">no flow</text>
+<text class="t" x="250" y="120">flows</text>
+</svg></div>
+<ul>
+<li>الخط ما يبدأ من الصفر، يقطع محور قوة الشد عند الـ yield value.</li>
+<li>تحت الـ yield value: تتصرف مثل صلب مرن (elastic).</li>
+<li>فوقها: الزيادة في (F − f) تزيد G بنفس النسبة، يعني تصير مثل النيوتنية.</li>
+<li>علماء الريولوجي يصنفون المواد اللي لها yield value كمواد صلبة.</li>
+</ul>
+<h3>القانون</h3>
+<span class="en">Slope = mobility · its reciprocal = plastic viscosity (U)</span>
+<span class="f">U = (F − f) / G</span>
+<h3>ليش يصير؟</h3>
+<p>في المعلقات المركزة، الجزيئات متجمعة بشكل عناقيد مفتوحة:</p>
+<span class="en">Flocculated particles (floc)</span>
+<p>بينهم قوى van der Waals واحتكاك، ولازم تنكسر هالروابط قبل ما يبدأ الجريان، وهذا هو الـ yield value.</p>
+<h3>أهميته</h3>
+<ul>
+<li>المعلق: الـ yield value يقول كم لازم نخض القنينة عشان يجري.</li>
+<li>الكريم والمرهم (semi-solids): يقيس القوة اللازمة عشان ينفرش على الجلد. بقوة قليلة صلب، وبقوة عالية يجري.</li>
+</ul>
+</section>
+
+<section id="s5">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>Pseudoplastic flow</h2>
+<span class="en">Shear-thinning systems</span>
+<p>كل ما زادت قوة الشد، قلت اللزوجة وصار الجريان أسهل.</p>
+<div class="fig"><svg viewBox="0 0 360 210" role="img" aria-label="Pseudoplastic rheogram">
+<g stroke="#8a8f8c" stroke-width="2" fill="none"><path d="M50 170V30M50 170H330"/></g>
+<path d="M50 170 Q 230 160 300 40" fill="none" stroke="#0f6e63" stroke-width="4"/>
+<line x1="185" y1="160" x2="290" y2="90" stroke="#e9a83b" stroke-width="2" stroke-dasharray="6 5"/>
+<circle cx="238" cy="125" r="5" fill="#e9a83b"/>
+<text class="tb" x="36" y="36">G</text><text class="tb" x="334" y="190">F</text>
+<text class="t" x="296" y="96">tangent</text>
+</svg></div>
+<ul>
+<li>ما فيه yield value، والرسم يبدأ من الصفر.</li>
+<li>ما فيه أي جزء مستقيم، فاللزوجة ما تنوصف برقم واحد.</li>
+<li>نطلع لزوجة ظاهرية عند أي نقطة من ميل المماس:</li>
+</ul>
+<span class="en">Apparent viscosity — slope of the tangent</span>
+<p>وأفضل وصف لها هو رسم المنحنى كامل.</p>
+<h3>ليش يصير؟</h3>
+<p>بوليمرات بسلاسل طويلة. وهي واقفة، السلاسل متلخبطة. مع زيادة القوة، تترتب باتجاه الجريان، فتقل المقاومة. وكمان يطلع جزء من المذيب المرتبط فيها، فيصغر حجمها وتركيزها الفعلي.</p>
+<span class="en">Long-chain linear polymers align with flow</span>
+<h3>أمثلة</h3>
+<span class="en">Tragacanth · Sodium alginate · Methylcellulose · Sodium CMC</span>
+<p>والكاتشب: وهو واقف ثقيل، ولما تخضين القنينة ينكسر تركيبه ويجري.</p>
+</section>
+
+<section id="s6">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>Dilatant flow</h2>
+<span class="en">Shear-thickening systems</span>
+<p>عكس الـ pseudoplastic: كل ما زادت قوة الشد، زادت المقاومة للجريان. ولما نشيل القوة، يرجع لحالته الأولى.</p>
+<div class="fig"><svg viewBox="0 0 360 210" role="img" aria-label="Dilatant rheogram">
+<g stroke="#8a8f8c" stroke-width="2" fill="none"><path d="M50 170V30M50 170H330"/></g>
+<path d="M50 170 Q 140 60 310 40" fill="none" stroke="#c8492f" stroke-width="4"/>
+<text class="tb" x="36" y="36">G</text><text class="tb" x="334" y="190">F</text>
+</svg></div>
+<p>اسمه dilatant لأن حجمه يزيد (يتمدد) لما ينشد.</p>
+<h3>أي مواد؟</h3>
+<p>معلقات فيها تركيز عالي من جزيئات صغيرة غير متجمعة:</p>
+<span class="en">≥ 50% small deflocculated particles</span>
+<div class="box">انتبهي: المتجمعة (flocculated) تعطي plastic، وغير المتجمعة (deflocculated) تعطي dilatant.</div>
+<h3>ليش يصير؟</h3>
+<ul>
+<li>وهو واقف: الجزيئات مرصوصة، والسائل يكفي يعبي الفراغات بينها، فيجري بسهولة بقوة قليلة.</li>
+<li>مع زيادة القوة: الجزيئات تتباعد عشان تمشي، فتكبر الفراغات.</li>
+<li>كمية السائل نفسها ما تكفي تعبي الفراغات الجديدة، فالجزيئات ما تتزلق، والمقاومة تزيد.</li>
+</ul>
+<h3>أهميته</h3>
+<ul>
+<li>في التصنيع: نستخدم أوعية خلط كبيرة، لأن المساحة الكبيرة تقلل قوة الشد.</li>
+<li>الإبر: المعلق يدخل السرنجة بسهولة لأنها واسعة، بس لما يطلع من الإبرة الضيقة تزيد قوة الشد ويثقل فجأة، فيصعب الحقن أو يضر المريض.</li>
+</ul>
+<h3>المقارنة</h3>
+<div class="fig"><svg viewBox="0 0 360 230" role="img" aria-label="Four flow types">
+<g stroke="#8a8f8c" stroke-width="2" fill="none"><path d="M40 190V30M40 190H330"/></g>
+<line x1="40" y1="190" x2="250" y2="50" stroke="#0f6e63" stroke-width="3"/>
+<line x1="120" y1="190" x2="320" y2="70" stroke="#c8492f" stroke-width="3"/>
+<path d="M40 190 Q 200 180 260 40" fill="none" stroke="#e9a83b" stroke-width="3"/>
+<path d="M40 190 Q 130 80 320 55" fill="none" stroke="#7f77dd" stroke-width="3"/>
+<text class="tb" x="26" y="36">G</text><text class="tb" x="334" y="210">F</text>
+</svg></div>
+<table>
+<tr><th>النوع</th><th>اللون</th><th>اللزوجة مع القوة</th></tr>
+<tr><td>Newtonian</td><td style="color:#0f6e63">●</td><td>ثابتة</td></tr>
+<tr><td>Plastic</td><td style="color:#c8492f">●</td><td>ما يجري قبل f، بعدها ثابتة</td></tr>
+<tr><td>Pseudoplastic</td><td style="color:#e9a83b">●</td><td>تقل</td></tr>
+<tr><td>Dilatant</td><td style="color:#7f77dd">●</td><td>تزيد</td></tr>
+</table>
+</section>
+
+<section id="s7">
+<a class="back" href="#home" aria-label="رجوع">←</a>
+<h2>تأثير الحرارة</h2>
+<span class="en">Effect of temperature on viscosity</span>
+<p>في أغلب السوائل النيوتنية، كل ما ترتفع الحرارة درجة وحدة، تقل اللزوجة تقريبًا 2%.</p>
+<h3>القانون</h3>
+<span class="f">η = A · e^(Ea / RT)</span>
+<p>وصيغته باللوغاريتم:</p>
+<span class="f">ln η = ln A + Ea / RT</span>
+<ul>
+<li>A: ثابت يعتمد على الوزن الجزيئي والحجم المولي للسائل.</li>
+<li>Ea: طاقة التنشيط.</li>
+</ul>
+<span class="en">A: molecular weight & molar volume · Ea: activation energy</span>
+<h3>استثناء: Poloxamer</h3>
+<p>مكونات السائل الغير نيوتني ممكن تغيّر طريقة تأثره بالحرارة.</p>
+<span class="en">Poloxamer — nonionic triblock copolymer</span>
+<ul>
+<li>يستخدم في قواعد الجلد وقطرات العين، لأن سميته قليلة ويكوّن جل شفاف مائي.</li>
+<li>ذوبانه يقل مع الحرارة، فلما نسخنه السلاسل تتشابك وتكوّن شبكة، فتزيد اللزوجة ويصير جل.</li>
+</ul>
+<span class="en">Sol → Gel with increasing temperature</span>
+<div class="box">الفايدة: بحرارة الغرفة (25°C) يجري من الإبرة أو العبوة، ولما يلمس الجسم (35–37°C) يصير جل.</div>
+</section>
+
+<div class="nav" id="nav"><a id="next" href="#">→</a><a id="prev" href="#">←</a></div>
+</main>
+<script>
+{
+const ids=['s1','s2','s3','s4','s5','s6','s7'];
+const nav=document.getElementById('nav'),prev=document.getElementById('prev'),next=document.getElementById('next');
+const show=()=>{
+  const h=location.hash.slice(1);const cur=ids.includes(h)?h:'home';
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===cur));
+  const i=ids.indexOf(cur);
+  nav.style.display=i<0?'none':'flex';
+  if(i>=0){
+    prev.href='#'+(ids[i+1]||'');prev.classList.toggle('hide',!ids[i+1]);
+    next.href='#'+(ids[i-1]||'');next.classList.toggle('hide',!ids[i-1]);
+  }
+  window.scrollTo(0,0);
+};
+addEventListener('hashchange',show);show();
+}
+</script>
+</body>
+</html>
